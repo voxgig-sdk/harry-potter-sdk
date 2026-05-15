@@ -1,0 +1,77 @@
+{
+  "existing": {
+    "character": {
+      "CHARACTER00": {
+        "actor": "s96",
+        "alive": false,
+        "ancestry": "s98",
+        "date_of_birth": "s99",
+        "eye_colour": "s9a",
+        "hair_colour": "s9b",
+        "hogwarts_staff": true,
+        "hogwarts_student": false,
+        "houses": "s9e",
+        "id": "CHARACTER00",
+        "image": "sa0",
+        "name": "sa1",
+        "patronus": "sa2",
+        "wand": {},
+        "wizard": true
+      },
+      "CHARACTER01": {
+        "actor": "s12c",
+        "alive": false,
+        "ancestry": "s12e",
+        "date_of_birth": "s12f",
+        "eye_colour": "s130",
+        "hair_colour": "s131",
+        "hogwarts_staff": true,
+        "hogwarts_student": false,
+        "houses": "s134",
+        "id": "CHARACTER01",
+        "image": "s136",
+        "name": "s137",
+        "patronus": "s138",
+        "wand": {},
+        "wizard": true
+      },
+      "CHARACTER02": {
+        "actor": "s1c2",
+        "alive": false,
+        "ancestry": "s1c4",
+        "date_of_birth": "s1c5",
+        "eye_colour": "s1c6",
+        "hair_colour": "s1c7",
+        "hogwarts_staff": true,
+        "hogwarts_student": false,
+        "houses": "s1ca",
+        "id": "CHARACTER02",
+        "image": "s1cc",
+        "name": "s1cd",
+        "patronus": "s1ce",
+        "wand": {},
+        "wizard": true
+      }
+    }
+  },
+  "new": {
+    "character": {
+      "character_ref01": {
+        "actor": "s258",
+        "alive": false,
+        "ancestry": "s25a",
+        "date_of_birth": "s25b",
+        "eye_colour": "s25c",
+        "hair_colour": "s25d",
+        "hogwarts_staff": true,
+        "hogwarts_student": false,
+        "houses": "s260",
+        "image": "s262",
+        "name": "s263",
+        "patronus": "s264",
+        "wand": {},
+        "wizard": true
+      }
+    }
+  }
+}

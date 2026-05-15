@@ -1,0 +1,22 @@
+# BasicSpellFlow
+
+main: kit: flow: BasicSpellFlow:
+{
+  entity: "spell",
+  kind: "basic",
+  name: "BasicSpellFlow",
+  step: [
+    {
+      op: "list",
+      valid: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "spell_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSpellFlow"
+}

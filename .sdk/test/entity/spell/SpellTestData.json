@@ -1,0 +1,29 @@
+{
+  "existing": {
+    "spell": {
+      "SPELL00": {
+        "description": "s1e",
+        "id": "SPELL00",
+        "name": "s20"
+      },
+      "SPELL01": {
+        "description": "s3c",
+        "id": "SPELL01",
+        "name": "s3e"
+      },
+      "SPELL02": {
+        "description": "s5a",
+        "id": "SPELL02",
+        "name": "s5c"
+      }
+    }
+  },
+  "new": {
+    "spell": {
+      "spell_ref01": {
+        "description": "s78",
+        "name": "s7a"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+# Guide
+
+guide: {
+  metrics: count: entity: 2
+  metrics: count: path: 6
+  metrics: count: method: 6
+
+  entity: character: {
+    path: "/api/character/{id}": {
+      op: load: method: *GET
+    }
+    path: "/api/characters": {
+      op: list: method: *GET
+    }
+    path: "/api/characters/house/{house}": {
+      rename: param: "house": *"houses"
+      op: load: method: *GET
+    }
+    path: "/api/characters/staff": {
+      action: "staff": {}
+      op: list: method: *GET
+    }
+    path: "/api/characters/students": {
+      action: "student": {}
+      op: list: method: *GET
+    }
+  }
+
+  entity: spell: {
+    path: "/api/spells": {
+      op: list: method: *GET
+    }
+  }
+
+}

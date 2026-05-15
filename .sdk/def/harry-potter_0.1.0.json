@@ -1,0 +1,329 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Harry Potter API",
+    "description": "A magical JSON API for Harry Potter characters, spells, and the wizarding world. API providing data on Harry Potter characters and spells. Includes routes for all characters, specific character by ID, Hogwarts students and staff, characters in a house, and all spells.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "KostaSav",
+      "url": "https://hp-api.onrender.com/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://hp-api.onrender.com",
+      "description": "Production Server"
+    },
+    {
+      "url": "http://localhost:5000",
+      "description": "Local Development Server"
+    }
+  ],
+  "paths": {
+    "/api/characters": {
+      "get": {
+        "summary": "Get all characters",
+        "description": "Returns all characters (wizards, witches, magical creatures)",
+        "operationId": "getAllCharacters",
+        "tags": [
+          "Characters"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with all characters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Character"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/character/{id}": {
+      "get": {
+        "summary": "Get character by ID",
+        "description": "Find a specific character by their unique ID",
+        "operationId": "getCharacterById",
+        "tags": [
+          "Characters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Unique identifier of the character",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "example": "9e3f7ce4-b9a7-4244-b709-dae5c1f1d4a8"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with character details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Character"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Character not found"
+          }
+        }
+      }
+    },
+    "/api/characters/students": {
+      "get": {
+        "summary": "Get all Hogwarts students",
+        "description": "Retrieve all Hogwarts students (past and present)",
+        "operationId": "getStudents",
+        "tags": [
+          "Characters"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with all students",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Character"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/characters/staff": {
+      "get": {
+        "summary": "Get all Hogwarts staff",
+        "description": "Access information about Hogwarts faculty and staff",
+        "operationId": "getStaff",
+        "tags": [
+          "Characters"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with all staff members",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Character"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/characters/house/{house}": {
+      "get": {
+        "summary": "Get characters by Hogwarts house",
+        "description": "Find characters from a specific Hogwarts house (Gryffindor, Slytherin, Ravenclaw, Hufflepuff)",
+        "operationId": "getCharactersByHouse",
+        "tags": [
+          "Characters"
+        ],
+        "parameters": [
+          {
+            "name": "house",
+            "in": "path",
+            "required": true,
+            "description": "Name of the Hogwarts house",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "gryffindor",
+                "slytherin",
+                "ravenclaw",
+                "hufflepuff"
+              ]
+            },
+            "example": "gryffindor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with characters from the specified house",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Character"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "House not found"
+          }
+        }
+      }
+    },
+    "/api/spells": {
+      "get": {
+        "summary": "Get all spells",
+        "description": "Discover all magical spells and their incantations",
+        "operationId": "getAllSpells",
+        "tags": [
+          "Spells"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with all spells",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Spell"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Character": {
+        "type": "object",
+        "description": "A character from the Harry Potter universe",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the character"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the character"
+          },
+          "house": {
+            "type": "string",
+            "description": "Hogwarts house the character belongs to",
+            "enum": [
+              "Gryffindor",
+              "Slytherin",
+              "Ravenclaw",
+              "Hufflepuff",
+              ""
+            ]
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "description": "Date of birth of the character"
+          },
+          "wizard": {
+            "type": "boolean",
+            "description": "Whether the character is a wizard or witch"
+          },
+          "ancestry": {
+            "type": "string",
+            "description": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)"
+          },
+          "eyeColour": {
+            "type": "string",
+            "description": "Eye color of the character"
+          },
+          "hairColour": {
+            "type": "string",
+            "description": "Hair color of the character"
+          },
+          "wand": {
+            "type": "object",
+            "description": "Information about the character's wand",
+            "properties": {
+              "wood": {
+                "type": "string",
+                "description": "Type of wood the wand is made from"
+              },
+              "core": {
+                "type": "string",
+                "description": "Core material of the wand"
+              },
+              "length": {
+                "type": "number",
+                "description": "Length of the wand in inches"
+              }
+            }
+          },
+          "patronus": {
+            "type": "string",
+            "description": "The character's Patronus form"
+          },
+          "hogwartsStudent": {
+            "type": "boolean",
+            "description": "Whether the character is a Hogwarts student"
+          },
+          "hogwartsStaff": {
+            "type": "boolean",
+            "description": "Whether the character is a Hogwarts staff member"
+          },
+          "actor": {
+            "type": "string",
+            "description": "Name of the actor who portrayed the character"
+          },
+          "alive": {
+            "type": "boolean",
+            "description": "Whether the character is alive"
+          },
+          "image": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to an image of the character"
+          }
+        }
+      },
+      "Spell": {
+        "type": "object",
+        "description": "A magical spell from the Harry Potter universe",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the spell"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the spell"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of what the spell does"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Characters",
+      "description": "Endpoints related to Harry Potter characters"
+    },
+    {
+      "name": "Spells",
+      "description": "Endpoints related to magical spells"
+    }
+  ]
+}

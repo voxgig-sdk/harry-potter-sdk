@@ -1,0 +1,28 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "KostaSav"
+        url: "https://hp-api.onrender.com/"
+      }
+      description: "A magical JSON API for Harry Potter characters, spells, and the wizarding world. API providing data on Harry Potter characters and spells. Includes routes for all characters, specific character by ID, Hogwarts students and staff, characters in a house, and all spells."
+      servers: [
+        {
+          description: "Production Server"
+          url: "https://hp-api.onrender.com"
+        }
+        {
+          description: "Local Development Server"
+          url: "http://localhost:5000"
+        }
+      ]
+      title: "Harry Potter API"
+      version: "1.0.0"
+    }
+  }
+}
+
+}
