@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/voxgig-sdk/harry-potter-sdk"
-	"github.com/voxgig-sdk/harry-potter-sdk/core"
+	sdk "github.com/voxgig-sdk/harry-potter-sdk/go"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/harry-potter-sdk/go/utility/struct"
 )
 
 func TestSpellEntity(t *testing.T) {

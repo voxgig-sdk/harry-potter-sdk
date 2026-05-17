@@ -86,7 +86,7 @@ def make_config():
             "index$": 7,
           },
           {
-            "name": "houses",
+            "name": "house",
             "req": False,
             "type": "`$STRING`",
             "active": True,
@@ -207,8 +207,8 @@ def make_config():
                     {
                       "example": "gryffindor",
                       "kind": "param",
-                      "name": "houses",
-                      "orig": "houses",
+                      "name": "house",
+                      "orig": "house",
                       "reqd": True,
                       "type": "`$STRING`",
                       "active": True,
@@ -221,16 +221,11 @@ def make_config():
                   "api",
                   "characters",
                   "house",
-                  "{houses}",
+                  "{house}",
                 ],
-                "rename": {
-                  "param": {
-                    "house": "houses",
-                  },
-                },
                 "select": {
                   "exist": [
-                    "houses",
+                    "house",
                   ],
                 },
                 "transform": {
@@ -281,7 +276,7 @@ def make_config():
         "relations": {
           "ancestors": [
             [
-              "houses",
+              "house",
             ],
           ],
         },

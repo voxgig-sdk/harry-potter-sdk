@@ -5,14 +5,14 @@ The Golang SDK for the HarryPotter API. Provides an entity-oriented interface us
 
 ## Install
 ```bash
-go get github.com/voxgig-sdk/harry-potter-sdk
+go get github.com/voxgig-sdk/harry-potter-sdk/go
 ```
 
 If the module is not yet published to a registry, use a `replace` directive
 in your `go.mod` to point to a local checkout:
 
 ```bash
-go mod edit -replace github.com/voxgig-sdk/harry-potter-sdk=../path/to/github.com/voxgig-sdk/harry-potter-sdk
+go mod edit -replace github.com/voxgig-sdk/harry-potter-sdk/go=../path/to/github.com/voxgig-sdk/harry-potter-sdk/go
 ```
 
 
@@ -30,8 +30,8 @@ import (
     "fmt"
     "os"
 
-    sdk "github.com/voxgig-sdk/harry-potter-sdk"
-    "github.com/voxgig-sdk/harry-potter-sdk/core"
+    sdk "github.com/voxgig-sdk/harry-potter-sdk/go"
+    "github.com/voxgig-sdk/harry-potter-sdk/go/core"
 )
 
 func main() {
@@ -250,7 +250,7 @@ On error, `"ok"` is `false` and `"err"` contains the error value.
 | `"hair_colour"` |  |
 | `"hogwarts_staff"` |  |
 | `"hogwarts_student"` |  |
-| `"houses"` |  |
+| `"house"` |  |
 | `"id"` |  |
 | `"image"` |  |
 | `"name"` |  |
@@ -302,7 +302,7 @@ Create an instance: `character := client.Character(nil)`
 | `hair_colour` | ``$STRING`` |  |
 | `hogwarts_staff` | ``$BOOLEAN`` |  |
 | `hogwarts_student` | ``$BOOLEAN`` |  |
-| `houses` | ``$STRING`` |  |
+| `house` | ``$STRING`` |  |
 | `id` | ``$STRING`` |  |
 | `image` | ``$STRING`` |  |
 | `name` | ``$STRING`` |  |
@@ -398,7 +398,7 @@ Use `core.ToMapAny()` to safely cast results and nested data.
 ### Package structure
 
 ```
-github.com/voxgig-sdk/harry-potter-sdk/
+github.com/voxgig-sdk/harry-potter-sdk/go/
 ├── harry-potter.go        # Root package — type aliases and constructors
 ├── core/               # SDK core — client, types, pipeline
 ├── entity/             # Entity implementations
@@ -407,7 +407,7 @@ github.com/voxgig-sdk/harry-potter-sdk/
 └── test/               # Test suites
 ```
 
-The root package (`github.com/voxgig-sdk/harry-potter-sdk`) re-exports everything needed
+The root package (`github.com/voxgig-sdk/harry-potter-sdk/go`) re-exports everything needed
 for normal use. Import sub-packages only when you need specific types
 like `core.ToMapAny`.
 

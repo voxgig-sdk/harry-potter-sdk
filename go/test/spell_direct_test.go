@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/voxgig-sdk/harry-potter-sdk"
-	"github.com/voxgig-sdk/harry-potter-sdk/core"
+	sdk "github.com/voxgig-sdk/harry-potter-sdk/go"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/core"
 )
 
 func TestSpellDirect(t *testing.T) {

@@ -86,7 +86,7 @@ module HarryPotterConfig
               "index$" => 7,
             },
             {
-              "name" => "houses",
+              "name" => "house",
               "req" => false,
               "type" => "`$STRING`",
               "active" => true,
@@ -207,8 +207,8 @@ module HarryPotterConfig
                       {
                         "example" => "gryffindor",
                         "kind" => "param",
-                        "name" => "houses",
-                        "orig" => "houses",
+                        "name" => "house",
+                        "orig" => "house",
                         "reqd" => true,
                         "type" => "`$STRING`",
                         "active" => true,
@@ -221,16 +221,11 @@ module HarryPotterConfig
                     "api",
                     "characters",
                     "house",
-                    "{houses}",
+                    "{house}",
                   ],
-                  "rename" => {
-                    "param" => {
-                      "house" => "houses",
-                    },
-                  },
                   "select" => {
                     "exist" => [
-                      "houses",
+                      "house",
                     ],
                   },
                   "transform" => {
@@ -281,7 +276,7 @@ module HarryPotterConfig
           "relations" => {
             "ancestors" => [
               [
-                "houses",
+                "house",
               ],
             ],
           },

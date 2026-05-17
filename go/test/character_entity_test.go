@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/voxgig-sdk/harry-potter-sdk"
-	"github.com/voxgig-sdk/harry-potter-sdk/core"
+	sdk "github.com/voxgig-sdk/harry-potter-sdk/go"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/harry-potter-sdk/go/utility/struct"
 )
 
 func TestCharacterEntity(t *testing.T) {
@@ -116,7 +116,7 @@ func characterBasicSetup(extra map[string]any) *entityTestSetup {
 
 	// Generate idmap via transform, matching TS pattern.
 	idmap := vs.Transform(
-		[]any{"character01", "character02", "character03", "houses01", "houses02", "houses03"},
+		[]any{"character01", "character02", "character03", "house01", "house02", "house03"},
 		map[string]any{
 			"`$PACK`": []any{"", map[string]any{
 				"`$KEY`": "`$COPY`",

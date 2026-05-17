@@ -4,7 +4,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/voxgig-sdk/harry-potter-sdk/core"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/core"
 )
 
 type LogFeature struct {

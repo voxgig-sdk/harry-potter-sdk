@@ -64,13 +64,13 @@ describe("CharacterDirect", function()
     local params = {}
     local query = {}
     if setup.live then
-      params["houses"] = "gryffindor"
+      params["house"] = "gryffindor"
     else
-      params["houses"] = "direct01"
+      params["house"] = "direct01"
     end
 
     local result, err = client:direct({
-      path = "api/characters/house/{houses}",
+      path = "api/characters/house/{house}",
       method = "GET",
       params = params,
       query = query,

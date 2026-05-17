@@ -1,7 +1,7 @@
 package feature
 
 import (
-	"github.com/voxgig-sdk/harry-potter-sdk/core"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/core"
 )
 
 type BaseFeature struct {

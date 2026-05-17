@@ -63,13 +63,13 @@ class CharacterDirectTest < Minitest::Test
     params = {}
     query = {}
     if setup[:live]
-      params["houses"] = "gryffindor"
+      params["house"] = "gryffindor"
     else
-      params["houses"] = "direct01"
+      params["house"] = "direct01"
     end
 
     result, err = client.direct({
-      "path" => "api/characters/house/{houses}",
+      "path" => "api/characters/house/{house}",
       "method" => "GET",
       "params" => params,
       "query" => query,

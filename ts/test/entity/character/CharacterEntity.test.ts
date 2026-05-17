@@ -101,7 +101,7 @@ function basicSetup(extra?: any) {
   const transform = struct.transform
 
   let idmap = transform(
-    ['character01','character02','character03','houses01','houses02','houses03'],
+    ['character01','character02','character03','house01','house02','house03'],
     {
       '`$PACK`': ['', {
         '`$KEY`': '`$COPY`',

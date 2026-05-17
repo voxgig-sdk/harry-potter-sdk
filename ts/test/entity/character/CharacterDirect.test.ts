@@ -39,13 +39,13 @@ describe('CharacterDirect', async () => {
     const params: any = {}
     const query: any = {}
     if (setup.live) {
-      params.houses = "gryffindor"
+      params.house = "gryffindor"
     } else {
-      params.houses = 'direct01'
+      params.house = 'direct01'
     }
 
     const result: any = await client.direct({
-      path: 'api/characters/house/{houses}',
+      path: 'api/characters/house/{house}',
       method: 'GET',
       params,
       query,

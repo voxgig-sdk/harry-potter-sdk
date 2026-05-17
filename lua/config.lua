@@ -85,7 +85,7 @@ local function make_config()
             ["index$"] = 7,
           },
           {
-            ["name"] = "houses",
+            ["name"] = "house",
             ["req"] = false,
             ["type"] = "`$STRING`",
             ["active"] = true,
@@ -206,8 +206,8 @@ local function make_config()
                     {
                       ["example"] = "gryffindor",
                       ["kind"] = "param",
-                      ["name"] = "houses",
-                      ["orig"] = "houses",
+                      ["name"] = "house",
+                      ["orig"] = "house",
                       ["reqd"] = true,
                       ["type"] = "`$STRING`",
                       ["active"] = true,
@@ -220,16 +220,11 @@ local function make_config()
                   "api",
                   "characters",
                   "house",
-                  "{houses}",
-                },
-                ["rename"] = {
-                  ["param"] = {
-                    ["house"] = "houses",
-                  },
+                  "{house}",
                 },
                 ["select"] = {
                   ["exist"] = {
-                    "houses",
+                    "house",
                   },
                 },
                 ["transform"] = {
@@ -280,7 +275,7 @@ local function make_config()
         ["relations"] = {
           ["ancestors"] = {
             {
-              "houses",
+              "house",
             },
           },
         },

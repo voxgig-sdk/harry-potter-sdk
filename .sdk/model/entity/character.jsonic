@@ -46,7 +46,7 @@ main: kit: entity: character: {
       type: "`$BOOLEAN`"
     }
     {
-      name: "houses"
+      name: "house"
       req: false
       type: "`$STRING`"
     }
@@ -147,8 +147,8 @@ main: kit: entity: character: {
               {
                 example: "gryffindor"
                 kind: "param"
-                name: "houses"
-                orig: "houses"
+                name: "house"
+                orig: "house"
                 reqd: true
                 type: "`$STRING`"
               }
@@ -160,16 +160,11 @@ main: kit: entity: character: {
             "api"
             "characters"
             "house"
-            "{houses}"
+            "{house}"
           ]
-          rename: {
-            param: {
-              house: "houses"
-            }
-          }
           select: {
             exist: [
-              "houses"
+              "house"
             ]
           }
           transform: {
@@ -214,7 +209,7 @@ main: kit: entity: character: {
   relations: {
     ancestors: [
       [
-        "houses"
+        "house"
       ]
     ]
   }

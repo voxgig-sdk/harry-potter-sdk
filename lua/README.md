@@ -228,7 +228,7 @@ On error, `ok` is `false` and `err` contains the error value.
 | `hair_colour` |  |
 | `hogwarts_staff` |  |
 | `hogwarts_student` |  |
-| `houses` |  |
+| `house` |  |
 | `id` |  |
 | `image` |  |
 | `name` |  |
@@ -280,7 +280,7 @@ Create an instance: `const character = client.Character()`
 | `hair_colour` | ``$STRING`` |  |
 | `hogwarts_staff` | ``$BOOLEAN`` |  |
 | `hogwarts_student` | ``$BOOLEAN`` |  |
-| `houses` | ``$STRING`` |  |
+| `house` | ``$STRING`` |  |
 | `id` | ``$STRING`` |  |
 | `image` | ``$STRING`` |  |
 | `name` | ``$STRING`` |  |

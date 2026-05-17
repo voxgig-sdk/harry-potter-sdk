@@ -13,7 +13,6 @@ guide: {
       op: list: method: *GET
     }
     path: "/api/characters/house/{house}": {
-      rename: param: "house": *"houses"
       op: load: method: *GET
     }
     path: "/api/characters/staff": {

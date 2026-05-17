@@ -100,7 +100,7 @@ character = client.Character()
 | `hair_colour` | ``$STRING`` | No |  |
 | `hogwarts_staff` | ``$BOOLEAN`` | No |  |
 | `hogwarts_student` | ``$BOOLEAN`` | No |  |
-| `houses` | ``$STRING`` | No |  |
+| `house` | ``$STRING`` | No |  |
 | `id` | ``$STRING`` | No |  |
 | `image` | ``$STRING`` | No |  |
 | `name` | ``$STRING`` | No |  |

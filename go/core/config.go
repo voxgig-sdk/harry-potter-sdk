@@ -85,7 +85,7 @@ func MakeConfig() map[string]any {
 						"index$": 7,
 					},
 					map[string]any{
-						"name": "houses",
+						"name": "house",
 						"req": false,
 						"type": "`$STRING`",
 						"active": true,
@@ -206,8 +206,8 @@ func MakeConfig() map[string]any {
 										map[string]any{
 											"example": "gryffindor",
 											"kind": "param",
-											"name": "houses",
-											"orig": "houses",
+											"name": "house",
+											"orig": "house",
 											"reqd": true,
 											"type": "`$STRING`",
 											"active": true,
@@ -220,16 +220,11 @@ func MakeConfig() map[string]any {
 									"api",
 									"characters",
 									"house",
-									"{houses}",
-								},
-								"rename": map[string]any{
-									"param": map[string]any{
-										"house": "houses",
-									},
+									"{house}",
 								},
 								"select": map[string]any{
 									"exist": []any{
-										"houses",
+										"house",
 									},
 								},
 								"transform": map[string]any{
@@ -280,7 +275,7 @@ func MakeConfig() map[string]any {
 				"relations": map[string]any{
 					"ancestors": []any{
 						[]any{
-							"houses",
+							"house",
 						},
 					},
 				},

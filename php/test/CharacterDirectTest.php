@@ -69,13 +69,13 @@ class CharacterDirectTest extends TestCase
         $params = [];
         $query = [];
         if ($setup["live"]) {
-            $params["houses"] = "gryffindor";
+            $params["house"] = "gryffindor";
         } else {
-            $params["houses"] = "direct01";
+            $params["house"] = "direct01";
         }
 
         [$result, $err] = $client->direct([
-            "path" => "api/characters/house/{houses}",
+            "path" => "api/characters/house/{house}",
             "method" => "GET",
             "params" => $params,
             "query" => $query,

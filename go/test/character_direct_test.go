@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/voxgig-sdk/harry-potter-sdk"
-	"github.com/voxgig-sdk/harry-potter-sdk/core"
+	sdk "github.com/voxgig-sdk/harry-potter-sdk/go"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/core"
 )
 
 func TestCharacterDirect(t *testing.T) {
@@ -94,13 +94,13 @@ func TestCharacterDirect(t *testing.T) {
 		params := map[string]any{}
 		query := map[string]any{}
 		if setup.live {
-			params["houses"] = "gryffindor"
+			params["house"] = "gryffindor"
 		} else {
-			params["houses"] = "direct01"
+			params["house"] = "direct01"
 		}
 
 		result, err := client.Direct(map[string]any{
-			"path":   "api/characters/house/{houses}",
+			"path":   "api/characters/house/{house}",
 			"method": "GET",
 			"params": params,
 			"query":  query,

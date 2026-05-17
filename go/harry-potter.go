@@ -1,10 +1,10 @@
 package voxgigharrypottersdk
 
 import (
-	"github.com/voxgig-sdk/harry-potter-sdk/core"
-	"github.com/voxgig-sdk/harry-potter-sdk/entity"
-	"github.com/voxgig-sdk/harry-potter-sdk/feature"
-	_ "github.com/voxgig-sdk/harry-potter-sdk/utility"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/core"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/entity"
+	"github.com/voxgig-sdk/harry-potter-sdk/go/feature"
+	_ "github.com/voxgig-sdk/harry-potter-sdk/go/utility"
 )
 
 // Type aliases preserve external API.
