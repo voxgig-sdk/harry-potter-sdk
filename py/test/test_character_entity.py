@@ -102,7 +102,6 @@ def _character_basic_setup(extra):
         "HARRYPOTTER_TEST_CHARACTER_ENTID": idmap,
         "HARRYPOTTER_TEST_LIVE": "FALSE",
         "HARRYPOTTER_TEST_EXPLAIN": "FALSE",
-        "HARRYPOTTER_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -113,7 +112,6 @@ def _character_basic_setup(extra):
     if env.get("HARRYPOTTER_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
-                "apikey": env.get("HARRYPOTTER_APIKEY"),
             },
             extra or {},
         ])

@@ -113,7 +113,6 @@ function basicSetup(extra?: any) {
     'HARRY_POTTER_TEST_SPELL_ENTID': idmap,
     'HARRY_POTTER_TEST_LIVE': 'FALSE',
     'HARRY_POTTER_TEST_EXPLAIN': 'FALSE',
-    'HARRY_POTTER_APIKEY': 'NONE',
   })
 
   idmap = env['HARRY_POTTER_TEST_SPELL_ENTID']
@@ -123,7 +122,6 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new HarryPotterSDK(merge([
       {
-        apikey: env.HARRY_POTTER_APIKEY,
       },
       extra
     ]))

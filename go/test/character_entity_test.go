@@ -135,7 +135,6 @@ func characterBasicSetup(extra map[string]any) *entityTestSetup {
 		"HARRYPOTTER_TEST_CHARACTER_ENTID": idmap,
 		"HARRYPOTTER_TEST_LIVE":      "FALSE",
 		"HARRYPOTTER_TEST_EXPLAIN":   "FALSE",
-		"HARRYPOTTER_APIKEY":         "NONE",
 	})
 
 	idmapResolved := core.ToMapAny(env["HARRYPOTTER_TEST_CHARACTER_ENTID"])
@@ -146,7 +145,6 @@ func characterBasicSetup(extra map[string]any) *entityTestSetup {
 	if env["HARRYPOTTER_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
-				"apikey": env["HARRYPOTTER_APIKEY"],
 			},
 			extra,
 		})
