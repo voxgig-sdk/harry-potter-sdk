@@ -114,12 +114,14 @@ def character_direct_setup(mockres)
   env = Runner.env_override({
     "HARRYPOTTER_TEST_CHARACTER_ENTID" => {},
     "HARRYPOTTER_TEST_LIVE" => "FALSE",
+    "HARRYPOTTER_APIKEY" => "NONE",
   })
 
   live = env["HARRYPOTTER_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {
+      "apikey" => env["HARRYPOTTER_APIKEY"],
     }
     client = HarryPotterSDK.new(merged_opts)
     return {

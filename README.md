@@ -1,22 +1,8 @@
 # HarryPotter SDK
 
-Look up Harry Potter characters, Hogwarts houses, staff, and spells from a free JSON API
+Harry Potter API client, generated from the OpenAPI spec.
 
 > TypeScript, Python, PHP, Golang, Ruby, Lua SDKs, a CLI, an interactive REPL, and an MCP server for AI agents — all generated from one OpenAPI spec by [@voxgig/sdkgen](https://github.com/voxgig/sdkgen).
-
-## About Harry Potter API
-
-[HP-API](https://hp-api.onrender.com) is a community-run JSON API serving data about characters and spells from the Harry Potter universe. It is currently maintained by [KostaSav](https://github.com/KostaSav/hp-api) and traces back to an earlier project by bethfraser.
-
-What you get from the API:
-
-- All characters, including wizards, witches, and magical creatures (`/api/characters`)
-- A single character by ID (`/api/character/:id`)
-- Hogwarts students (`/api/characters/students`) and staff (`/api/characters/staff`)
-- Characters filtered by house — Gryffindor, Slytherin, Ravenclaw, or Hufflepuff (`/api/characters/house/:house`)
-- All spells with their incantations (`/api/spells`)
-
-No authentication is required and the service is open to anyone. The host is the free tier of Render, so cold starts and occasional latency are normal. CORS is generally enabled on the JSON endpoints.
 
 ## Try it
 
@@ -50,29 +36,31 @@ gem install harry-potter-sdk
 luarocks install harry-potter-sdk
 ```
 
-## 30-second quickstart
+## Quickstart
 
 ### TypeScript
 
 ```ts
 import { HarryPotterSDK } from 'harry-potter'
 
-const client = new HarryPotterSDK({})
+const client = new HarryPotterSDK({
+  apikey: process.env.HARRY-POTTER_APIKEY,
+})
 
 // List all characters
 const characters = await client.Character().list()
+console.log(characters.data)
 ```
 
-See the [TypeScript README](ts/README.md) for the
-full guide, or scroll down for the same example in other languages.
+See the [TypeScript README](ts/README.md) for the full guide.
 
-## What's in the box
+## Surfaces
 
-| Surface | Use it for | Path |
-| --- | --- | --- |
-| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | App integration | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
-| **CLI** | Scripts, CI, ops, one-off API calls | `go-cli/` |
-| **MCP server** | AI agents (Claude, Cursor, Cline) | `go-mcp/` |
+| Surface | Path |
+| --- | --- |
+| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
+| **CLI** | `go-cli/` |
+| **MCP server** | `go-mcp/` |
 
 ## Use it from an AI agent (MCP)
 
@@ -102,8 +90,8 @@ The API exposes 2 entities:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Character** | A person or magical creature from the Harry Potter universe; served from `/api/characters`, `/api/character/:id`, `/api/characters/students`, `/api/characters/staff`, and `/api/characters/house/:house`. | `/api/characters` |
-| **Spell** | A magical spell with its incantation; served from `/api/spells`. | `/api/spells` |
+| **Character** |  | `/api/characters` |
+| **Spell** |  | `/api/spells` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -113,17 +101,20 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
+import os
 from harrypotter_sdk import HarryPotterSDK
 
-client = HarryPotterSDK({})
+client = HarryPotterSDK({
+    "apikey": os.environ.get("HARRY-POTTER_APIKEY"),
+})
 
 # List all characters
-characters, err = client.Character(None).list(None, None)
+characters, err = client.Character().list()
+print(characters)
 
 # Load a specific character
-character, err = client.Character(None).load(
-    {"id": "example_id"}, None
-)
+character, err = client.Character().load({"id": "example_id"})
+print(character)
 ```
 
 ### PHP
@@ -132,15 +123,17 @@ character, err = client.Character(None).load(
 <?php
 require_once 'harrypotter_sdk.php';
 
-$client = new HarryPotterSDK([]);
+$client = new HarryPotterSDK([
+    "apikey" => getenv("HARRY-POTTER_APIKEY"),
+]);
 
 // List all characters
-[$characters, $err] = $client->Character(null)->list(null, null);
+[$characters, $err] = $client->Character()->list();
+print_r($characters);
 
 // Load a specific character
-[$character, $err] = $client->Character(null)->load(
-    ["id" => "example_id"], null
-);
+[$character, $err] = $client->Character()->load(["id" => "example_id"]);
+print_r($character);
 ```
 
 ### Golang
@@ -148,10 +141,13 @@ $client = new HarryPotterSDK([]);
 ```go
 import sdk "github.com/voxgig-sdk/harry-potter-sdk/go"
 
-client := sdk.NewHarryPotterSDK(map[string]any{})
+client := sdk.NewHarryPotterSDK(map[string]any{
+    "apikey": os.Getenv("HARRY-POTTER_APIKEY"),
+})
 
 // List all characters
 characters, err := client.Character(nil).List(nil, nil)
+fmt.Println(characters)
 ```
 
 ### Ruby
@@ -159,15 +155,17 @@ characters, err := client.Character(nil).List(nil, nil)
 ```ruby
 require_relative "HarryPotter_sdk"
 
-client = HarryPotterSDK.new({})
+client = HarryPotterSDK.new({
+  "apikey" => ENV["HARRY-POTTER_APIKEY"],
+})
 
 # List all characters
-characters, err = client.Character(nil).list(nil, nil)
+characters, err = client.Character().list
+puts characters
 
 # Load a specific character
-character, err = client.Character(nil).load(
-  { "id" => "example_id" }, nil
-)
+character, err = client.Character().load({ "id" => "example_id" })
+puts character
 ```
 
 ### Lua
@@ -175,15 +173,17 @@ character, err = client.Character(nil).load(
 ```lua
 local sdk = require("harry-potter_sdk")
 
-local client = sdk.new({})
+local client = sdk.new({
+  apikey = os.getenv("HARRY-POTTER_APIKEY"),
+})
 
 -- List all characters
-local characters, err = client:Character(nil):list(nil, nil)
+local characters, err = client:Character():list()
+print(characters)
 
 -- Load a specific character
-local character, err = client:Character(nil):load(
-  { id = "example_id" }, nil
-)
+local character, err = client:Character():load({ id = "example_id" })
+print(character)
 ```
 
 ## Unit testing in offline mode
@@ -202,25 +202,21 @@ const result = await client.Character().load({ id: 'test01' })
 ### Python
 
 ```python
-client = HarryPotterSDK.test(None, None)
-result, err = client.Character(None).load(
-    {"id": "test01"}, None
-)
+client = HarryPotterSDK.test()
+result, err = client.Character().load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
-$client = HarryPotterSDK::test(null, null);
-[$result, $err] = $client->Character(null)->load(
-    ["id" => "test01"], null
-);
+$client = HarryPotterSDK::test();
+[$result, $err] = $client->Character()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
-client := sdk.TestSDK(nil, nil)
+client := sdk.Test()
 result, err := client.Character(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
@@ -229,19 +225,15 @@ result, err := client.Character(nil).Load(
 ### Ruby
 
 ```ruby
-client = HarryPotterSDK.test(nil, nil)
-result, err = client.Character(nil).load(
-  { "id" => "test01" }, nil
-)
+client = HarryPotterSDK.test
+result, err = client.Character().load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
-local client = sdk.test(nil, nil)
-local result, err = client:Character(nil):load(
-  { id = "test01" }, nil
-)
+local client = sdk.test()
+local result, err = client:Character():load({ id = "test01" })
 ```
 
 ## How it works
@@ -345,15 +337,6 @@ local result, err = client:direct({
 - [Golang](go/README.md)
 - [Ruby](rb/README.md)
 - [Lua](lua/README.md)
-
-## Using the Harry Potter API
-
-- Upstream: [https://hp-api.onrender.com](https://hp-api.onrender.com)
-
-- Free to use; no API key required.
-- Unofficial fan project — not affiliated with or endorsed by J.K. Rowling or Warner Bros.
-- Maintained by KostaSav, based on the original `hp-api` project by bethfraser.
-- No explicit open-source licence is published on the live site; check the upstream GitHub repository before redistributing data.
 
 ---
 

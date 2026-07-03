@@ -92,6 +92,7 @@ function spell_basic_setup(extra)
     ["HARRYPOTTER_TEST_SPELL_ENTID"] = idmap,
     ["HARRYPOTTER_TEST_LIVE"] = "FALSE",
     ["HARRYPOTTER_TEST_EXPLAIN"] = "FALSE",
+    ["HARRYPOTTER_APIKEY"] = "NONE",
   })
 
   local idmap_resolved = helpers.to_map(
@@ -103,6 +104,7 @@ function spell_basic_setup(extra)
   if env["HARRYPOTTER_TEST_LIVE"] == "TRUE" then
     local merged_opts = vs.merge({
       {
+        apikey = env["HARRYPOTTER_APIKEY"],
       },
       extra or {},
     })

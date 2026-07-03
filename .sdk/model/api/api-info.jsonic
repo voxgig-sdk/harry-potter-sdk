@@ -21,30 +21,7 @@ main: {
       ]
       title: "Harry Potter API"
       version: "1.0.0"
-      tagline: "Look up Harry Potter characters, Hogwarts houses, staff, and spells from a free JSON API"
-      homepage: "https://hp-api.onrender.com"
-      docs_url: "https://hp-api.onrender.com"
-      license_short: "Free to use, unofficial — not affiliated with J.K. Rowling or Warner Bros."
-      license_md: `- Free to use; no API key required.
-- Unofficial fan project — not affiliated with or endorsed by J.K. Rowling or Warner Bros.
-- Maintained by KostaSav, based on the original \`hp-api\` project by bethfraser.
-- No explicit open-source licence is published on the live site; check the upstream GitHub repository before redistributing data.`
-      about_md: `[HP-API](https://hp-api.onrender.com) is a community-run JSON API serving data about characters and spells from the Harry Potter universe. It is currently maintained by [KostaSav](https://github.com/KostaSav/hp-api) and traces back to an earlier project by bethfraser.
-
-What you get from the API:
-
-- All characters, including wizards, witches, and magical creatures (\`/api/characters\`)
-- A single character by ID (\`/api/character/:id\`)
-- Hogwarts students (\`/api/characters/students\`) and staff (\`/api/characters/staff\`)
-- Characters filtered by house — Gryffindor, Slytherin, Ravenclaw, or Hufflepuff (\`/api/characters/house/:house\`)
-- All spells with their incantations (\`/api/spells\`)
-
-No authentication is required and the service is open to anyone. The host is the free tier of Render, so cold starts and occasional latency are normal. CORS is generally enabled on the JSON endpoints.`
-      entity_desc: {
-        character: "A person or magical creature from the Harry Potter universe; served from `/api/characters`, `/api/character/:id`, `/api/characters/students`, `/api/characters/staff`, and `/api/characters/house/:house`."
-        spell: "A magical spell with its incantation; served from `/api/spells`."
-      }
-      auth: false
     }
   }
 }
+

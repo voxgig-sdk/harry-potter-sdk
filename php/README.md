@@ -1,6 +1,11 @@
 # HarryPotter PHP SDK
 
-The PHP SDK for the HarryPotter API. Provides an entity-oriented interface using PHP conventions.
+
+
+The PHP SDK for the HarryPotter API — an entity-oriented client using PHP conventions.
+
+> Other languages, the CLI, and MCP server live alongside this one — see
+> the [top-level README](../README.md).
 
 
 ## Install
@@ -20,13 +25,15 @@ loading a specific record.
 <?php
 require_once 'harrypotter_sdk.php';
 
-$client = new HarryPotterSDK([]);
+$client = new HarryPotterSDK([
+    "apikey" => getenv("HARRY-POTTER_APIKEY"),
+]);
 ```
 
 ### 2. List characters
 
 ```php
-[$result, $err] = $client->Character(null)->list(null, null);
+[$result, $err] = $client->Character()->list();
 if ($err) { throw new \Exception($err); }
 
 if (is_array($result)) {
@@ -40,7 +47,7 @@ if (is_array($result)) {
 ### 3. Load a character
 
 ```php
-[$result, $err] = $client->Character(null)->load(["id" => "example_id"], null);
+[$result, $err] = $client->Character()->load(["id" => "example_id"]);
 if ($err) { throw new \Exception($err); }
 print_r($result);
 ```
@@ -86,11 +93,9 @@ print_r($fetchdef["headers"]);
 Create a mock client for unit testing — no server required:
 
 ```php
-$client = HarryPotterSDK::test(null, null);
+$client = HarryPotterSDK::test();
 
-[$result, $err] = $client->HarryPotter(null)->load(
-    ["id" => "test01"], null
-);
+[$result, $err] = $client->HarryPotter()->load(["id" => "test01"]);
 // $result contains mock response data
 ```
 
@@ -125,6 +130,7 @@ Create a `.env.local` file at the project root:
 
 ```
 HARRY-POTTER_TEST_LIVE=TRUE
+HARRY-POTTER_APIKEY=<your-key>
 ```
 
 Then run:
@@ -147,6 +153,7 @@ Creates a new SDK client.
 
 | Option | Type | Description |
 | --- | --- | --- |
+| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |

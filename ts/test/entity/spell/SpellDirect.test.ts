@@ -79,12 +79,14 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'HARRYPOTTER_TEST_SPELL_ENTID': {},
     'HARRYPOTTER_TEST_LIVE': 'FALSE',
+    'HARRYPOTTER_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.HARRYPOTTER_TEST_LIVE
 
   if (live) {
     const client = new HarryPotterSDK({
+      apikey: env.HARRYPOTTER_APIKEY,
     })
 
     let idmap: any = env['HARRYPOTTER_TEST_SPELL_ENTID']
