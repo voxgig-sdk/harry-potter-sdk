@@ -10,7 +10,7 @@ The PHP SDK for the HarryPotter API — an entity-oriented client using PHP conv
 
 ## Install
 ```bash
-composer require voxgig/harry-potter-sdk
+composer require voxgig-sdk/harry-potter
 ```
 
 

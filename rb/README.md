@@ -10,13 +10,13 @@ The Ruby SDK for the HarryPotter API — an entity-oriented client using idiomat
 
 ## Install
 ```bash
-gem install harry-potter-sdk
+gem install voxgig-sdk-harry-potter
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "harry-potter-sdk"
+gem "voxgig-sdk-harry-potter"
 ```
 
 Then run:

@@ -8,12 +8,14 @@ source = {
   dir = "harry-potter-sdk/lua"
 }
 description = {
-  summary = "HarryPotter SDK for Lua",
-  license = "MIT"
+  summary = "Unofficial generated Lua SDK for the Harry Potter public API. Not affiliated with or endorsed by the upstream API provider.",
+  homepage = "https://github.com/voxgig-sdk/harry-potter-sdk",
+  issues_url = "https://github.com/voxgig-sdk/harry-potter-sdk/issues",
+  license = "MIT",
+  labels = { "voxgig", "sdk", "generated-sdk", "openapi", "api-client", "harry-potter" }
 }
 dependencies = {
   "lua >= 5.3",
-  "dkjson >= 2.5",
   "dkjson >= 2.5",
 }
 build = {

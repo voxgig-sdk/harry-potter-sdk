@@ -10,7 +10,7 @@ The TypeScript SDK for the HarryPotter API — a type-safe, entity-oriented clie
 
 ## Install
 ```bash
-npm install harry-potter
+npm install @voxgig-sdk/harry-potter
 ```
 ## Tutorial: your first API call
 

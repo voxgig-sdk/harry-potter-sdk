@@ -10,7 +10,7 @@ The Python SDK for the HarryPotter API — an entity-oriented client following P
 
 ## Install
 ```bash
-pip install harry-potter-sdk
+pip install voxgig-sdk-harry-potter
 ```
 
 Or install from source:
