@@ -4,67 +4,66 @@
 # params (op.<name>.points[].args.params[]). Field/param types come from the
 # canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 # @voxgig/apidef VALID_CANON). Do not edit by hand.
+#
+# These are TypedDicts, not dataclasses: the SDK ops return/accept plain dicts
+# at runtime, and a TypedDict IS a dict shape, so the types match the runtime.
+# Optional (req:false) keys are modelled as TypedDict key-optionality
+# (total=False), split into a required base + total=False subclass when a type
+# has both required and optional keys.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Optional, Any
+from typing import TypedDict, Any
 
 
-@dataclass
-class Character:
-    actor: Optional[str] = None
-    alive: Optional[bool] = None
-    ancestry: Optional[str] = None
-    date_of_birth: Optional[str] = None
-    eye_colour: Optional[str] = None
-    hair_colour: Optional[str] = None
-    hogwarts_staff: Optional[bool] = None
-    hogwarts_student: Optional[bool] = None
-    house: Optional[str] = None
-    id: Optional[str] = None
-    image: Optional[str] = None
-    name: Optional[str] = None
-    patronus: Optional[str] = None
-    wand: Optional[dict] = None
-    wizard: Optional[bool] = None
+class Character(TypedDict, total=False):
+    actor: str
+    alive: bool
+    ancestry: str
+    date_of_birth: str
+    eye_colour: str
+    hair_colour: str
+    hogwarts_staff: bool
+    hogwarts_student: bool
+    house: str
+    id: str
+    image: str
+    name: str
+    patronus: str
+    wand: dict
+    wizard: bool
 
 
-@dataclass
-class CharacterLoadMatch:
+class CharacterLoadMatch(TypedDict):
     house: str
     id: str
 
 
-@dataclass
-class CharacterListMatch:
-    actor: Optional[str] = None
-    alive: Optional[bool] = None
-    ancestry: Optional[str] = None
-    date_of_birth: Optional[str] = None
-    eye_colour: Optional[str] = None
-    hair_colour: Optional[str] = None
-    hogwarts_staff: Optional[bool] = None
-    hogwarts_student: Optional[bool] = None
-    house: Optional[str] = None
-    id: Optional[str] = None
-    image: Optional[str] = None
-    name: Optional[str] = None
-    patronus: Optional[str] = None
-    wand: Optional[dict] = None
-    wizard: Optional[bool] = None
+class CharacterListMatch(TypedDict, total=False):
+    actor: str
+    alive: bool
+    ancestry: str
+    date_of_birth: str
+    eye_colour: str
+    hair_colour: str
+    hogwarts_staff: bool
+    hogwarts_student: bool
+    house: str
+    id: str
+    image: str
+    name: str
+    patronus: str
+    wand: dict
+    wizard: bool
 
 
-@dataclass
-class Spell:
-    description: Optional[str] = None
-    id: Optional[str] = None
-    name: Optional[str] = None
+class Spell(TypedDict, total=False):
+    description: str
+    id: str
+    name: str
 
 
-@dataclass
-class SpellListMatch:
-    description: Optional[str] = None
-    id: Optional[str] = None
-    name: Optional[str] = None
-
+class SpellListMatch(TypedDict, total=False):
+    description: str
+    id: str
+    name: str

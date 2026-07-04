@@ -208,26 +208,14 @@ class HarryPotterSDK
   end
 
 
-  # Idiomatic facade: client.character.list / client.character.load({ "id" => ... })
-  def character
-    require_relative 'entity/character_entity'
-    @character ||= CharacterEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.character instead.
+  # Canonical facade: client.Character.list / client.Character.load({ "id" => ... })
   def Character(data = nil)
     require_relative 'entity/character_entity'
     CharacterEntity.new(self, data)
   end
 
 
-  # Idiomatic facade: client.spell.list / client.spell.load({ "id" => ... })
-  def spell
-    require_relative 'entity/spell_entity'
-    @spell ||= SpellEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.spell instead.
+  # Canonical facade: client.Spell.list / client.Spell.load({ "id" => ... })
   def Spell(data = nil)
     require_relative 'entity/spell_entity'
     SpellEntity.new(self, data)

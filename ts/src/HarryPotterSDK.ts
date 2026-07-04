@@ -205,28 +205,14 @@ class HarryPotterSDK {
 
 
 
-  _character?: CharacterEntity
-
-  // Idiomatic facade: `client.character.list()` / `client.character.load({ id })`.
-  get character(): CharacterEntity {
-    return (this._character ??= new CharacterEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.character` instead. */
+  // Entity access: `client.Character().list()` / `client.Character().load({ id })`.
   Character(data?: any) {
     const self = this
     return new CharacterEntity(self,data)
   }
 
 
-  _spell?: SpellEntity
-
-  // Idiomatic facade: `client.spell.list()` / `client.spell.load({ id })`.
-  get spell(): SpellEntity {
-    return (this._spell ??= new SpellEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.spell` instead. */
+  // Entity access: `client.Spell().list()` / `client.Spell().load({ id })`.
   Spell(data?: any) {
     const self = this
     return new SpellEntity(self,data)

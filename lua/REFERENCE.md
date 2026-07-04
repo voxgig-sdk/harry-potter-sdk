@@ -87,7 +87,7 @@ same parameters as `direct()`.
 ## CharacterEntity
 
 ```lua
-local character = client:character(nil)
+local character = client:Character(nil)
 ```
 
 ### Fields
@@ -117,7 +117,7 @@ local character = client:character(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:character():list()
+local results, err = client:Character():list()
 ```
 
 #### `load(reqmatch, ctrl) -> any, err`
@@ -125,7 +125,7 @@ local results, err = client:character():list()
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:character():load({ id = "character_id" })
+local result, err = client:Character():load({ id = "character_id" })
 ```
 
 ### Common Methods
@@ -161,7 +161,7 @@ Return the entity name.
 ## SpellEntity
 
 ```lua
-local spell = client:spell(nil)
+local spell = client:Spell(nil)
 ```
 
 ### Fields
@@ -179,7 +179,7 @@ local spell = client:spell(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:spell():list()
+local results, err = client:Spell():list()
 ```
 
 ### Common Methods

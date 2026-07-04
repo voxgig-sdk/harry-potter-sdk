@@ -244,8 +244,9 @@ end
 
 
 
--- Idiomatic facade: client:character():list() / client:character():load({ id = ... })
-function HarryPotterSDK:character(data)
+-- Idiomatic facade: client:Character():list() / client:Character():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function HarryPotterSDK:Character(data)
   local EntityMod = require("entity.character_entity")
   if data == nil then
     if self._character == nil then
@@ -256,15 +257,10 @@ function HarryPotterSDK:character(data)
   return EntityMod.new(self, data)
 end
 
--- Deprecated: use client:character() instead.
-function HarryPotterSDK:Character(data)
-  local EntityMod = require("entity.character_entity")
-  return EntityMod.new(self, data)
-end
 
-
--- Idiomatic facade: client:spell():list() / client:spell():load({ id = ... })
-function HarryPotterSDK:spell(data)
+-- Idiomatic facade: client:Spell():list() / client:Spell():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function HarryPotterSDK:Spell(data)
   local EntityMod = require("entity.spell_entity")
   if data == nil then
     if self._spell == nil then
@@ -272,12 +268,6 @@ function HarryPotterSDK:spell(data)
     end
     return self._spell
   end
-  return EntityMod.new(self, data)
-end
-
--- Deprecated: use client:spell() instead.
-function HarryPotterSDK:Spell(data)
-  local EntityMod = require("entity.spell_entity")
   return EntityMod.new(self, data)
 end
 

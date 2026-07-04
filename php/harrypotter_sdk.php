@@ -233,10 +233,10 @@ class HarryPotterSDK
 
     private $_character = null;
 
-    // Idiomatic facade: $client->character()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias Character() (PHP method
-    // names are case-insensitive).
-    public function character($data = null)
+    // Canonical facade: $client->Character()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->character()
+    // resolves here too.
+    public function Character($data = null)
     {
         require_once __DIR__ . '/entity/character_entity.php';
         if ($data === null) {
@@ -251,10 +251,10 @@ class HarryPotterSDK
 
     private $_spell = null;
 
-    // Idiomatic facade: $client->spell()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias Spell() (PHP method
-    // names are case-insensitive).
-    public function spell($data = null)
+    // Canonical facade: $client->Spell()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->spell()
+    // resolves here too.
+    public function Spell($data = null)
     {
         require_once __DIR__ . '/entity/spell_entity.php';
         if ($data === null) {
