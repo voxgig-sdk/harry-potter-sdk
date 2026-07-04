@@ -20,9 +20,6 @@ class HarryPotterConfig
             ],
             "options" => [
                 "base" => "https://hp-api.onrender.com",
-                "auth" => [
-                    "prefix" => "Bearer",
-                ],
                 "headers" => [
           'content-type' => 'application/json',
         ],
@@ -219,6 +216,7 @@ class HarryPotterConfig
                         'orig' => 'house',
                         'reqd' => true,
                         'type' => '`$STRING`',
+                        'index$' => 0,
                       ],
                     ],
                   ],
@@ -253,6 +251,7 @@ class HarryPotterConfig
                         'orig' => 'id',
                         'reqd' => true,
                         'type' => '`$STRING`',
+                        'index$' => 0,
                       ],
                     ],
                   ],

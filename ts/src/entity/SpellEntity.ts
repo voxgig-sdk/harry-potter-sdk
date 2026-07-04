@@ -14,9 +14,13 @@ import type {
   Control,
 } from '../types'
 
+import type {
+  Spell,
+  SpellListMatch,
+} from '../HarryPotterTypes'
 
 // TODO: needs Entity superclass
-class SpellEntity extends HarryPotterEntityBase {
+class SpellEntity extends HarryPotterEntityBase<Spell> {
 
   constructor(client: HarryPotterSDK, entopts: any) {
     super(client, entopts)
@@ -33,7 +37,7 @@ class SpellEntity extends HarryPotterEntityBase {
 
 
 
-  async list(this: any, reqmatch?: any, ctrl?: Control) {
+  async list(this: any, reqmatch?: SpellListMatch, ctrl?: Control): Promise<Spell[]> {
 
     const utility = this._utility
 
@@ -133,7 +137,9 @@ class SpellEntity extends HarryPotterEntityBase {
         throw err
       }
       else {
-        return undefined
+        // Off-happy-path (throw disabled): typed as any so the method's
+        // Promise<Spell[]> return stays clean under strict null checks.
+        return undefined as any
       }
     }
   }

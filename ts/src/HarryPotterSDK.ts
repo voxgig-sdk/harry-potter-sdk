@@ -3,6 +3,8 @@
 import { CharacterEntity } from './entity/CharacterEntity'
 import { SpellEntity } from './entity/SpellEntity'
 
+export type * from './HarryPotterTypes'
+
 
 import { inspect } from 'node:util'
 
@@ -203,12 +205,28 @@ class HarryPotterSDK {
 
 
 
+  _character?: CharacterEntity
+
+  // Idiomatic facade: `client.character.list()` / `client.character.load({ id })`.
+  get character(): CharacterEntity {
+    return (this._character ??= new CharacterEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.character` instead. */
   Character(data?: any) {
     const self = this
     return new CharacterEntity(self,data)
   }
 
 
+  _spell?: SpellEntity
+
+  // Idiomatic facade: `client.spell.list()` / `client.spell.load({ id })`.
+  get spell(): SpellEntity {
+    return (this._spell ??= new SpellEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.spell` instead. */
   Spell(data?: any) {
     const self = this
     return new SpellEntity(self,data)

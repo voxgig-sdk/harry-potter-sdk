@@ -15,9 +15,6 @@ module HarryPotterConfig
       },
       "options" => {
         "base" => "https://hp-api.onrender.com",
-        "auth" => {
-          "prefix" => "Bearer",
-        },
         "headers" => {
           "content-type" => "application/json",
         },
@@ -214,6 +211,7 @@ module HarryPotterConfig
                         "orig" => "house",
                         "reqd" => true,
                         "type" => "`$STRING`",
+                        "index$" => 0,
                       },
                     ],
                   },
@@ -248,6 +246,7 @@ module HarryPotterConfig
                         "orig" => "id",
                         "reqd" => true,
                         "type" => "`$STRING`",
+                        "index$" => 0,
                       },
                     ],
                   },

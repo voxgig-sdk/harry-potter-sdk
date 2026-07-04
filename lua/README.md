@@ -9,12 +9,9 @@ The Lua SDK for the HarryPotter API — an entity-oriented client using Lua conv
 
 
 ## Install
-```bash
-luarocks install voxgig-sdk-harry-potter
-```
-
-If the module is not yet published, add the source directory to
-your `LUA_PATH`:
+This package is not yet published to LuaRocks. Install it from the
+GitHub release tag (`lua/vX.Y.Z`, see [Releases](https://github.com/voxgig-sdk/harry-potter-sdk/releases)),
+or add the source directory to your `LUA_PATH`:
 
 ```bash
 export LUA_PATH="path/to/lua/?.lua;path/to/lua/?/init.lua;;"
@@ -31,15 +28,13 @@ loading a specific record.
 ```lua
 local sdk = require("harry-potter_sdk")
 
-local client = sdk.new({
-  apikey = os.getenv("HARRY-POTTER_APIKEY"),
-})
+local client = sdk.new()
 ```
 
 ### 2. List characters
 
 ```lua
-local result, err = client:Character():list()
+local result, err = client:character():list()
 if err then error(err) end
 
 if type(result) == "table" then
@@ -53,7 +48,7 @@ end
 ### 3. Load a character
 
 ```lua
-local result, err = client:Character():load({ id = "example_id" })
+local result, err = client:character():load({ id = "example_id" })
 if err then error(err) end
 print(result)
 ```
@@ -101,7 +96,7 @@ Create a mock client for unit testing — no server required:
 ```lua
 local client = sdk.test()
 
-local result, err = client:HarryPotter():load({ id = "test01" })
+local result, err = client:character():load({ id = "test01" })
 -- result contains mock response data
 ```
 
@@ -134,8 +129,7 @@ local client = sdk.new({
 Create a `.env.local` file at the project root:
 
 ```
-HARRY-POTTER_TEST_LIVE=TRUE
-HARRY-POTTER_APIKEY=<your-key>
+HARRY_POTTER_TEST_LIVE=TRUE
 ```
 
 Then run:
@@ -158,7 +152,6 @@ Creates a new SDK client.
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |
@@ -262,7 +255,7 @@ API path: `/api/spells`
 
 ### Character
 
-Create an instance: `const character = client.Character()`
+Create an instance: `const character = client.character`
 
 #### Operations
 
@@ -294,19 +287,19 @@ Create an instance: `const character = client.Character()`
 #### Example: Load
 
 ```ts
-const character = await client.Character().load({ id: 'character_id' })
+const character = await client.character.load({ id: 'character_id' })
 ```
 
 #### Example: List
 
 ```ts
-const characters = await client.Character().list()
+const characters = await client.character.list()
 ```
 
 
 ### Spell
 
-Create an instance: `const spell = client.Spell()`
+Create an instance: `const spell = client.spell`
 
 #### Operations
 
@@ -325,7 +318,7 @@ Create an instance: `const spell = client.Spell()`
 #### Example: List
 
 ```ts
-const spells = await client.Spell().list()
+const spells = await client.spell.list()
 ```
 
 
@@ -400,11 +393,11 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```lua
-local moon = client:Moon(nil)
-moon:load({ planet_id = "earth", id = "luna" }, nil)
+local character = client:character()
+character:load({ id = "example_id" })
 
--- moon:data_get() now returns the loaded moon data
--- moon:match_get() returns the last match criteria
+-- character:data_get() now returns the loaded character data
+-- character:match_get() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

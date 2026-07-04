@@ -43,8 +43,7 @@ class SpellEntityTest < Minitest::Test
     spell_ref01_ent = client.Spell(nil)
     spell_ref01_match = {}
 
-    spell_ref01_list_result, err = spell_ref01_ent.list(spell_ref01_match, nil)
-    assert_nil err
+    spell_ref01_list_result = spell_ref01_ent.list(spell_ref01_match, nil)
     assert spell_ref01_list_result.is_a?(Array)
 
   end
@@ -83,7 +82,6 @@ def spell_basic_setup(extra)
     "HARRYPOTTER_TEST_SPELL_ENTID" => idmap,
     "HARRYPOTTER_TEST_LIVE" => "FALSE",
     "HARRYPOTTER_TEST_EXPLAIN" => "FALSE",
-    "HARRYPOTTER_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -95,7 +93,6 @@ def spell_basic_setup(extra)
   if env["HARRYPOTTER_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["HARRYPOTTER_APIKEY"],
       },
       extra || {},
     ])

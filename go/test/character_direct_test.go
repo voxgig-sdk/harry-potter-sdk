@@ -175,14 +175,12 @@ func characterDirectSetup(mockres any) *characterDirectSetupResult {
 	env := envOverride(map[string]any{
 		"HARRYPOTTER_TEST_CHARACTER_ENTID": map[string]any{},
 		"HARRYPOTTER_TEST_LIVE":    "FALSE",
-		"HARRYPOTTER_APIKEY":       "NONE",
 	})
 
 	live := env["HARRYPOTTER_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
-			"apikey": env["HARRYPOTTER_APIKEY"],
 		}
 		client := sdk.NewHarryPotterSDK(mergedOpts)
 

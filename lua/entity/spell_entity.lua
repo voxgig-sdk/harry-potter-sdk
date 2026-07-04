@@ -81,6 +81,10 @@ end
 
 
 
+---@param reqmatch SpellListMatch
+---@param ctrl? table
+---@return Spell[]
+---@return string? err
 function SpellEntity:list(reqmatch, ctrl)
   local utility = self._utility
   local ctx = utility.make_context({

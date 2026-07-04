@@ -50,8 +50,7 @@ class TestSpellEntity:
         spell_ref01_ent = client.Spell(None)
         spell_ref01_match = {}
 
-        spell_ref01_list_result, err = spell_ref01_ent.list(spell_ref01_match, None)
-        assert err is None
+        spell_ref01_list_result = spell_ref01_ent.list(spell_ref01_match, None)
         assert isinstance(spell_ref01_list_result, list)
 
 
@@ -92,7 +91,6 @@ def _spell_basic_setup(extra):
         "HARRYPOTTER_TEST_SPELL_ENTID": idmap,
         "HARRYPOTTER_TEST_LIVE": "FALSE",
         "HARRYPOTTER_TEST_EXPLAIN": "FALSE",
-        "HARRYPOTTER_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -103,7 +101,6 @@ def _spell_basic_setup(extra):
     if env.get("HARRYPOTTER_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
-                "apikey": env.get("HARRYPOTTER_APIKEY"),
             },
             extra or {},
         ])

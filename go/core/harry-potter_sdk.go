@@ -245,11 +245,17 @@ func (sdk *HarryPotterSDK) Direct(fetchargs map[string]any) (map[string]any, err
 }
 
 
+// Character returns a Character entity bound to this client.
+// Idiomatic usage: client.Character(nil).List(nil, nil) or
+// client.Character(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *HarryPotterSDK) Character(data map[string]any) HarryPotterEntity {
 	return NewCharacterEntityFunc(sdk, data)
 }
 
 
+// Spell returns a Spell entity bound to this client.
+// Idiomatic usage: client.Spell(nil).List(nil, nil) or
+// client.Spell(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *HarryPotterSDK) Spell(data map[string]any) HarryPotterEntity {
 	return NewSpellEntityFunc(sdk, data)
 }
