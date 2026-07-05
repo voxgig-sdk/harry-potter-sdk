@@ -33,8 +33,7 @@ type CharacterLoadMatch struct {
 	Id string `json:"id"`
 }
 
-// CharacterListMatch mirrors the character fields as an all-optional match
-// filter (Go analog of Partial<Character>).
+// CharacterListMatch is the typed request payload for Character.ListTyped.
 type CharacterListMatch struct {
 	Actor *string `json:"actor,omitempty"`
 	Alive *bool `json:"alive,omitempty"`
@@ -60,8 +59,7 @@ type Spell struct {
 	Name *string `json:"name,omitempty"`
 }
 
-// SpellListMatch mirrors the spell fields as an all-optional match
-// filter (Go analog of Partial<Spell>).
+// SpellListMatch is the typed request payload for Spell.ListTyped.
 type SpellListMatch struct {
 	Description *string `json:"description,omitempty"`
 	Id *string `json:"id,omitempty"`

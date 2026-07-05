@@ -28,7 +28,23 @@ export interface CharacterLoadMatch {
   id: string
 }
 
-export type CharacterListMatch = Partial<Character>
+export interface CharacterListMatch {
+  actor?: string
+  alive?: boolean
+  ancestry?: string
+  date_of_birth?: string
+  eye_colour?: string
+  hair_colour?: string
+  hogwarts_staff?: boolean
+  hogwarts_student?: boolean
+  house?: string
+  id?: string
+  image?: string
+  name?: string
+  patronus?: string
+  wand?: Record<string, any>
+  wizard?: boolean
+}
 
 export interface Spell {
   description?: string
@@ -36,5 +52,9 @@ export interface Spell {
   name?: string
 }
 
-export type SpellListMatch = Partial<Spell>
+export interface SpellListMatch {
+  description?: string
+  id?: string
+  name?: string
+}
 

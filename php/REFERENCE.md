@@ -8,7 +8,7 @@ Complete API reference for the HarryPotter PHP SDK.
 ### Constructor
 
 ```php
-require_once __DIR__ . '/harry-potter_sdk.php';
+require_once __DIR__ . '/harrypotter_sdk.php';
 
 $client = new HarryPotterSDK($options);
 ```
@@ -49,11 +49,11 @@ Create a new `CharacterEntity` instance. Pass `null` for no initial data.
 
 Create a new `SpellEntity` instance. Pass `null` for no initial data.
 
-#### `optionsMap(): array`
+#### `options_map(): array`
 
 Return a deep copy of the current SDK options.
 
-#### `getUtility(): ProjectNameUtility`
+#### `get_utility(): HarryPotterUtility`
 
 Return a copy of the SDK utility object.
 
@@ -96,30 +96,30 @@ $character = $client->Character();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `actor` | ``$STRING`` | No |  |
-| `alive` | ``$BOOLEAN`` | No |  |
-| `ancestry` | ``$STRING`` | No |  |
-| `date_of_birth` | ``$STRING`` | No |  |
-| `eye_colour` | ``$STRING`` | No |  |
-| `hair_colour` | ``$STRING`` | No |  |
-| `hogwarts_staff` | ``$BOOLEAN`` | No |  |
-| `hogwarts_student` | ``$BOOLEAN`` | No |  |
-| `house` | ``$STRING`` | No |  |
-| `id` | ``$STRING`` | No |  |
-| `image` | ``$STRING`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `patronus` | ``$STRING`` | No |  |
-| `wand` | ``$OBJECT`` | No |  |
-| `wizard` | ``$BOOLEAN`` | No |  |
+| `actor` | `string` | No |  |
+| `alive` | `bool` | No |  |
+| `ancestry` | `string` | No |  |
+| `date_of_birth` | `string` | No |  |
+| `eye_colour` | `string` | No |  |
+| `hair_colour` | `string` | No |  |
+| `hogwarts_staff` | `bool` | No |  |
+| `hogwarts_student` | `bool` | No |  |
+| `house` | `string` | No |  |
+| `id` | `string` | No |  |
+| `image` | `string` | No |  |
+| `name` | `string` | No |  |
+| `patronus` | `string` | No |  |
+| `wand` | `array` | No |  |
+| `wizard` | `bool` | No |  |
 
 ### Operations
 
-#### `list(array $reqmatch, ?array $ctrl = null): mixed`
+#### `list(?array $reqmatch = null, ?array $ctrl = null): mixed`
 
-List entities matching the given criteria. Returns an array. Throws on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Throws on error.
 
 ```php
-$results = $client->Character()->list([]);
+$results = $client->Character()->list();
 ```
 
 #### `load(array $reqmatch, ?array $ctrl = null): mixed`
@@ -132,19 +132,19 @@ $result = $client->Character()->load(["id" => "character_id"]);
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -153,7 +153,7 @@ Set the entity match criteria.
 Create a new `CharacterEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 
@@ -170,35 +170,35 @@ $spell = $client->Spell();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | ``$STRING`` | No |  |
-| `id` | ``$STRING`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `description` | `string` | No |  |
+| `id` | `string` | No |  |
+| `name` | `string` | No |  |
 
 ### Operations
 
-#### `list(array $reqmatch, ?array $ctrl = null): mixed`
+#### `list(?array $reqmatch = null, ?array $ctrl = null): mixed`
 
-List entities matching the given criteria. Returns an array. Throws on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Throws on error.
 
 ```php
-$results = $client->Spell()->list([]);
+$results = $client->Spell()->list();
 ```
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -207,7 +207,7 @@ Set the entity match criteria.
 Create a new `SpellEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 

@@ -221,13 +221,13 @@ class HarryPotterSDK:
 
 
     def Character(self, data=None) -> "CharacterEntity":
-        """Entity factory: client.Character().list({}) / client.Character().load({"id": ...})."""
+        """Entity factory: client.Character().list() / client.Character().load({"id": ...})."""
         from entity.character_entity import CharacterEntity
         return CharacterEntity(self, data)
 
 
     def Spell(self, data=None) -> "SpellEntity":
-        """Entity factory: client.Spell().list({}) / client.Spell().load({"id": ...})."""
+        """Entity factory: client.Spell().list() / client.Spell().load({"id": ...})."""
         from entity.spell_entity import SpellEntity
         return SpellEntity(self, data)
 

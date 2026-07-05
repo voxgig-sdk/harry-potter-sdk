@@ -86,7 +86,7 @@ CharacterLoadMatch = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Character#list (any subset of Character fields).
+# Request payload for Character#list.
 #
 # @!attribute [rw] actor
 #   @return [String, nil]
@@ -168,7 +168,7 @@ Spell = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Spell#list (any subset of Spell fields).
+# Request payload for Spell#list.
 #
 # @!attribute [rw] description
 #   @return [String, nil]

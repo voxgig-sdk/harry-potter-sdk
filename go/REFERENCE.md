@@ -101,21 +101,21 @@ character := client.Character(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `actor` | ``$STRING`` | No |  |
-| `alive` | ``$BOOLEAN`` | No |  |
-| `ancestry` | ``$STRING`` | No |  |
-| `date_of_birth` | ``$STRING`` | No |  |
-| `eye_colour` | ``$STRING`` | No |  |
-| `hair_colour` | ``$STRING`` | No |  |
-| `hogwarts_staff` | ``$BOOLEAN`` | No |  |
-| `hogwarts_student` | ``$BOOLEAN`` | No |  |
-| `house` | ``$STRING`` | No |  |
-| `id` | ``$STRING`` | No |  |
-| `image` | ``$STRING`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `patronus` | ``$STRING`` | No |  |
-| `wand` | ``$OBJECT`` | No |  |
-| `wizard` | ``$BOOLEAN`` | No |  |
+| `actor` | `string` | No |  |
+| `alive` | `bool` | No |  |
+| `ancestry` | `string` | No |  |
+| `date_of_birth` | `string` | No |  |
+| `eye_colour` | `string` | No |  |
+| `hair_colour` | `string` | No |  |
+| `hogwarts_staff` | `bool` | No |  |
+| `hogwarts_student` | `bool` | No |  |
+| `house` | `string` | No |  |
+| `id` | `string` | No |  |
+| `image` | `string` | No |  |
+| `name` | `string` | No |  |
+| `patronus` | `string` | No |  |
+| `wand` | `map[string]any` | No |  |
+| `wizard` | `bool` | No |  |
 
 ### Operations
 
@@ -169,9 +169,9 @@ spell := client.Spell(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | ``$STRING`` | No |  |
-| `id` | ``$STRING`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `description` | `string` | No |  |
+| `id` | `string` | No |  |
+| `name` | `string` | No |  |
 
 ### Operations
 

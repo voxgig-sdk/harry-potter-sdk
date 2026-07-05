@@ -39,7 +39,7 @@ class CharacterLoadMatch
     public string $id;
 }
 
-/** Match filter for Character#list (any subset of Character fields). */
+/** Request payload for Character#list. */
 class CharacterListMatch
 {
     public ?string $actor = null;
@@ -67,7 +67,7 @@ class Spell
     public ?string $name = null;
 }
 
-/** Match filter for Spell#list (any subset of Spell fields). */
+/** Request payload for Spell#list. */
 class SpellListMatch
 {
     public ?string $description = null;

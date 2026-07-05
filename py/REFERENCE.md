@@ -8,7 +8,7 @@ Complete API reference for the HarryPotter Python SDK.
 ### Constructor
 
 ```python
-from harry-potter_sdk import HarryPotterSDK
+from harrypotter_sdk import HarryPotterSDK
 
 client = HarryPotterSDK(options)
 ```
@@ -91,30 +91,30 @@ character = client.Character()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `actor` | ``$STRING`` | No |  |
-| `alive` | ``$BOOLEAN`` | No |  |
-| `ancestry` | ``$STRING`` | No |  |
-| `date_of_birth` | ``$STRING`` | No |  |
-| `eye_colour` | ``$STRING`` | No |  |
-| `hair_colour` | ``$STRING`` | No |  |
-| `hogwarts_staff` | ``$BOOLEAN`` | No |  |
-| `hogwarts_student` | ``$BOOLEAN`` | No |  |
-| `house` | ``$STRING`` | No |  |
-| `id` | ``$STRING`` | No |  |
-| `image` | ``$STRING`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `patronus` | ``$STRING`` | No |  |
-| `wand` | ``$OBJECT`` | No |  |
-| `wizard` | ``$BOOLEAN`` | No |  |
+| `actor` | `str` | No |  |
+| `alive` | `bool` | No |  |
+| `ancestry` | `str` | No |  |
+| `date_of_birth` | `str` | No |  |
+| `eye_colour` | `str` | No |  |
+| `hair_colour` | `str` | No |  |
+| `hogwarts_staff` | `bool` | No |  |
+| `hogwarts_student` | `bool` | No |  |
+| `house` | `str` | No |  |
+| `id` | `str` | No |  |
+| `image` | `str` | No |  |
+| `name` | `str` | No |  |
+| `patronus` | `str` | No |  |
+| `wand` | `dict` | No |  |
+| `wizard` | `bool` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Character().list({})
+results = client.Character().list()
 for character in results:
     print(character)
 ```
@@ -166,18 +166,18 @@ spell = client.Spell()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | ``$STRING`` | No |  |
-| `id` | ``$STRING`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `description` | `str` | No |  |
+| `id` | `str` | No |  |
+| `name` | `str` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Spell().list({})
+results = client.Spell().list()
 for spell in results:
     print(spell)
 ```

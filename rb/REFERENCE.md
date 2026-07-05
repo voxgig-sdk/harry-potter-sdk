@@ -8,7 +8,7 @@ Complete API reference for the HarryPotter Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'harry-potter_sdk'
+require_relative 'HarryPotter_sdk'
 
 client = HarryPotterSDK.new(options)
 ```
@@ -97,30 +97,30 @@ character = client.Character
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `actor` | ``$STRING`` | No |  |
-| `alive` | ``$BOOLEAN`` | No |  |
-| `ancestry` | ``$STRING`` | No |  |
-| `date_of_birth` | ``$STRING`` | No |  |
-| `eye_colour` | ``$STRING`` | No |  |
-| `hair_colour` | ``$STRING`` | No |  |
-| `hogwarts_staff` | ``$BOOLEAN`` | No |  |
-| `hogwarts_student` | ``$BOOLEAN`` | No |  |
-| `house` | ``$STRING`` | No |  |
-| `id` | ``$STRING`` | No |  |
-| `image` | ``$STRING`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `patronus` | ``$STRING`` | No |  |
-| `wand` | ``$OBJECT`` | No |  |
-| `wizard` | ``$BOOLEAN`` | No |  |
+| `actor` | `String` | No |  |
+| `alive` | `Boolean` | No |  |
+| `ancestry` | `String` | No |  |
+| `date_of_birth` | `String` | No |  |
+| `eye_colour` | `String` | No |  |
+| `hair_colour` | `String` | No |  |
+| `hogwarts_staff` | `Boolean` | No |  |
+| `hogwarts_student` | `Boolean` | No |  |
+| `house` | `String` | No |  |
+| `id` | `String` | No |  |
+| `image` | `String` | No |  |
+| `name` | `String` | No |  |
+| `patronus` | `String` | No |  |
+| `wand` | `Hash` | No |  |
+| `wizard` | `Boolean` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> Array`
+#### `list(reqmatch = nil, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array. Raises on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Raises on error.
 
 ```ruby
-results = client.Character.list(nil)
+results = client.Character.list
 ```
 
 #### `load(reqmatch, ctrl = nil) -> result`
@@ -171,18 +171,18 @@ spell = client.Spell
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | ``$STRING`` | No |  |
-| `id` | ``$STRING`` | No |  |
-| `name` | ``$STRING`` | No |  |
+| `description` | `String` | No |  |
+| `id` | `String` | No |  |
+| `name` | `String` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> Array`
+#### `list(reqmatch = nil, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array. Raises on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Raises on error.
 
 ```ruby
-results = client.Spell.list(nil)
+results = client.Spell.list
 ```
 
 ### Common Methods
