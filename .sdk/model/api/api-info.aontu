@@ -20,9 +20,9 @@ main: {
           url: "http://localhost:5000"
         }
       ]
+      summary: "A magical JSON API for Harry Potter characters, spells, and the wizarding world."
       title: "Harry Potter API"
       version: "1.0.0"
+      website: "https://hp-api.onrender.com"
     }
   }
-}
-

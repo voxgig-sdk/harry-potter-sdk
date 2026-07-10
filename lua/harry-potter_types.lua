@@ -24,8 +24,8 @@
 ---@field wizard? boolean
 
 ---@class CharacterLoadMatch
----@field house string
----@field id string
+---@field house? string
+---@field id? string
 
 ---@class CharacterListMatch
 ---@field actor? string

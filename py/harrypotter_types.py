@@ -34,7 +34,7 @@ class Character(TypedDict, total=False):
     wizard: bool
 
 
-class CharacterLoadMatch(TypedDict):
+class CharacterLoadMatch(TypedDict, total=False):
     house: str
     id: str
 

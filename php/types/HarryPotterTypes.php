@@ -35,8 +35,8 @@ class Character
 /** Request payload for Character#load. */
 class CharacterLoadMatch
 {
-    public string $house;
-    public string $id;
+    public ?string $house = null;
+    public ?string $id = null;
 }
 
 /** Request payload for Character#list. */

@@ -29,8 +29,8 @@ type Character struct {
 
 // CharacterLoadMatch is the typed request payload for Character.LoadTyped.
 type CharacterLoadMatch struct {
-	House string `json:"house"`
-	Id string `json:"id"`
+	House *string `json:"house,omitempty"`
+	Id *string `json:"id,omitempty"`
 }
 
 // CharacterListMatch is the typed request payload for Character.ListTyped.
