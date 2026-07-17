@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- HarryPotter SDK exists test
 
 local sdk = require("harry-potter_sdk")
 
