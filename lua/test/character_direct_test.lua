@@ -113,11 +113,11 @@ function character_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["HARRYPOTTER_TEST_CHARACTER_ENTID"] = {},
-    ["HARRYPOTTER_TEST_LIVE"] = "FALSE",
+    ["HARRY_POTTER_TEST_CHARACTER_ENTID"] = {},
+    ["HARRY_POTTER_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["HARRYPOTTER_TEST_LIVE"] == "TRUE"
+  local live = env["HARRY_POTTER_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

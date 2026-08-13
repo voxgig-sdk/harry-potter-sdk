@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'HarryPotter',
   }
 
 
@@ -80,87 +80,108 @@ class Config {
         },
         {
           "active": true,
-          "name": "date_of_birth",
+          "name": "core",
           "req": false,
           "type": "`$STRING`",
           "index$": 3
         },
         {
           "active": true,
-          "name": "eye_colour",
+          "name": "dateOfBirth",
           "req": false,
           "type": "`$STRING`",
           "index$": 4
         },
         {
           "active": true,
-          "name": "hair_colour",
+          "name": "eyeColour",
           "req": false,
           "type": "`$STRING`",
           "index$": 5
         },
         {
           "active": true,
-          "name": "hogwarts_staff",
+          "name": "hairColour",
           "req": false,
-          "type": "`$BOOLEAN`",
+          "type": "`$STRING`",
           "index$": 6
         },
         {
           "active": true,
-          "name": "hogwarts_student",
+          "name": "hogwartsStaff",
           "req": false,
           "type": "`$BOOLEAN`",
           "index$": 7
         },
         {
           "active": true,
-          "name": "house",
+          "name": "hogwartsStudent",
           "req": false,
-          "type": "`$STRING`",
+          "type": "`$BOOLEAN`",
           "index$": 8
         },
         {
           "active": true,
-          "name": "id",
+          "name": "house",
           "req": false,
           "type": "`$STRING`",
           "index$": 9
         },
         {
           "active": true,
-          "name": "image",
+          "name": "id",
           "req": false,
           "type": "`$STRING`",
           "index$": 10
         },
         {
           "active": true,
-          "name": "name",
+          "name": "image",
           "req": false,
           "type": "`$STRING`",
           "index$": 11
         },
         {
           "active": true,
+          "name": "length",
+          "req": false,
+          "type": "`$NUMBER`",
+          "index$": 12
+        },
+        {
+          "active": true,
+          "name": "name",
+          "req": false,
+          "type": "`$STRING`",
+          "index$": 13
+        },
+        {
+          "active": true,
           "name": "patronus",
           "req": false,
           "type": "`$STRING`",
-          "index$": 12
+          "index$": 14
         },
         {
           "active": true,
           "name": "wand",
           "req": false,
           "type": "`$OBJECT`",
-          "index$": 13
+          "index$": 15
         },
         {
           "active": true,
           "name": "wizard",
           "req": false,
           "type": "`$BOOLEAN`",
-          "index$": 14
+          "index$": 16
+        },
+        {
+          "active": true,
+          "name": "wood",
+          "req": false,
+          "type": "`$STRING`",
+          "index$": 17
         }
       ],
       "name": "character",
@@ -172,6 +193,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/api/characters",
               "parts": [
@@ -188,6 +210,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/api/characters/staff",
               "parts": [
@@ -207,6 +230,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/api/characters/students",
               "parts": [
@@ -246,6 +270,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/api/characters/house/{house}",
               "parts": [
@@ -281,6 +306,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/api/character/{id}",
               "parts": [
@@ -295,7 +321,7 @@ class Config {
               },
               "transform": {
                 "req": "`reqdata`",
-                "res": "`body`"
+                "res": "`body.wand`"
               },
               "index$": 1
             }
@@ -344,6 +370,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/api/spells",
               "parts": [

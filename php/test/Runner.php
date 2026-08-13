@@ -43,8 +43,8 @@ class HarryPotterTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('HARRYPOTTER_TEST_LIVE');
-        $override = self::getenv('HARRYPOTTER_TEST_OVERRIDE');
+        $live = self::getenv('HARRY_POTTER_TEST_LIVE');
+        $override = self::getenv('HARRY_POTTER_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class HarryPotterTestRunner
             }
         }
 
-        $explain = self::getenv('HARRYPOTTER_TEST_EXPLAIN');
+        $explain = self::getenv('HARRY_POTTER_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['HARRYPOTTER_TEST_EXPLAIN'] = $explain;
+            $m['HARRY_POTTER_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

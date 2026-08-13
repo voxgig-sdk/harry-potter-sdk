@@ -52,7 +52,7 @@ except Exception as err:
 
 ### 3. Load a character
 
-`load()` returns the bare record (a `dict`) and raises on error.
+`load()` returns the ENTITY — call data_get() for the record — and raises on error.
 
 ```python
 try:
@@ -136,7 +136,8 @@ Create a mock client for unit testing — no server required:
 ```python
 client = HarryPotterSDK.test()
 
-# Entity ops return the bare record and raise on error.
+# Entity ops return the ENTITY and raises on error;
+# call data_get() for the record.
 character = client.Character().list()
 # character contains the mock response record
 ```
@@ -234,7 +235,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (a `dict` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (a `dict` for single-entity
 ops, a `list` for `list`) and raise on error. Wrap calls in
 `try`/`except` to handle failures.
 
@@ -259,18 +260,21 @@ On error, `ok` is `False` and `err` contains the error value.
 | `actor` |  |
 | `alive` |  |
 | `ancestry` |  |
-| `date_of_birth` |  |
-| `eye_colour` |  |
-| `hair_colour` |  |
-| `hogwarts_staff` |  |
-| `hogwarts_student` |  |
+| `core` |  |
+| `dateOfBirth` |  |
+| `eyeColour` |  |
+| `hairColour` |  |
+| `hogwartsStaff` |  |
+| `hogwartsStudent` |  |
 | `house` |  |
 | `id` |  |
 | `image` |  |
+| `length` |  |
 | `name` |  |
 | `patronus` |  |
 | `wand` |  |
 | `wizard` |  |
+| `wood` |  |
 
 Operations: List, Load.
 
@@ -311,18 +315,21 @@ Create an instance: `character = client.Character()`
 | `actor` | `str` |  |
 | `alive` | `bool` |  |
 | `ancestry` | `str` |  |
-| `date_of_birth` | `str` |  |
-| `eye_colour` | `str` |  |
-| `hair_colour` | `str` |  |
-| `hogwarts_staff` | `bool` |  |
-| `hogwarts_student` | `bool` |  |
+| `core` | `str` |  |
+| `dateOfBirth` | `str` |  |
+| `eyeColour` | `str` |  |
+| `hairColour` | `str` |  |
+| `hogwartsStaff` | `bool` |  |
+| `hogwartsStudent` | `bool` |  |
 | `house` | `str` |  |
 | `id` | `str` |  |
 | `image` | `str` |  |
+| `length` | `float` |  |
 | `name` | `str` |  |
 | `patronus` | `str` |  |
 | `wand` | `dict` |  |
 | `wizard` | `bool` |  |
+| `wood` | `str` |  |
 
 #### Example: Load
 

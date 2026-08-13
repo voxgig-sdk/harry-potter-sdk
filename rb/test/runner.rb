@@ -23,8 +23,8 @@ module HarryPotterTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("HARRYPOTTER_TEST_LIVE")
-    override = getenv("HARRYPOTTER_TEST_OVERRIDE")
+    live = getenv("HARRY_POTTER_TEST_LIVE")
+    override = getenv("HARRY_POTTER_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module HarryPotterTestRunner
       end
     end
 
-    explain = getenv("HARRYPOTTER_TEST_EXPLAIN")
-    m["HARRYPOTTER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("HARRY_POTTER_TEST_EXPLAIN")
+    m["HARRY_POTTER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

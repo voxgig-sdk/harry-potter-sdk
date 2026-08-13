@@ -245,18 +245,21 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 | `actor` |  |
 | `alive` |  |
 | `ancestry` |  |
-| `date_of_birth` |  |
-| `eye_colour` |  |
-| `hair_colour` |  |
-| `hogwarts_staff` |  |
-| `hogwarts_student` |  |
+| `core` |  |
+| `dateOfBirth` |  |
+| `eyeColour` |  |
+| `hairColour` |  |
+| `hogwartsStaff` |  |
+| `hogwartsStudent` |  |
 | `house` |  |
 | `id` |  |
 | `image` |  |
+| `length` |  |
 | `name` |  |
 | `patronus` |  |
 | `wand` |  |
 | `wizard` |  |
+| `wood` |  |
 
 Operations: List, Load.
 
@@ -297,18 +300,21 @@ Create an instance: `local character = client:Character(nil)`
 | `actor` | `string` |  |
 | `alive` | `boolean` |  |
 | `ancestry` | `string` |  |
-| `date_of_birth` | `string` |  |
-| `eye_colour` | `string` |  |
-| `hair_colour` | `string` |  |
-| `hogwarts_staff` | `boolean` |  |
-| `hogwarts_student` | `boolean` |  |
+| `core` | `string` |  |
+| `dateOfBirth` | `string` |  |
+| `eyeColour` | `string` |  |
+| `hairColour` | `string` |  |
+| `hogwartsStaff` | `boolean` |  |
+| `hogwartsStudent` | `boolean` |  |
 | `house` | `string` |  |
 | `id` | `string` |  |
 | `image` | `string` |  |
+| `length` | `number` |  |
 | `name` | `string` |  |
 | `patronus` | `string` |  |
 | `wand` | `table` |  |
 | `wizard` | `boolean` |  |
+| `wood` | `string` |  |
 
 #### Example: Load
 

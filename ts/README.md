@@ -35,7 +35,9 @@ const client = new HarryPotterSDK()
 
 ### 2. List character records
 
-`list()` resolves to an array of Character objects — iterate it directly:
+`list()` resolves to an array of Character ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const characters = await client.Character().list()
@@ -133,7 +135,8 @@ Create a mock client for unit testing — no server required:
 const client = HarryPotterSDK.test()
 
 const character = await client.Character().list()
-// character is a bare entity populated with mock response data
+// character is the entity, populated with mock response data
+// — call character.data() for the record itself
 console.log(character)
 ```
 
@@ -303,18 +306,21 @@ The `prepare()` method returns:
 | `actor` |  |
 | `alive` |  |
 | `ancestry` |  |
-| `date_of_birth` |  |
-| `eye_colour` |  |
-| `hair_colour` |  |
-| `hogwarts_staff` |  |
-| `hogwarts_student` |  |
+| `core` |  |
+| `dateOfBirth` |  |
+| `eyeColour` |  |
+| `hairColour` |  |
+| `hogwartsStaff` |  |
+| `hogwartsStudent` |  |
 | `house` |  |
 | `id` |  |
 | `image` |  |
+| `length` |  |
 | `name` |  |
 | `patronus` |  |
 | `wand` |  |
 | `wizard` |  |
+| `wood` |  |
 
 Operations: list, load.
 
@@ -355,18 +361,21 @@ Create an instance: `const character = client.Character()`
 | `actor` | `string` |  |
 | `alive` | `boolean` |  |
 | `ancestry` | `string` |  |
-| `date_of_birth` | `string` |  |
-| `eye_colour` | `string` |  |
-| `hair_colour` | `string` |  |
-| `hogwarts_staff` | `boolean` |  |
-| `hogwarts_student` | `boolean` |  |
+| `core` | `string` |  |
+| `dateOfBirth` | `string` |  |
+| `eyeColour` | `string` |  |
+| `hairColour` | `string` |  |
+| `hogwartsStaff` | `boolean` |  |
+| `hogwartsStudent` | `boolean` |  |
 | `house` | `string` |  |
 | `id` | `string` |  |
 | `image` | `string` |  |
+| `length` | `number` |  |
 | `name` | `string` |  |
 | `patronus` | `string` |  |
 | `wand` | `Record<string, any>` |  |
 | `wizard` | `boolean` |  |
+| `wood` | `string` |  |
 
 #### Example: Load
 

@@ -19,19 +19,22 @@
 # @!attribute [rw] ancestry
 #   @return [String, nil]
 #
-# @!attribute [rw] date_of_birth
+# @!attribute [rw] core
 #   @return [String, nil]
 #
-# @!attribute [rw] eye_colour
+# @!attribute [rw] dateOfBirth
 #   @return [String, nil]
 #
-# @!attribute [rw] hair_colour
+# @!attribute [rw] eyeColour
 #   @return [String, nil]
 #
-# @!attribute [rw] hogwarts_staff
+# @!attribute [rw] hairColour
+#   @return [String, nil]
+#
+# @!attribute [rw] hogwartsStaff
 #   @return [Boolean, nil]
 #
-# @!attribute [rw] hogwarts_student
+# @!attribute [rw] hogwartsStudent
 #   @return [Boolean, nil]
 #
 # @!attribute [rw] house
@@ -42,6 +45,9 @@
 #
 # @!attribute [rw] image
 #   @return [String, nil]
+#
+# @!attribute [rw] length
+#   @return [Float, nil]
 #
 # @!attribute [rw] name
 #   @return [String, nil]
@@ -54,22 +60,28 @@
 #
 # @!attribute [rw] wizard
 #   @return [Boolean, nil]
+#
+# @!attribute [rw] wood
+#   @return [String, nil]
 Character = Struct.new(
   :actor,
   :alive,
   :ancestry,
-  :date_of_birth,
-  :eye_colour,
-  :hair_colour,
-  :hogwarts_staff,
-  :hogwarts_student,
+  :core,
+  :dateOfBirth,
+  :eyeColour,
+  :hairColour,
+  :hogwartsStaff,
+  :hogwartsStudent,
   :house,
   :id,
   :image,
+  :length,
   :name,
   :patronus,
   :wand,
   :wizard,
+  :wood,
   keyword_init: true
 )
 
@@ -97,19 +109,22 @@ CharacterLoadMatch = Struct.new(
 # @!attribute [rw] ancestry
 #   @return [String, nil]
 #
-# @!attribute [rw] date_of_birth
+# @!attribute [rw] core
 #   @return [String, nil]
 #
-# @!attribute [rw] eye_colour
+# @!attribute [rw] dateOfBirth
 #   @return [String, nil]
 #
-# @!attribute [rw] hair_colour
+# @!attribute [rw] eyeColour
 #   @return [String, nil]
 #
-# @!attribute [rw] hogwarts_staff
+# @!attribute [rw] hairColour
+#   @return [String, nil]
+#
+# @!attribute [rw] hogwartsStaff
 #   @return [Boolean, nil]
 #
-# @!attribute [rw] hogwarts_student
+# @!attribute [rw] hogwartsStudent
 #   @return [Boolean, nil]
 #
 # @!attribute [rw] house
@@ -120,6 +135,9 @@ CharacterLoadMatch = Struct.new(
 #
 # @!attribute [rw] image
 #   @return [String, nil]
+#
+# @!attribute [rw] length
+#   @return [Float, nil]
 #
 # @!attribute [rw] name
 #   @return [String, nil]
@@ -132,22 +150,28 @@ CharacterLoadMatch = Struct.new(
 #
 # @!attribute [rw] wizard
 #   @return [Boolean, nil]
+#
+# @!attribute [rw] wood
+#   @return [String, nil]
 CharacterListMatch = Struct.new(
   :actor,
   :alive,
   :ancestry,
-  :date_of_birth,
-  :eye_colour,
-  :hair_colour,
-  :hogwarts_staff,
-  :hogwarts_student,
+  :core,
+  :dateOfBirth,
+  :eyeColour,
+  :hairColour,
+  :hogwartsStaff,
+  :hogwartsStudent,
   :house,
   :id,
   :image,
+  :length,
   :name,
   :patronus,
   :wand,
   :wizard,
+  :wood,
   keyword_init: true
 )
 

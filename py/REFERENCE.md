@@ -94,18 +94,21 @@ character = client.Character()
 | `actor` | `str` | No |  |
 | `alive` | `bool` | No |  |
 | `ancestry` | `str` | No |  |
-| `date_of_birth` | `str` | No |  |
-| `eye_colour` | `str` | No |  |
-| `hair_colour` | `str` | No |  |
-| `hogwarts_staff` | `bool` | No |  |
-| `hogwarts_student` | `bool` | No |  |
+| `core` | `str` | No |  |
+| `dateOfBirth` | `str` | No |  |
+| `eyeColour` | `str` | No |  |
+| `hairColour` | `str` | No |  |
+| `hogwartsStaff` | `bool` | No |  |
+| `hogwartsStudent` | `bool` | No |  |
 | `house` | `str` | No |  |
 | `id` | `str` | No |  |
 | `image` | `str` | No |  |
+| `length` | `float` | No |  |
 | `name` | `str` | No |  |
 | `patronus` | `str` | No |  |
 | `wand` | `dict` | No |  |
 | `wizard` | `bool` | No |  |
+| `wood` | `str` | No |  |
 
 ### Operations
 

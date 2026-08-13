@@ -49,7 +49,7 @@ try {
 
 ```php
 try {
-    // load() returns the bare Character record (throws on error).
+    // load() returns the ENTITY — call data_get() for the Character record (throws on error).
     $character = $client->Character()->load(["id" => "example_id"]);
     print_r($character);
 } catch (\Throwable $err) {
@@ -140,7 +140,8 @@ $client = HarryPotterSDK::test([
     "entity" => ["character" => ["test01" => ["id" => "test01"]]],
 ]);
 
-// Entity ops return the bare mock record (throws on error).
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
 $character = $client->Character()->list();
 print_r($character);
 ```
@@ -241,7 +242,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -266,18 +267,21 @@ On error, `ok` is `false` and `$err` contains the error value.
 | `actor` |  |
 | `alive` |  |
 | `ancestry` |  |
-| `date_of_birth` |  |
-| `eye_colour` |  |
-| `hair_colour` |  |
-| `hogwarts_staff` |  |
-| `hogwarts_student` |  |
+| `core` |  |
+| `dateOfBirth` |  |
+| `eyeColour` |  |
+| `hairColour` |  |
+| `hogwartsStaff` |  |
+| `hogwartsStudent` |  |
 | `house` |  |
 | `id` |  |
 | `image` |  |
+| `length` |  |
 | `name` |  |
 | `patronus` |  |
 | `wand` |  |
 | `wizard` |  |
+| `wood` |  |
 
 Operations: List, Load.
 
@@ -318,23 +322,26 @@ Create an instance: `$character = $client->Character();`
 | `actor` | `string` |  |
 | `alive` | `bool` |  |
 | `ancestry` | `string` |  |
-| `date_of_birth` | `string` |  |
-| `eye_colour` | `string` |  |
-| `hair_colour` | `string` |  |
-| `hogwarts_staff` | `bool` |  |
-| `hogwarts_student` | `bool` |  |
+| `core` | `string` |  |
+| `dateOfBirth` | `string` |  |
+| `eyeColour` | `string` |  |
+| `hairColour` | `string` |  |
+| `hogwartsStaff` | `bool` |  |
+| `hogwartsStudent` | `bool` |  |
 | `house` | `string` |  |
 | `id` | `string` |  |
 | `image` | `string` |  |
+| `length` | `float` |  |
 | `name` | `string` |  |
 | `patronus` | `string` |  |
 | `wand` | `array` |  |
 | `wizard` | `bool` |  |
+| `wood` | `string` |  |
 
 #### Example: Load
 
 ```php
-// load() returns the bare Character record (throws on error).
+// load() returns the ENTITY — call data_get() for the Character record (throws on error).
 $character = $client->Character()->load(["id" => "character_id"]);
 ```
 

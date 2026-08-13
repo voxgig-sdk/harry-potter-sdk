@@ -273,18 +273,21 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | `"actor"` |  |
 | `"alive"` |  |
 | `"ancestry"` |  |
-| `"date_of_birth"` |  |
-| `"eye_colour"` |  |
-| `"hair_colour"` |  |
-| `"hogwarts_staff"` |  |
-| `"hogwarts_student"` |  |
+| `"core"` |  |
+| `"dateOfBirth"` |  |
+| `"eyeColour"` |  |
+| `"hairColour"` |  |
+| `"hogwartsStaff"` |  |
+| `"hogwartsStudent"` |  |
 | `"house"` |  |
 | `"id"` |  |
 | `"image"` |  |
+| `"length"` |  |
 | `"name"` |  |
 | `"patronus"` |  |
 | `"wand"` |  |
 | `"wizard"` |  |
+| `"wood"` |  |
 
 Operations: List, Load.
 
@@ -325,18 +328,21 @@ Create an instance: `character := client.Character(nil)`
 | `actor` | `string` |  |
 | `alive` | `bool` |  |
 | `ancestry` | `string` |  |
-| `date_of_birth` | `string` |  |
-| `eye_colour` | `string` |  |
-| `hair_colour` | `string` |  |
-| `hogwarts_staff` | `bool` |  |
-| `hogwarts_student` | `bool` |  |
+| `core` | `string` |  |
+| `dateOfBirth` | `string` |  |
+| `eyeColour` | `string` |  |
+| `hairColour` | `string` |  |
+| `hogwartsStaff` | `bool` |  |
+| `hogwartsStudent` | `bool` |  |
 | `house` | `string` |  |
 | `id` | `string` |  |
 | `image` | `string` |  |
+| `length` | `float64` |  |
 | `name` | `string` |  |
 | `patronus` | `string` |  |
 | `wand` | `map[string]any` |  |
 | `wizard` | `bool` |  |
+| `wood` | `string` |  |
 
 #### Example: Load
 

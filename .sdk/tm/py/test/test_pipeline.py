@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import HarryPotterSDK
-from core.error import HarryPotterError
-from core.result import HarryPotterResult
-from core.response import HarryPotterResponse
-from core.spec import HarryPotterSpec
-from feature.base_feature import HarryPotterBaseFeature
+from projectname_sdk.core.error import HarryPotterError
+from projectname_sdk.core.result import HarryPotterResult
+from projectname_sdk.core.response import HarryPotterResponse
+from projectname_sdk.core.spec import HarryPotterSpec
+from projectname_sdk.feature.base_feature import HarryPotterBaseFeature
 
 
 def _client():

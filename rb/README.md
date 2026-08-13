@@ -48,7 +48,7 @@ end
 
 ```ruby
 begin
-  # load returns the bare Character record (raises on error).
+  # load returns the ENTITY — call data_get for the Character record (raises on error).
   character = client.Character.load({ "id" => "example_id" })
   puts character
 rescue => err
@@ -134,7 +134,8 @@ client = HarryPotterSDK.test({
   "entity" => { "character" => { "test01" => { "id" => "test01" } } },
 })
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 character = client.Character.list()
 puts character
 ```
@@ -256,18 +257,21 @@ returns a result `Hash` with these keys:
 | `actor` |  |
 | `alive` |  |
 | `ancestry` |  |
-| `date_of_birth` |  |
-| `eye_colour` |  |
-| `hair_colour` |  |
-| `hogwarts_staff` |  |
-| `hogwarts_student` |  |
+| `core` |  |
+| `dateOfBirth` |  |
+| `eyeColour` |  |
+| `hairColour` |  |
+| `hogwartsStaff` |  |
+| `hogwartsStudent` |  |
 | `house` |  |
 | `id` |  |
 | `image` |  |
+| `length` |  |
 | `name` |  |
 | `patronus` |  |
 | `wand` |  |
 | `wizard` |  |
+| `wood` |  |
 
 Operations: List, Load.
 
@@ -308,23 +312,26 @@ Create an instance: `character = client.Character`
 | `actor` | `String` |  |
 | `alive` | `Boolean` |  |
 | `ancestry` | `String` |  |
-| `date_of_birth` | `String` |  |
-| `eye_colour` | `String` |  |
-| `hair_colour` | `String` |  |
-| `hogwarts_staff` | `Boolean` |  |
-| `hogwarts_student` | `Boolean` |  |
+| `core` | `String` |  |
+| `dateOfBirth` | `String` |  |
+| `eyeColour` | `String` |  |
+| `hairColour` | `String` |  |
+| `hogwartsStaff` | `Boolean` |  |
+| `hogwartsStudent` | `Boolean` |  |
 | `house` | `String` |  |
 | `id` | `String` |  |
 | `image` | `String` |  |
+| `length` | `Float` |  |
 | `name` | `String` |  |
 | `patronus` | `String` |  |
 | `wand` | `Hash` |  |
 | `wizard` | `Boolean` |  |
+| `wood` | `String` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Character record (raises on error).
+# load returns the ENTITY — call data_get for the Character record (raises on error).
 character = client.Character.load({ "id" => "character_id" })
 ```
 

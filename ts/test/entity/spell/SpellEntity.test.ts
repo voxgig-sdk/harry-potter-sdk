@@ -26,8 +26,8 @@ import {
 describe('SpellEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when HARRYPOTTER_TEST_LIVE=TRUE.
-  afterEach(liveDelay('HARRYPOTTER_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when HARRY_POTTER_TEST_LIVE=TRUE.
+  afterEach(liveDelay('HARRY_POTTER_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = HarryPotterSDK.test()
@@ -63,7 +63,7 @@ describe('SpellEntity', async () => {
     const spell_ref01_ent = client.Spell()
     const spell_ref01_match: any = {}
 
-    const spell_ref01_list = await spell_ref01_ent.list(spell_ref01_match)
+    const spell_ref01_list = (await spell_ref01_ent.list(spell_ref01_match)).map((e: any) => e.data())
 
 
   })

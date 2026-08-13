@@ -1,4 +1,4 @@
 module github.com/voxgig-sdk/harry-potter-sdk/go
 
-go 1.20
+go 1.21
 

@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ HarryPotterUtility.registrar = ->(u) {
   u.prepare_params = HarryPotterUtilities::PrepareParams
   u.prepare_path = HarryPotterUtilities::PreparePath
   u.prepare_query = HarryPotterUtilities::PrepareQuery
+  u.graphql_body = HarryPotterUtilities::GraphqlBody
+  u.graphql_errors = HarryPotterUtilities::GraphqlErrors
   u.result_basic = HarryPotterUtilities::ResultBasic
   u.result_body = HarryPotterUtilities::ResultBody
   u.result_headers = HarryPotterUtilities::ResultHeaders

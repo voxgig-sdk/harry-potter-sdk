@@ -131,18 +131,42 @@ const character = client.Character()
 | `actor` | `string` | No |  |
 | `alive` | `boolean` | No |  |
 | `ancestry` | `string` | No |  |
-| `date_of_birth` | `string` | No |  |
-| `eye_colour` | `string` | No |  |
-| `hair_colour` | `string` | No |  |
-| `hogwarts_staff` | `boolean` | No |  |
-| `hogwarts_student` | `boolean` | No |  |
+| `core` | `string` | No |  |
+| `dateOfBirth` | `string` | No |  |
+| `eyeColour` | `string` | No |  |
+| `hairColour` | `string` | No |  |
+| `hogwartsStaff` | `boolean` | No |  |
+| `hogwartsStudent` | `boolean` | No |  |
 | `house` | `string` | No |  |
 | `id` | `string` | No |  |
 | `image` | `string` | No |  |
+| `length` | `number` | No |  |
 | `name` | `string` | No |  |
 | `patronus` | `string` | No |  |
 | `wand` | `Record<string, any>` | No |  |
 | `wizard` | `boolean` | No |  |
+| `wood` | `string` | No |  |
+
+### Actions
+
+This entity exposes custom API actions in addition to the standard
+operations. Select one with `$action` in the call's argument; the
+remaining keys are sent as that action's payload.
+
+| Action | Route | Call |
+| --- | --- | --- |
+| `staff` | `/api/characters/staff` | `client.Character().list({ $action: 'staff', ... })` |
+| `student` | `/api/characters/students` | `client.Character().list({ $action: 'student', ... })` |
+
+An action returns that action's OWN response, which is not necessarily a
+Character record — check the API definition for its shape.
+
+```ts
+const result = await client.Character().list({
+  $action: 'staff',
+  /* ...the action's own arguments */
+})
+```
 
 ### Operations
 

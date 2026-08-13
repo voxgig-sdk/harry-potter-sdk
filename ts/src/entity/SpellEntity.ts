@@ -37,7 +37,7 @@ class SpellEntity extends HarryPotterEntityBase<Spell> {
 
 
 
-  async list(this: any, reqmatch?: SpellListMatch, ctrl?: Control): Promise<Spell[]> {
+  async list(this: any, reqmatch?: SpellListMatch, ctrl?: Control): Promise<SpellEntity[]> {
 
     const utility = this._utility
 

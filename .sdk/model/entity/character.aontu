@@ -21,27 +21,32 @@ main: kit: entity: character: {
       type: "`$STRING`"
     }
     {
-      name: "date_of_birth"
+      name: "core"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "eye_colour"
+      name: "dateOfBirth"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "hair_colour"
+      name: "eyeColour"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "hogwarts_staff"
+      name: "hairColour"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "hogwartsStaff"
       req: false
       type: "`$BOOLEAN`"
     }
     {
-      name: "hogwarts_student"
+      name: "hogwartsStudent"
       req: false
       type: "`$BOOLEAN`"
     }
@@ -59,6 +64,11 @@ main: kit: entity: character: {
       name: "image"
       req: false
       type: "`$STRING`"
+    }
+    {
+      name: "length"
+      req: false
+      type: "`$NUMBER`"
     }
     {
       name: "name"
@@ -79,6 +89,11 @@ main: kit: entity: character: {
       name: "wizard"
       req: false
       type: "`$BOOLEAN`"
+    }
+    {
+      name: "wood"
+      req: false
+      type: "`$STRING`"
     }
   ]
 
@@ -199,7 +214,7 @@ main: kit: entity: character: {
           }
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.wand`"
           }
         }
       ]

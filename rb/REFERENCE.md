@@ -100,18 +100,21 @@ character = client.Character
 | `actor` | `String` | No |  |
 | `alive` | `Boolean` | No |  |
 | `ancestry` | `String` | No |  |
-| `date_of_birth` | `String` | No |  |
-| `eye_colour` | `String` | No |  |
-| `hair_colour` | `String` | No |  |
-| `hogwarts_staff` | `Boolean` | No |  |
-| `hogwarts_student` | `Boolean` | No |  |
+| `core` | `String` | No |  |
+| `dateOfBirth` | `String` | No |  |
+| `eyeColour` | `String` | No |  |
+| `hairColour` | `String` | No |  |
+| `hogwartsStaff` | `Boolean` | No |  |
+| `hogwartsStudent` | `Boolean` | No |  |
 | `house` | `String` | No |  |
 | `id` | `String` | No |  |
 | `image` | `String` | No |  |
+| `length` | `Float` | No |  |
 | `name` | `String` | No |  |
 | `patronus` | `String` | No |  |
 | `wand` | `Hash` | No |  |
 | `wizard` | `Boolean` | No |  |
+| `wood` | `String` | No |  |
 
 ### Operations
 

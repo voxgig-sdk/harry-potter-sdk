@@ -9,18 +9,21 @@ export interface Character {
   actor?: string
   alive?: boolean
   ancestry?: string
-  date_of_birth?: string
-  eye_colour?: string
-  hair_colour?: string
-  hogwarts_staff?: boolean
-  hogwarts_student?: boolean
+  core?: string
+  dateOfBirth?: string
+  eyeColour?: string
+  hairColour?: string
+  hogwartsStaff?: boolean
+  hogwartsStudent?: boolean
   house?: string
   id?: string
   image?: string
+  length?: number
   name?: string
   patronus?: string
   wand?: Record<string, any>
   wizard?: boolean
+  wood?: string
 }
 
 export interface CharacterLoadMatch {
@@ -32,18 +35,27 @@ export interface CharacterListMatch {
   actor?: string
   alive?: boolean
   ancestry?: string
-  date_of_birth?: string
-  eye_colour?: string
-  hair_colour?: string
-  hogwarts_staff?: boolean
-  hogwarts_student?: boolean
+  core?: string
+  dateOfBirth?: string
+  eyeColour?: string
+  hairColour?: string
+  hogwartsStaff?: boolean
+  hogwartsStudent?: boolean
   house?: string
   id?: string
   image?: string
+  length?: number
   name?: string
   patronus?: string
   wand?: Record<string, any>
   wizard?: boolean
+  wood?: string
+
+  // Selects a custom action instead of the plain list:
+  //   'staff' | 'student'
+  // The remaining keys are that action's own payload.
+  $action?: string
+  [action: string]: any
 }
 
 export interface Spell {

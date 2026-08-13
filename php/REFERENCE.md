@@ -99,18 +99,21 @@ $character = $client->Character();
 | `actor` | `string` | No |  |
 | `alive` | `bool` | No |  |
 | `ancestry` | `string` | No |  |
-| `date_of_birth` | `string` | No |  |
-| `eye_colour` | `string` | No |  |
-| `hair_colour` | `string` | No |  |
-| `hogwarts_staff` | `bool` | No |  |
-| `hogwarts_student` | `bool` | No |  |
+| `core` | `string` | No |  |
+| `dateOfBirth` | `string` | No |  |
+| `eyeColour` | `string` | No |  |
+| `hairColour` | `string` | No |  |
+| `hogwartsStaff` | `bool` | No |  |
+| `hogwartsStudent` | `bool` | No |  |
 | `house` | `string` | No |  |
 | `id` | `string` | No |  |
 | `image` | `string` | No |  |
+| `length` | `float` | No |  |
 | `name` | `string` | No |  |
 | `patronus` | `string` | No |  |
 | `wand` | `array` | No |  |
 | `wizard` | `bool` | No |  |
+| `wood` | `string` | No |  |
 
 ### Operations
 

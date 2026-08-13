@@ -18,18 +18,21 @@ class Character
     public ?string $actor = null;
     public ?bool $alive = null;
     public ?string $ancestry = null;
-    public ?string $date_of_birth = null;
-    public ?string $eye_colour = null;
-    public ?string $hair_colour = null;
-    public ?bool $hogwarts_staff = null;
-    public ?bool $hogwarts_student = null;
+    public ?string $core = null;
+    public ?string $dateOfBirth = null;
+    public ?string $eyeColour = null;
+    public ?string $hairColour = null;
+    public ?bool $hogwartsStaff = null;
+    public ?bool $hogwartsStudent = null;
     public ?string $house = null;
     public ?string $id = null;
     public ?string $image = null;
+    public ?float $length = null;
     public ?string $name = null;
     public ?string $patronus = null;
     public ?array $wand = null;
     public ?bool $wizard = null;
+    public ?string $wood = null;
 }
 
 /** Request payload for Character#load. */
@@ -45,18 +48,21 @@ class CharacterListMatch
     public ?string $actor = null;
     public ?bool $alive = null;
     public ?string $ancestry = null;
-    public ?string $date_of_birth = null;
-    public ?string $eye_colour = null;
-    public ?string $hair_colour = null;
-    public ?bool $hogwarts_staff = null;
-    public ?bool $hogwarts_student = null;
+    public ?string $core = null;
+    public ?string $dateOfBirth = null;
+    public ?string $eyeColour = null;
+    public ?string $hairColour = null;
+    public ?bool $hogwartsStaff = null;
+    public ?bool $hogwartsStudent = null;
     public ?string $house = null;
     public ?string $id = null;
     public ?string $image = null;
+    public ?float $length = null;
     public ?string $name = null;
     public ?string $patronus = null;
     public ?array $wand = null;
     public ?bool $wizard = null;
+    public ?string $wood = null;
 }
 
 /** Spell entity data model. */

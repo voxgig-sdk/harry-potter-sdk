@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# HarryPotter SDK exists test
 
 import pytest
 from harrypotter_sdk import HarryPotterSDK

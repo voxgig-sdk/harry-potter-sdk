@@ -8,6 +8,7 @@ guide: {
   entity: character: {
     path: "/api/character/{id}": {
       op: load: method: *GET
+      op: load: transform: res: *("`body.wand`")|top
     }
     path: "/api/characters": {
       op: list: method: *GET

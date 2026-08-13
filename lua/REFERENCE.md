@@ -97,18 +97,21 @@ local character = client:Character(nil)
 | `actor` | `string` | No |  |
 | `alive` | `boolean` | No |  |
 | `ancestry` | `string` | No |  |
-| `date_of_birth` | `string` | No |  |
-| `eye_colour` | `string` | No |  |
-| `hair_colour` | `string` | No |  |
-| `hogwarts_staff` | `boolean` | No |  |
-| `hogwarts_student` | `boolean` | No |  |
+| `core` | `string` | No |  |
+| `dateOfBirth` | `string` | No |  |
+| `eyeColour` | `string` | No |  |
+| `hairColour` | `string` | No |  |
+| `hogwartsStaff` | `boolean` | No |  |
+| `hogwartsStudent` | `boolean` | No |  |
 | `house` | `string` | No |  |
 | `id` | `string` | No |  |
 | `image` | `string` | No |  |
+| `length` | `number` | No |  |
 | `name` | `string` | No |  |
 | `patronus` | `string` | No |  |
 | `wand` | `table` | No |  |
 | `wizard` | `boolean` | No |  |
+| `wood` | `string` | No |  |
 
 ### Operations
 
