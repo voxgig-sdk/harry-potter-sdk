@@ -40,7 +40,7 @@ class HarryPotterSDK
         $utility = new HarryPotterUtility();
         $this->_utility = $utility;
 
-        $config = HarryPotterConfig::make_config();
+        $config = HarryPotterConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

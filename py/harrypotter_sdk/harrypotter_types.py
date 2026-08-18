@@ -37,8 +37,7 @@ class Character(TypedDict, total=False):
     wood: str
 
 
-class CharacterLoadMatch(TypedDict, total=False):
-    house: str
+class CharacterLoadMatch(TypedDict):
     id: str
 
 

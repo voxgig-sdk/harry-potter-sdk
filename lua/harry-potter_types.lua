@@ -27,8 +27,7 @@
 ---@field wood? string
 
 ---@class CharacterLoadMatch
----@field house? string
----@field id? string
+---@field id string
 
 ---@class CharacterListMatch
 ---@field actor? string

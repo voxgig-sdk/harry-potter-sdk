@@ -27,8 +27,7 @@ export interface Character {
 }
 
 export interface CharacterLoadMatch {
-  house?: string
-  id?: string
+  id: string
 }
 
 export interface CharacterListMatch {

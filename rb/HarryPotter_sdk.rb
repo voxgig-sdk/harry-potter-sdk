@@ -28,7 +28,7 @@ class HarryPotterSDK
     utility = HarryPotterUtility.new
     @_utility = utility
 
-    config = HarryPotterConfig.make_config
+    config = HarryPotterConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

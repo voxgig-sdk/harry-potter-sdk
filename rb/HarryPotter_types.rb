@@ -87,13 +87,9 @@ Character = Struct.new(
 
 # Request payload for Character#load.
 #
-# @!attribute [rw] house
-#   @return [String, nil]
-#
 # @!attribute [rw] id
-#   @return [String, nil]
+#   @return [String]
 CharacterLoadMatch = Struct.new(
-  :house,
   :id,
   keyword_init: true
 )
