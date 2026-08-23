@@ -257,24 +257,24 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `actor` |  |
-| `alive` |  |
-| `ancestry` |  |
-| `core` |  |
-| `dateOfBirth` |  |
-| `eyeColour` |  |
-| `hairColour` |  |
-| `hogwartsStaff` |  |
-| `hogwartsStudent` |  |
-| `house` |  |
-| `id` |  |
-| `image` |  |
-| `length` |  |
-| `name` |  |
-| `patronus` |  |
-| `wand` |  |
-| `wizard` |  |
-| `wood` |  |
+| `actor` | Name of the actor who portrayed the character |
+| `alive` | Whether the character is alive |
+| `ancestry` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
+| `core` | Core material of the wand |
+| `dateOfBirth` | Date of birth of the character |
+| `eyeColour` | Eye color of the character |
+| `hairColour` | Hair color of the character |
+| `hogwartsStaff` | Whether the character is a Hogwarts staff member |
+| `hogwartsStudent` | Whether the character is a Hogwarts student |
+| `house` | Hogwarts house the character belongs to |
+| `id` | Unique identifier for the character |
+| `image` | URL to an image of the character |
+| `length` | Length of the wand in inches |
+| `name` | Name of the character |
+| `patronus` | The character's Patronus form |
+| `wand` | Information about the character's wand |
+| `wizard` | Whether the character is a wizard or witch |
+| `wood` | Type of wood the wand is made from |
 
 Operations: List, Load.
 
@@ -284,9 +284,9 @@ API path: `/api/characters`
 
 | Field | Description |
 | --- | --- |
-| `description` |  |
-| `id` |  |
-| `name` |  |
+| `description` | Description of what the spell does |
+| `id` | Unique identifier for the spell |
+| `name` | Name of the spell |
 
 Operations: List.
 
@@ -312,24 +312,24 @@ Create an instance: `character = client.Character()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `actor` | `str` |  |
-| `alive` | `bool` |  |
-| `ancestry` | `str` |  |
-| `core` | `str` |  |
-| `dateOfBirth` | `str` |  |
-| `eyeColour` | `str` |  |
-| `hairColour` | `str` |  |
-| `hogwartsStaff` | `bool` |  |
-| `hogwartsStudent` | `bool` |  |
-| `house` | `str` |  |
-| `id` | `str` |  |
-| `image` | `str` |  |
-| `length` | `float` |  |
-| `name` | `str` |  |
-| `patronus` | `str` |  |
-| `wand` | `dict` |  |
-| `wizard` | `bool` |  |
-| `wood` | `str` |  |
+| `actor` | `str` | Name of the actor who portrayed the character |
+| `alive` | `bool` | Whether the character is alive |
+| `ancestry` | `str` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
+| `core` | `str` | Core material of the wand |
+| `dateOfBirth` | `str` | Date of birth of the character |
+| `eyeColour` | `str` | Eye color of the character |
+| `hairColour` | `str` | Hair color of the character |
+| `hogwartsStaff` | `bool` | Whether the character is a Hogwarts staff member |
+| `hogwartsStudent` | `bool` | Whether the character is a Hogwarts student |
+| `house` | `str` | Hogwarts house the character belongs to |
+| `id` | `str` | Unique identifier for the character |
+| `image` | `str` | URL to an image of the character |
+| `length` | `float` | Length of the wand in inches |
+| `name` | `str` | Name of the character |
+| `patronus` | `str` | The character's Patronus form |
+| `wand` | `dict` | Information about the character's wand |
+| `wizard` | `bool` | Whether the character is a wizard or witch |
+| `wood` | `str` | Type of wood the wand is made from |
 
 #### Example: Load
 
@@ -358,9 +358,9 @@ Create an instance: `spell = client.Spell()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `description` | `str` |  |
-| `id` | `str` |  |
-| `name` | `str` |  |
+| `description` | `str` | Description of what the spell does |
+| `id` | `str` | Unique identifier for the spell |
+| `name` | `str` | Name of the spell |
 
 #### Example: List
 

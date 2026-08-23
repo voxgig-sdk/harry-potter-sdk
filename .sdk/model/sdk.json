@@ -36,108 +36,126 @@
               "active": true,
               "name": "actor",
               "req": false,
+              "short": "Name of the actor who portrayed the character",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "alive",
               "req": false,
+              "short": "Whether the character is alive",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "ancestry",
               "req": false,
+              "short": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "core",
               "req": false,
+              "short": "Core material of the wand",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "dateOfBirth",
               "req": false,
+              "short": "Date of birth of the character",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "eyeColour",
               "req": false,
+              "short": "Eye color of the character",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "hairColour",
               "req": false,
+              "short": "Hair color of the character",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "hogwartsStaff",
               "req": false,
+              "short": "Whether the character is a Hogwarts staff member",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "hogwartsStudent",
               "req": false,
+              "short": "Whether the character is a Hogwarts student",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "house",
               "req": false,
+              "short": "Hogwarts house the character belongs to",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Unique identifier for the character",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "image",
               "req": false,
+              "short": "URL to an image of the character",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "length",
               "req": false,
+              "short": "Length of the wand in inches",
               "type": "`$NUMBER`"
             },
             {
               "active": true,
               "name": "name",
               "req": false,
+              "short": "Name of the character",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "patronus",
               "req": false,
+              "short": "The character's Patronus form",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "wand",
               "req": false,
+              "short": "Information about the character's wand",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "wizard",
               "req": false,
+              "short": "Whether the character is a wizard or witch",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "wood",
               "req": false,
+              "short": "Type of wood the wand is made from",
               "type": "`$STRING`"
             }
           ],
@@ -299,18 +317,21 @@
               "active": true,
               "name": "description",
               "req": false,
+              "short": "Description of what the spell does",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Unique identifier for the spell",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "name",
               "req": false,
+              "short": "Name of the spell",
               "type": "`$STRING`"
             }
           ],

@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "HarryPotter",
+			"slug": "harry-potter",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -34,74 +37,92 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "actor",
+						"short": "Name of the actor who portrayed the character",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "alive",
+						"short": "Whether the character is alive",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "ancestry",
+						"short": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "core",
+						"short": "Core material of the wand",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "dateOfBirth",
+						"short": "Date of birth of the character",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "eyeColour",
+						"short": "Eye color of the character",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "hairColour",
+						"short": "Hair color of the character",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "hogwartsStaff",
+						"short": "Whether the character is a Hogwarts staff member",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "hogwartsStudent",
+						"short": "Whether the character is a Hogwarts student",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "house",
+						"short": "Hogwarts house the character belongs to",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the character",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "image",
+						"short": "URL to an image of the character",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "length",
+						"short": "Length of the wand in inches",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "Name of the character",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "patronus",
+						"short": "The character's Patronus form",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "wand",
+						"short": "Information about the character's wand",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "wizard",
+						"short": "Whether the character is a wizard or witch",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "wood",
+						"short": "Type of wood the wand is made from",
 						"type": "`$STRING`",
 					},
 				},
@@ -246,14 +267,17 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "description",
+						"short": "Description of what the spell does",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the spell",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "Name of the spell",
 						"type": "`$STRING`",
 					},
 				},

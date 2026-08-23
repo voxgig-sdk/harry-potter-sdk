@@ -102,24 +102,24 @@ fmt.Println(character.GetName()) // "character"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `actor` | `string` | No |  |
-| `alive` | `bool` | No |  |
-| `ancestry` | `string` | No |  |
-| `core` | `string` | No |  |
-| `dateOfBirth` | `string` | No |  |
-| `eyeColour` | `string` | No |  |
-| `hairColour` | `string` | No |  |
-| `hogwartsStaff` | `bool` | No |  |
-| `hogwartsStudent` | `bool` | No |  |
-| `house` | `string` | No |  |
-| `id` | `string` | No |  |
-| `image` | `string` | No |  |
-| `length` | `float64` | No |  |
-| `name` | `string` | No |  |
-| `patronus` | `string` | No |  |
-| `wand` | `map[string]any` | No |  |
-| `wizard` | `bool` | No |  |
-| `wood` | `string` | No |  |
+| `actor` | `string` | No | Name of the actor who portrayed the character |
+| `alive` | `bool` | No | Whether the character is alive |
+| `ancestry` | `string` | No | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
+| `core` | `string` | No | Core material of the wand |
+| `dateOfBirth` | `string` | No | Date of birth of the character |
+| `eyeColour` | `string` | No | Eye color of the character |
+| `hairColour` | `string` | No | Hair color of the character |
+| `hogwartsStaff` | `bool` | No | Whether the character is a Hogwarts staff member |
+| `hogwartsStudent` | `bool` | No | Whether the character is a Hogwarts student |
+| `house` | `string` | No | Hogwarts house the character belongs to |
+| `id` | `string` | No | Unique identifier for the character |
+| `image` | `string` | No | URL to an image of the character |
+| `length` | `float64` | No | Length of the wand in inches |
+| `name` | `string` | No | Name of the character |
+| `patronus` | `string` | No | The character's Patronus form |
+| `wand` | `map[string]any` | No | Information about the character's wand |
+| `wizard` | `bool` | No | Whether the character is a wizard or witch |
+| `wood` | `string` | No | Type of wood the wand is made from |
 
 ### Operations
 
@@ -182,9 +182,9 @@ fmt.Println(spell.GetName()) // "spell"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | `string` | No |  |
-| `id` | `string` | No |  |
-| `name` | `string` | No |  |
+| `description` | `string` | No | Description of what the spell does |
+| `id` | `string` | No | Unique identifier for the spell |
+| `name` | `string` | No | Name of the spell |
 
 ### Operations
 

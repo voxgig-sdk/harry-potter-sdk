@@ -8,91 +8,109 @@ main: kit: entity: character: {
     {
       name: "actor"
       req: false
+      short: "Name of the actor who portrayed the character"
       type: "`$STRING`"
     }
     {
       name: "alive"
       req: false
+      short: "Whether the character is alive"
       type: "`$BOOLEAN`"
     }
     {
       name: "ancestry"
       req: false
+      short: "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)"
       type: "`$STRING`"
     }
     {
       name: "core"
       req: false
+      short: "Core material of the wand"
       type: "`$STRING`"
     }
     {
       name: "dateOfBirth"
       req: false
+      short: "Date of birth of the character"
       type: "`$STRING`"
     }
     {
       name: "eyeColour"
       req: false
+      short: "Eye color of the character"
       type: "`$STRING`"
     }
     {
       name: "hairColour"
       req: false
+      short: "Hair color of the character"
       type: "`$STRING`"
     }
     {
       name: "hogwartsStaff"
       req: false
+      short: "Whether the character is a Hogwarts staff member"
       type: "`$BOOLEAN`"
     }
     {
       name: "hogwartsStudent"
       req: false
+      short: "Whether the character is a Hogwarts student"
       type: "`$BOOLEAN`"
     }
     {
       name: "house"
       req: false
+      short: "Hogwarts house the character belongs to"
       type: "`$STRING`"
     }
     {
       name: "id"
       req: false
+      short: "Unique identifier for the character"
       type: "`$STRING`"
     }
     {
       name: "image"
       req: false
+      short: "URL to an image of the character"
       type: "`$STRING`"
     }
     {
       name: "length"
       req: false
+      short: "Length of the wand in inches"
       type: "`$NUMBER`"
     }
     {
       name: "name"
       req: false
+      short: "Name of the character"
       type: "`$STRING`"
     }
     {
       name: "patronus"
       req: false
+      short: "The character's Patronus form"
       type: "`$STRING`"
     }
     {
       name: "wand"
       req: false
+      short: "Information about the character's wand"
       type: "`$OBJECT`"
     }
     {
       name: "wizard"
       req: false
+      short: "Whether the character is a wizard or witch"
       type: "`$BOOLEAN`"
     }
     {
       name: "wood"
       req: false
+      short: "Type of wood the wand is made from"
       type: "`$STRING`"
     }
   ]

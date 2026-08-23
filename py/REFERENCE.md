@@ -91,24 +91,24 @@ character = client.Character()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `actor` | `str` | No |  |
-| `alive` | `bool` | No |  |
-| `ancestry` | `str` | No |  |
-| `core` | `str` | No |  |
-| `dateOfBirth` | `str` | No |  |
-| `eyeColour` | `str` | No |  |
-| `hairColour` | `str` | No |  |
-| `hogwartsStaff` | `bool` | No |  |
-| `hogwartsStudent` | `bool` | No |  |
-| `house` | `str` | No |  |
-| `id` | `str` | No |  |
-| `image` | `str` | No |  |
-| `length` | `float` | No |  |
-| `name` | `str` | No |  |
-| `patronus` | `str` | No |  |
-| `wand` | `dict` | No |  |
-| `wizard` | `bool` | No |  |
-| `wood` | `str` | No |  |
+| `actor` | `str` | No | Name of the actor who portrayed the character |
+| `alive` | `bool` | No | Whether the character is alive |
+| `ancestry` | `str` | No | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
+| `core` | `str` | No | Core material of the wand |
+| `dateOfBirth` | `str` | No | Date of birth of the character |
+| `eyeColour` | `str` | No | Eye color of the character |
+| `hairColour` | `str` | No | Hair color of the character |
+| `hogwartsStaff` | `bool` | No | Whether the character is a Hogwarts staff member |
+| `hogwartsStudent` | `bool` | No | Whether the character is a Hogwarts student |
+| `house` | `str` | No | Hogwarts house the character belongs to |
+| `id` | `str` | No | Unique identifier for the character |
+| `image` | `str` | No | URL to an image of the character |
+| `length` | `float` | No | Length of the wand in inches |
+| `name` | `str` | No | Name of the character |
+| `patronus` | `str` | No | The character's Patronus form |
+| `wand` | `dict` | No | Information about the character's wand |
+| `wizard` | `bool` | No | Whether the character is a wizard or witch |
+| `wood` | `str` | No | Type of wood the wand is made from |
 
 ### Operations
 
@@ -169,9 +169,9 @@ spell = client.Spell()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | `str` | No |  |
-| `id` | `str` | No |  |
-| `name` | `str` | No |  |
+| `description` | `str` | No | Description of what the spell does |
+| `id` | `str` | No | Unique identifier for the spell |
+| `name` | `str` | No | Name of the spell |
 
 ### Operations
 

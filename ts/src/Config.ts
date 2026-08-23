@@ -19,9 +19,20 @@ class Config {
     return fi
   }
 
+  // False for a feature added at runtime via options.extend (station's
+  // adopt path) - the constructor uses this to skip makeFeature for names
+  // no generated class backs.
+  hasFeature(this: any, fn: string) {
+    return null != FEATURE_CLASS[fn]
+  }
+
 
   main = {
     name: 'HarryPotter',
+        slug: "harry-potter",
+    version: "0.0.1",
+    target: "ts",
+
   }
 
 
@@ -59,74 +70,92 @@ class Config {
       "fields": [
         {
           "name": "actor",
+          "short": "Name of the actor who portrayed the character",
           "type": "`$STRING`"
         },
         {
           "name": "alive",
+          "short": "Whether the character is alive",
           "type": "`$BOOLEAN`"
         },
         {
           "name": "ancestry",
+          "short": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
           "type": "`$STRING`"
         },
         {
           "name": "core",
+          "short": "Core material of the wand",
           "type": "`$STRING`"
         },
         {
           "name": "dateOfBirth",
+          "short": "Date of birth of the character",
           "type": "`$STRING`"
         },
         {
           "name": "eyeColour",
+          "short": "Eye color of the character",
           "type": "`$STRING`"
         },
         {
           "name": "hairColour",
+          "short": "Hair color of the character",
           "type": "`$STRING`"
         },
         {
           "name": "hogwartsStaff",
+          "short": "Whether the character is a Hogwarts staff member",
           "type": "`$BOOLEAN`"
         },
         {
           "name": "hogwartsStudent",
+          "short": "Whether the character is a Hogwarts student",
           "type": "`$BOOLEAN`"
         },
         {
           "name": "house",
+          "short": "Hogwarts house the character belongs to",
           "type": "`$STRING`"
         },
         {
           "name": "id",
+          "short": "Unique identifier for the character",
           "type": "`$STRING`"
         },
         {
           "name": "image",
+          "short": "URL to an image of the character",
           "type": "`$STRING`"
         },
         {
           "name": "length",
+          "short": "Length of the wand in inches",
           "type": "`$NUMBER`"
         },
         {
           "name": "name",
+          "short": "Name of the character",
           "type": "`$STRING`"
         },
         {
           "name": "patronus",
+          "short": "The character's Patronus form",
           "type": "`$STRING`"
         },
         {
           "name": "wand",
+          "short": "Information about the character's wand",
           "type": "`$OBJECT`"
         },
         {
           "name": "wizard",
+          "short": "Whether the character is a wizard or witch",
           "type": "`$BOOLEAN`"
         },
         {
           "name": "wood",
+          "short": "Type of wood the wand is made from",
           "type": "`$STRING`"
         }
       ],
@@ -271,14 +300,17 @@ class Config {
       "fields": [
         {
           "name": "description",
+          "short": "Description of what the spell does",
           "type": "`$STRING`"
         },
         {
           "name": "id",
+          "short": "Unique identifier for the spell",
           "type": "`$STRING`"
         },
         {
           "name": "name",
+          "short": "Name of the spell",
           "type": "`$STRING`"
         }
       ],

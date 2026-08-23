@@ -8,16 +8,19 @@ main: kit: entity: spell: {
     {
       name: "description"
       req: false
+      short: "Description of what the spell does"
       type: "`$STRING`"
     }
     {
       name: "id"
       req: false
+      short: "Unique identifier for the spell"
       type: "`$STRING`"
     }
     {
       name: "name"
       req: false
+      short: "Name of the spell"
       type: "`$STRING`"
     }
   ]

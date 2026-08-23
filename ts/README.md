@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -303,24 +303,24 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `actor` |  |
-| `alive` |  |
-| `ancestry` |  |
-| `core` |  |
-| `dateOfBirth` |  |
-| `eyeColour` |  |
-| `hairColour` |  |
-| `hogwartsStaff` |  |
-| `hogwartsStudent` |  |
-| `house` |  |
-| `id` |  |
-| `image` |  |
-| `length` |  |
-| `name` |  |
-| `patronus` |  |
-| `wand` |  |
-| `wizard` |  |
-| `wood` |  |
+| `actor` | Name of the actor who portrayed the character |
+| `alive` | Whether the character is alive |
+| `ancestry` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
+| `core` | Core material of the wand |
+| `dateOfBirth` | Date of birth of the character |
+| `eyeColour` | Eye color of the character |
+| `hairColour` | Hair color of the character |
+| `hogwartsStaff` | Whether the character is a Hogwarts staff member |
+| `hogwartsStudent` | Whether the character is a Hogwarts student |
+| `house` | Hogwarts house the character belongs to |
+| `id` | Unique identifier for the character |
+| `image` | URL to an image of the character |
+| `length` | Length of the wand in inches |
+| `name` | Name of the character |
+| `patronus` | The character's Patronus form |
+| `wand` | Information about the character's wand |
+| `wizard` | Whether the character is a wizard or witch |
+| `wood` | Type of wood the wand is made from |
 
 Operations: list, load.
 
@@ -330,9 +330,9 @@ API path: `/api/characters`
 
 | Field | Description |
 | --- | --- |
-| `description` |  |
-| `id` |  |
-| `name` |  |
+| `description` | Description of what the spell does |
+| `id` | Unique identifier for the spell |
+| `name` | Name of the spell |
 
 Operations: list.
 
@@ -358,24 +358,24 @@ Create an instance: `const character = client.Character()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `actor` | `string` |  |
-| `alive` | `boolean` |  |
-| `ancestry` | `string` |  |
-| `core` | `string` |  |
-| `dateOfBirth` | `string` |  |
-| `eyeColour` | `string` |  |
-| `hairColour` | `string` |  |
-| `hogwartsStaff` | `boolean` |  |
-| `hogwartsStudent` | `boolean` |  |
-| `house` | `string` |  |
-| `id` | `string` |  |
-| `image` | `string` |  |
-| `length` | `number` |  |
-| `name` | `string` |  |
-| `patronus` | `string` |  |
-| `wand` | `Record<string, any>` |  |
-| `wizard` | `boolean` |  |
-| `wood` | `string` |  |
+| `actor` | `string` | Name of the actor who portrayed the character |
+| `alive` | `boolean` | Whether the character is alive |
+| `ancestry` | `string` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
+| `core` | `string` | Core material of the wand |
+| `dateOfBirth` | `string` | Date of birth of the character |
+| `eyeColour` | `string` | Eye color of the character |
+| `hairColour` | `string` | Hair color of the character |
+| `hogwartsStaff` | `boolean` | Whether the character is a Hogwarts staff member |
+| `hogwartsStudent` | `boolean` | Whether the character is a Hogwarts student |
+| `house` | `string` | Hogwarts house the character belongs to |
+| `id` | `string` | Unique identifier for the character |
+| `image` | `string` | URL to an image of the character |
+| `length` | `number` | Length of the wand in inches |
+| `name` | `string` | Name of the character |
+| `patronus` | `string` | The character's Patronus form |
+| `wand` | `Record<string, any>` | Information about the character's wand |
+| `wizard` | `boolean` | Whether the character is a wizard or witch |
+| `wood` | `string` | Type of wood the wand is made from |
 
 #### Example: Load
 
@@ -404,9 +404,9 @@ Create an instance: `const spell = client.Spell()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `description` | `string` |  |
-| `id` | `string` |  |
-| `name` | `string` |  |
+| `description` | `string` | Description of what the spell does |
+| `id` | `string` | Unique identifier for the spell |
+| `name` | `string` | Name of the spell |
 
 #### Example: List
 

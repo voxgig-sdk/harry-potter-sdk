@@ -6,7 +6,7 @@ The Golang SDK for the HarryPotter API — an entity-oriented client using stand
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Character(nil)` — each with the same small set of operations (`List`, `Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -270,24 +270,24 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"actor"` |  |
-| `"alive"` |  |
-| `"ancestry"` |  |
-| `"core"` |  |
-| `"dateOfBirth"` |  |
-| `"eyeColour"` |  |
-| `"hairColour"` |  |
-| `"hogwartsStaff"` |  |
-| `"hogwartsStudent"` |  |
-| `"house"` |  |
-| `"id"` |  |
-| `"image"` |  |
-| `"length"` |  |
-| `"name"` |  |
-| `"patronus"` |  |
-| `"wand"` |  |
-| `"wizard"` |  |
-| `"wood"` |  |
+| `"actor"` | Name of the actor who portrayed the character |
+| `"alive"` | Whether the character is alive |
+| `"ancestry"` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
+| `"core"` | Core material of the wand |
+| `"dateOfBirth"` | Date of birth of the character |
+| `"eyeColour"` | Eye color of the character |
+| `"hairColour"` | Hair color of the character |
+| `"hogwartsStaff"` | Whether the character is a Hogwarts staff member |
+| `"hogwartsStudent"` | Whether the character is a Hogwarts student |
+| `"house"` | Hogwarts house the character belongs to |
+| `"id"` | Unique identifier for the character |
+| `"image"` | URL to an image of the character |
+| `"length"` | Length of the wand in inches |
+| `"name"` | Name of the character |
+| `"patronus"` | The character's Patronus form |
+| `"wand"` | Information about the character's wand |
+| `"wizard"` | Whether the character is a wizard or witch |
+| `"wood"` | Type of wood the wand is made from |
 
 Operations: List, Load.
 
@@ -297,9 +297,9 @@ API path: `/api/characters`
 
 | Field | Description |
 | --- | --- |
-| `"description"` |  |
-| `"id"` |  |
-| `"name"` |  |
+| `"description"` | Description of what the spell does |
+| `"id"` | Unique identifier for the spell |
+| `"name"` | Name of the spell |
 
 Operations: List.
 
@@ -325,24 +325,24 @@ Create an instance: `character := client.Character(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `actor` | `string` |  |
-| `alive` | `bool` |  |
-| `ancestry` | `string` |  |
-| `core` | `string` |  |
-| `dateOfBirth` | `string` |  |
-| `eyeColour` | `string` |  |
-| `hairColour` | `string` |  |
-| `hogwartsStaff` | `bool` |  |
-| `hogwartsStudent` | `bool` |  |
-| `house` | `string` |  |
-| `id` | `string` |  |
-| `image` | `string` |  |
-| `length` | `float64` |  |
-| `name` | `string` |  |
-| `patronus` | `string` |  |
-| `wand` | `map[string]any` |  |
-| `wizard` | `bool` |  |
-| `wood` | `string` |  |
+| `actor` | `string` | Name of the actor who portrayed the character |
+| `alive` | `bool` | Whether the character is alive |
+| `ancestry` | `string` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
+| `core` | `string` | Core material of the wand |
+| `dateOfBirth` | `string` | Date of birth of the character |
+| `eyeColour` | `string` | Eye color of the character |
+| `hairColour` | `string` | Hair color of the character |
+| `hogwartsStaff` | `bool` | Whether the character is a Hogwarts staff member |
+| `hogwartsStudent` | `bool` | Whether the character is a Hogwarts student |
+| `house` | `string` | Hogwarts house the character belongs to |
+| `id` | `string` | Unique identifier for the character |
+| `image` | `string` | URL to an image of the character |
+| `length` | `float64` | Length of the wand in inches |
+| `name` | `string` | Name of the character |
+| `patronus` | `string` | The character's Patronus form |
+| `wand` | `map[string]any` | Information about the character's wand |
+| `wizard` | `bool` | Whether the character is a wizard or witch |
+| `wood` | `string` | Type of wood the wand is made from |
 
 #### Example: Load
 
@@ -379,9 +379,9 @@ Create an instance: `spell := client.Spell(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `description` | `string` |  |
-| `id` | `string` |  |
-| `name` | `string` |  |
+| `description` | `string` | Description of what the spell does |
+| `id` | `string` | Unique identifier for the spell |
+| `name` | `string` | Name of the spell |
 
 #### Example: List
 
