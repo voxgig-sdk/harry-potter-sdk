@@ -42,6 +42,7 @@ class HarryPotterConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
