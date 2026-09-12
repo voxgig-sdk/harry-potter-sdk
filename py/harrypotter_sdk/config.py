@@ -1,6 +1,14 @@
 # HarryPotter SDK configuration
 
 
+# The sekreto plugin DEFINITIONS the model selected per feature, imported
+# above by name from the modules the catalogue's active `plugin.def`
+# entries declare. Handed to each feature (secrets builds its Sekreto
+# with them): a provider kind not listed here is unknown to that SDK.
+FEATURE_PLUGINS = {
+}
+
+
 _shared_config = None
 
 
@@ -104,11 +112,13 @@ def make_config():
             "type": "`$STRING`",
           },
           {
+            "format": "uuid",
             "name": "id",
             "short": "Unique identifier for the character",
             "type": "`$STRING`",
           },
           {
+            "format": "uri",
             "name": "image",
             "short": "URL to an image of the character",
             "type": "`$STRING`",
@@ -144,6 +154,10 @@ def make_config():
             "type": "`$STRING`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "character",
         "op": {
           "list": {
@@ -155,25 +169,39 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/api/characters",
-                "parts": [
-                  "api",
-                  "characters",
+                "segments": [
+                  {
+                    "lit": "api",
+                  },
+                  {
+                    "lit": "characters",
+                  },
                 ],
                 "select": {},
                 "transform": {
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "api",
+                  "characters",
+                ],
               },
               {
                 "args": {},
                 "kind": "http",
                 "method": "GET",
                 "orig": "/api/characters/staff",
-                "parts": [
-                  "api",
-                  "characters",
-                  "staff",
+                "segments": [
+                  {
+                    "lit": "api",
+                  },
+                  {
+                    "lit": "characters",
+                  },
+                  {
+                    "lit": "staff",
+                  },
                 ],
                 "select": {
                   "$action": "staff",
@@ -182,16 +210,27 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "api",
+                  "characters",
+                  "staff",
+                ],
               },
               {
                 "args": {},
                 "kind": "http",
                 "method": "GET",
                 "orig": "/api/characters/students",
-                "parts": [
-                  "api",
-                  "characters",
-                  "students",
+                "segments": [
+                  {
+                    "lit": "api",
+                  },
+                  {
+                    "lit": "characters",
+                  },
+                  {
+                    "lit": "students",
+                  },
                 ],
                 "select": {
                   "$action": "student",
@@ -200,6 +239,11 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "api",
+                  "characters",
+                  "students",
+                ],
               },
             ],
           },
@@ -223,11 +267,19 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/api/characters/house/{house}",
-                "parts": [
-                  "api",
-                  "characters",
-                  "house",
-                  "{house}",
+                "segments": [
+                  {
+                    "lit": "api",
+                  },
+                  {
+                    "lit": "characters",
+                  },
+                  {
+                    "lit": "house",
+                  },
+                  {
+                    "var": "house",
+                  },
                 ],
                 "select": {
                   "exist": [
@@ -238,6 +290,12 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "api",
+                  "characters",
+                  "house",
+                  "{house}",
+                ],
               },
               {
                 "args": {
@@ -255,10 +313,16 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/api/character/{id}",
-                "parts": [
-                  "api",
-                  "character",
-                  "{id}",
+                "segments": [
+                  {
+                    "lit": "api",
+                  },
+                  {
+                    "lit": "character",
+                  },
+                  {
+                    "var": "id",
+                  },
                 ],
                 "select": {
                   "exist": [
@@ -269,6 +333,11 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body.wand`",
                 },
+                "parts": [
+                  "api",
+                  "character",
+                  "{id}",
+                ],
               },
             ],
           },
@@ -299,6 +368,10 @@ def make_config():
             "type": "`$STRING`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "spell",
         "op": {
           "list": {
@@ -310,15 +383,23 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/api/spells",
-                "parts": [
-                  "api",
-                  "spells",
+                "segments": [
+                  {
+                    "lit": "api",
+                  },
+                  {
+                    "lit": "spells",
+                  },
                 ],
                 "select": {},
                 "transform": {
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "api",
+                  "spells",
+                ],
               },
             ],
           },

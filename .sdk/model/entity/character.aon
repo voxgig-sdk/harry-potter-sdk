@@ -66,12 +66,14 @@ main: kit: entity: character: {
       type: "`$STRING`"
     }
     {
+      format: "uuid"
       name: "id"
       req: false
       short: "Unique identifier for the character"
       type: "`$STRING`"
     }
     {
+      format: "uri"
       name: "image"
       req: false
       short: "URL to an image of the character"
@@ -128,9 +130,13 @@ main: kit: entity: character: {
         {
           method: "GET"
           orig: "/api/characters"
-          parts: [
-            "api"
-            "characters"
+          segments: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "characters"
+            }
           ]
           transform: {
             req: "`reqdata`"
@@ -140,10 +146,16 @@ main: kit: entity: character: {
         {
           method: "GET"
           orig: "/api/characters/staff"
-          parts: [
-            "api"
-            "characters"
-            "staff"
+          segments: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "characters"
+            }
+            {
+              lit: "staff"
+            }
           ]
           select: {
             "$action": "staff"
@@ -156,10 +168,16 @@ main: kit: entity: character: {
         {
           method: "GET"
           orig: "/api/characters/students"
-          parts: [
-            "api"
-            "characters"
-            "students"
+          segments: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "characters"
+            }
+            {
+              lit: "students"
+            }
           ]
           select: {
             "$action": "student"
@@ -189,11 +207,19 @@ main: kit: entity: character: {
           }
           method: "GET"
           orig: "/api/characters/house/{house}"
-          parts: [
-            "api"
-            "characters"
-            "house"
-            "{house}"
+          segments: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "characters"
+            }
+            {
+              lit: "house"
+            }
+            {
+              var: "house"
+            }
           ]
           select: {
             exist: [
@@ -220,10 +246,16 @@ main: kit: entity: character: {
           }
           method: "GET"
           orig: "/api/character/{id}"
-          parts: [
-            "api"
-            "character"
-            "{id}"
+          segments: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "character"
+            }
+            {
+              var: "id"
+            }
           ]
           select: {
             exist: [

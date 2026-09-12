@@ -83,11 +83,13 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
           {
+            ["format"] = "uuid",
             ["name"] = "id",
             ["short"] = "Unique identifier for the character",
             ["type"] = "`$STRING`",
           },
           {
+            ["format"] = "uri",
             ["name"] = "image",
             ["short"] = "URL to an image of the character",
             ["type"] = "`$STRING`",
@@ -123,6 +125,10 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "character",
         ["op"] = {
           ["list"] = {
@@ -134,14 +140,22 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/characters",
-                ["parts"] = {
-                  "api",
-                  "characters",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "characters",
+                  },
                 },
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "api",
+                  "characters",
                 },
               },
               {
@@ -149,10 +163,16 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/characters/staff",
-                ["parts"] = {
-                  "api",
-                  "characters",
-                  "staff",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "characters",
+                  },
+                  {
+                    ["lit"] = "staff",
+                  },
                 },
                 ["select"] = {
                   ["$action"] = "staff",
@@ -161,16 +181,27 @@ local function make_config()
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
                 },
+                ["parts"] = {
+                  "api",
+                  "characters",
+                  "staff",
+                },
               },
               {
                 ["args"] = {},
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/characters/students",
-                ["parts"] = {
-                  "api",
-                  "characters",
-                  "students",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "characters",
+                  },
+                  {
+                    ["lit"] = "students",
+                  },
                 },
                 ["select"] = {
                   ["$action"] = "student",
@@ -178,6 +209,11 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "api",
+                  "characters",
+                  "students",
                 },
               },
             },
@@ -202,11 +238,19 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/characters/house/{house}",
-                ["parts"] = {
-                  "api",
-                  "characters",
-                  "house",
-                  "{house}",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "characters",
+                  },
+                  {
+                    ["lit"] = "house",
+                  },
+                  {
+                    ["var"] = "house",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -216,6 +260,12 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "api",
+                  "characters",
+                  "house",
+                  "{house}",
                 },
               },
               {
@@ -234,10 +284,16 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/character/{id}",
-                ["parts"] = {
-                  "api",
-                  "character",
-                  "{id}",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "character",
+                  },
+                  {
+                    ["var"] = "id",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -247,6 +303,11 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.wand`",
+                },
+                ["parts"] = {
+                  "api",
+                  "character",
+                  "{id}",
                 },
               },
             },
@@ -278,6 +339,10 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "spell",
         ["op"] = {
           ["list"] = {
@@ -289,14 +354,22 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/spells",
-                ["parts"] = {
-                  "api",
-                  "spells",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "spells",
+                  },
                 },
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "api",
+                  "spells",
                 },
               },
             },

@@ -10,6 +10,17 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
+// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
+// the model's active plugin groups. A feature that takes a `plugins` option
+// (secrets over sekreto) reads its own entry; a feature with no plugins has
+// none. Named imports above make each definition statically reachable, so
+// an SDK carries exactly the plugin modules its model selects — the same
+// leanness the old side-effect registry imports bought, without a registry.
+const FEATURE_PLUGINS: Record<string, any[]> = {
+  
+}
+
+
 class Config {
 
   makeFeature(this: any, fn: string) {
@@ -120,11 +131,13 @@ class Config {
           "type": "`$STRING`"
         },
         {
+          "format": "uuid",
           "name": "id",
           "short": "Unique identifier for the character",
           "type": "`$STRING`"
         },
         {
+          "format": "uri",
           "name": "image",
           "short": "URL to an image of the character",
           "type": "`$STRING`"
@@ -160,6 +173,10 @@ class Config {
           "type": "`$STRING`"
         }
       ],
+      "id": {
+        "field": "id",
+        "name": "id"
+      },
       "name": "character",
       "op": {
         "list": {
@@ -171,25 +188,39 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/api/characters",
-              "parts": [
-                "api",
-                "characters"
+              "segments": [
+                {
+                  "lit": "api"
+                },
+                {
+                  "lit": "characters"
+                }
               ],
               "select": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "api",
+                "characters"
+              ]
             },
             {
               "args": {},
               "kind": "http",
               "method": "GET",
               "orig": "/api/characters/staff",
-              "parts": [
-                "api",
-                "characters",
-                "staff"
+              "segments": [
+                {
+                  "lit": "api"
+                },
+                {
+                  "lit": "characters"
+                },
+                {
+                  "lit": "staff"
+                }
               ],
               "select": {
                 "$action": "staff"
@@ -197,17 +228,28 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "api",
+                "characters",
+                "staff"
+              ]
             },
             {
               "args": {},
               "kind": "http",
               "method": "GET",
               "orig": "/api/characters/students",
-              "parts": [
-                "api",
-                "characters",
-                "students"
+              "segments": [
+                {
+                  "lit": "api"
+                },
+                {
+                  "lit": "characters"
+                },
+                {
+                  "lit": "students"
+                }
               ],
               "select": {
                 "$action": "student"
@@ -215,7 +257,12 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "api",
+                "characters",
+                "students"
+              ]
             }
           ]
         },
@@ -239,11 +286,19 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/api/characters/house/{house}",
-              "parts": [
-                "api",
-                "characters",
-                "house",
-                "{house}"
+              "segments": [
+                {
+                  "lit": "api"
+                },
+                {
+                  "lit": "characters"
+                },
+                {
+                  "lit": "house"
+                },
+                {
+                  "var": "house"
+                }
               ],
               "select": {
                 "exist": [
@@ -253,7 +308,13 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "api",
+                "characters",
+                "house",
+                "{house}"
+              ]
             },
             {
               "args": {
@@ -271,10 +332,16 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/api/character/{id}",
-              "parts": [
-                "api",
-                "character",
-                "{id}"
+              "segments": [
+                {
+                  "lit": "api"
+                },
+                {
+                  "lit": "character"
+                },
+                {
+                  "var": "id"
+                }
               ],
               "select": {
                 "exist": [
@@ -284,7 +351,12 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body.wand`"
-              }
+              },
+              "parts": [
+                "api",
+                "character",
+                "{id}"
+              ]
             }
           ]
         }
@@ -315,6 +387,10 @@ class Config {
           "type": "`$STRING`"
         }
       ],
+      "id": {
+        "field": "id",
+        "name": "id"
+      },
       "name": "spell",
       "op": {
         "list": {
@@ -326,15 +402,23 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/api/spells",
-              "parts": [
-                "api",
-                "spells"
+              "segments": [
+                {
+                  "lit": "api"
+                },
+                {
+                  "lit": "spells"
+                }
               ],
               "select": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "api",
+                "spells"
+              ]
             }
           ]
         }
@@ -350,6 +434,7 @@ class Config {
 const config = new Config()
 
 export {
-  config
+  config,
+  FEATURE_PLUGINS,
 }
 

@@ -104,6 +104,7 @@
             },
             {
               "active": true,
+              "format": "uuid",
               "name": "id",
               "req": false,
               "short": "Unique identifier for the character",
@@ -111,6 +112,7 @@
             },
             {
               "active": true,
+              "format": "uri",
               "name": "image",
               "req": false,
               "short": "URL to an image of the character",
@@ -175,9 +177,13 @@
                   "kind": "http",
                   "method": "GET",
                   "orig": "/api/characters",
-                  "parts": [
-                    "api",
-                    "characters"
+                  "segments": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "characters"
+                    }
                   ],
                   "select": {},
                   "transform": {
@@ -191,10 +197,16 @@
                   "kind": "http",
                   "method": "GET",
                   "orig": "/api/characters/staff",
-                  "parts": [
-                    "api",
-                    "characters",
-                    "staff"
+                  "segments": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "characters"
+                    },
+                    {
+                      "lit": "staff"
+                    }
                   ],
                   "select": {
                     "$action": "staff"
@@ -210,10 +222,16 @@
                   "kind": "http",
                   "method": "GET",
                   "orig": "/api/characters/students",
-                  "parts": [
-                    "api",
-                    "characters",
-                    "students"
+                  "segments": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "characters"
+                    },
+                    {
+                      "lit": "students"
+                    }
                   ],
                   "select": {
                     "$action": "student"
@@ -247,11 +265,19 @@
                   "kind": "http",
                   "method": "GET",
                   "orig": "/api/characters/house/{house}",
-                  "parts": [
-                    "api",
-                    "characters",
-                    "house",
-                    "{house}"
+                  "segments": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "characters"
+                    },
+                    {
+                      "lit": "house"
+                    },
+                    {
+                      "var": "house"
+                    }
                   ],
                   "select": {
                     "exist": [
@@ -281,10 +307,16 @@
                   "kind": "http",
                   "method": "GET",
                   "orig": "/api/character/{id}",
-                  "parts": [
-                    "api",
-                    "character",
-                    "{id}"
+                  "segments": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "character"
+                    },
+                    {
+                      "var": "id"
+                    }
                   ],
                   "select": {
                     "exist": [
@@ -351,9 +383,13 @@
                   "kind": "http",
                   "method": "GET",
                   "orig": "/api/spells",
-                  "parts": [
-                    "api",
-                    "spells"
+                  "segments": [
+                    {
+                      "lit": "api"
+                    },
+                    {
+                      "lit": "spells"
+                    }
                   ],
                   "select": {},
                   "transform": {
@@ -433,8 +469,11 @@
             }
           },
           "name": "test",
+          "needs": {},
           "origname": "",
           "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
           "target": {
             "go": {
               "deps": {}
@@ -605,6 +644,9 @@
             "sdkrel": ""
           },
           "package": "@voxgig/sdkgen",
+          "provides": {
+            "sekreto": true
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -630,6 +672,10 @@
             "version": "0.0.1"
           },
           "srcfeature": false,
+          "superseded": [
+            "test/runner_test.go",
+            "test/struct_runner_test.go"
+          ],
           "title": "Golang"
         },
         "go-cli": {
@@ -681,6 +727,7 @@
               "active": false
             }
           },
+          "provides": {},
           "publish": {
             "registry": {
               "active": false,
@@ -705,6 +752,7 @@
             },
             "version": "0.0.1"
           },
+          "superseded": [],
           "title": "Go CLI"
         },
         "go-mcp": {
@@ -756,6 +804,7 @@
               "active": false
             }
           },
+          "provides": {},
           "publish": {
             "registry": {
               "active": false,
@@ -780,6 +829,7 @@
             },
             "version": "0.0.1"
           },
+          "superseded": [],
           "title": "Go MCP server"
         },
         "lua": {
@@ -820,6 +870,9 @@
             "sdkrel": ""
           },
           "package": "@voxgig/sdkgen",
+          "provides": {
+            "sekreto": true
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -845,6 +898,9 @@
             "version": "0.0.1"
           },
           "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.lua"
+          ],
           "title": "Lua"
         },
         "php": {
@@ -879,6 +935,9 @@
             "sdkrel": ""
           },
           "package": "@voxgig/sdkgen",
+          "provides": {
+            "sekreto": true
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -904,6 +963,9 @@
             "version": "0.0.1"
           },
           "srcfeature": false,
+          "superseded": [
+            "test/StructRunner.php"
+          ],
           "title": "PHP"
         },
         "py": {
@@ -944,6 +1006,9 @@
             "sdkrel": ""
           },
           "package": "@voxgig/sdkgen",
+          "provides": {
+            "sekreto": true
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -969,6 +1034,9 @@
             "version": "0.0.1"
           },
           "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
           "title": "Python"
         },
         "rb": {
@@ -1014,6 +1082,9 @@
             "sdkrel": ""
           },
           "package": "@voxgig/sdkgen",
+          "provides": {
+            "sekreto": true
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -1039,6 +1110,9 @@
             "version": "0.0.1"
           },
           "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.rb"
+          ],
           "title": "Ruby"
         },
         "ts": {
@@ -1056,11 +1130,6 @@
               "active": true,
               "kind": "dev",
               "version": "^25.6.0"
-            },
-            "dotenv": {
-              "active": true,
-              "kind": "dev",
-              "version": "^17.4.2"
             },
             "typescript": {
               "active": true,
@@ -1089,6 +1158,9 @@
             "sdkrel": ""
           },
           "package": "@voxgig/sdkgen",
+          "provides": {
+            "sekreto": true
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -1113,6 +1185,14 @@
             },
             "version": "0.0.1"
           },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
           "title": "TypeScript"
         }
       },

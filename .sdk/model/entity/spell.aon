@@ -38,9 +38,13 @@ main: kit: entity: spell: {
         {
           method: "GET"
           orig: "/api/spells"
-          parts: [
-            "api"
-            "spells"
+          segments: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "spells"
+            }
           ]
           transform: {
             req: "`reqdata`"

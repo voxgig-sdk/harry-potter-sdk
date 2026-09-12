@@ -109,11 +109,13 @@ class HarryPotterConfig
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'uuid',
               'name' => 'id',
               'short' => 'Unique identifier for the character',
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'uri',
               'name' => 'image',
               'short' => 'URL to an image of the character',
               'type' => '`$STRING`',
@@ -149,6 +151,10 @@ class HarryPotterConfig
               'type' => '`$STRING`',
             ],
           ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
+          ],
           'name' => 'character',
           'op' => [
             'list' => [
@@ -160,14 +166,22 @@ class HarryPotterConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/characters',
-                  'parts' => [
-                    'api',
-                    'characters',
+                  'segments' => [
+                    [
+                      'lit' => 'api',
+                    ],
+                    [
+                      'lit' => 'characters',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'api',
+                    'characters',
                   ],
                 ],
                 [
@@ -175,10 +189,16 @@ class HarryPotterConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/characters/staff',
-                  'parts' => [
-                    'api',
-                    'characters',
-                    'staff',
+                  'segments' => [
+                    [
+                      'lit' => 'api',
+                    ],
+                    [
+                      'lit' => 'characters',
+                    ],
+                    [
+                      'lit' => 'staff',
+                    ],
                   ],
                   'select' => [
                     '$action' => 'staff',
@@ -187,16 +207,27 @@ class HarryPotterConfig
                     'req' => '`reqdata`',
                     'res' => '`body`',
                   ],
+                  'parts' => [
+                    'api',
+                    'characters',
+                    'staff',
+                  ],
                 ],
                 [
                   'args' => [],
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/characters/students',
-                  'parts' => [
-                    'api',
-                    'characters',
-                    'students',
+                  'segments' => [
+                    [
+                      'lit' => 'api',
+                    ],
+                    [
+                      'lit' => 'characters',
+                    ],
+                    [
+                      'lit' => 'students',
+                    ],
                   ],
                   'select' => [
                     '$action' => 'student',
@@ -204,6 +235,11 @@ class HarryPotterConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'api',
+                    'characters',
+                    'students',
                   ],
                 ],
               ],
@@ -228,11 +264,19 @@ class HarryPotterConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/characters/house/{house}',
-                  'parts' => [
-                    'api',
-                    'characters',
-                    'house',
-                    '{house}',
+                  'segments' => [
+                    [
+                      'lit' => 'api',
+                    ],
+                    [
+                      'lit' => 'characters',
+                    ],
+                    [
+                      'lit' => 'house',
+                    ],
+                    [
+                      'var' => 'house',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -242,6 +286,12 @@ class HarryPotterConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'api',
+                    'characters',
+                    'house',
+                    '{house}',
                   ],
                 ],
                 [
@@ -260,10 +310,16 @@ class HarryPotterConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/character/{id}',
-                  'parts' => [
-                    'api',
-                    'character',
-                    '{id}',
+                  'segments' => [
+                    [
+                      'lit' => 'api',
+                    ],
+                    [
+                      'lit' => 'character',
+                    ],
+                    [
+                      'var' => 'id',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -273,6 +329,11 @@ class HarryPotterConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body.wand`',
+                  ],
+                  'parts' => [
+                    'api',
+                    'character',
+                    '{id}',
                   ],
                 ],
               ],
@@ -304,6 +365,10 @@ class HarryPotterConfig
               'type' => '`$STRING`',
             ],
           ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
+          ],
           'name' => 'spell',
           'op' => [
             'list' => [
@@ -315,14 +380,22 @@ class HarryPotterConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/spells',
-                  'parts' => [
-                    'api',
-                    'spells',
+                  'segments' => [
+                    [
+                      'lit' => 'api',
+                    ],
+                    [
+                      'lit' => 'spells',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'api',
+                    'spells',
                   ],
                 ],
               ],
