@@ -105,7 +105,7 @@ local results, err = client:Character():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/harry-potter` | publish pending — [install from git tag](https://github.com/voxgig-sdk/harry-potter-sdk/releases) |
+| TypeScript | `@voxgig-sdk/harry-potter-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/harry-potter-sdk/releases) |
 | Python | `voxgig-sdk-harry-potter` | publish pending — [install from git tag](https://github.com/voxgig-sdk/harry-potter-sdk/releases) |
 | PHP | `voxgig-sdk/harry-potter` | publish pending — [install from git tag](https://github.com/voxgig-sdk/harry-potter-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/harry-potter-sdk/go` | `go get github.com/voxgig-sdk/harry-potter-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Character():list()
 ### TypeScript
 
 ```ts
-import { HarryPotterSDK } from '@voxgig-sdk/harry-potter'
+import { HarryPotterSDK } from '@voxgig-sdk/harry-potter-sdk'
 
 const client = new HarryPotterSDK()
 

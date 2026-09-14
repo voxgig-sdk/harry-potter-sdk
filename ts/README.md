@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { HarryPotterSDK } from '@voxgig-sdk/harry-potter'
+import { HarryPotterSDK } from '@voxgig-sdk/harry-potter-sdk'
 
 const client = new HarryPotterSDK()
 ```
@@ -497,7 +497,7 @@ harry-potter/
 Import the SDK from the package root:
 
 ```ts
-import { HarryPotterSDK } from '@voxgig-sdk/harry-potter'
+import { HarryPotterSDK } from '@voxgig-sdk/harry-potter-sdk'
 ```
 
 ### Entity state
