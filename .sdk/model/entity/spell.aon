@@ -36,6 +36,12 @@ main: kit: entity: spell: {
       name: "list"
       points: [
         {
+          contract: {
+            id: "GET /api/spells"
+            json: "{\"operationId\":\"getAllSpells\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A magical spell from the Harry Potter universe\",\"properties\":{\"description\":{\"description\":\"Description of what the spell does\",\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the spell\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the spell\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with all spells\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/api/spells"
           segments: [

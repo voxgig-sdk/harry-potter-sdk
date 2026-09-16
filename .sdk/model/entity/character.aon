@@ -128,6 +128,12 @@ main: kit: entity: character: {
       name: "list"
       points: [
         {
+          contract: {
+            id: "GET /api/characters"
+            json: "{\"operationId\":\"getAllCharacters\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with all characters\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/api/characters"
           segments: [
@@ -144,6 +150,12 @@ main: kit: entity: character: {
           }
         }
         {
+          contract: {
+            id: "GET /api/characters/staff"
+            json: "{\"operationId\":\"getStaff\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with all staff members\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/api/characters/staff"
           segments: [
@@ -166,6 +178,12 @@ main: kit: entity: character: {
           }
         }
         {
+          contract: {
+            id: "GET /api/characters/students"
+            json: "{\"operationId\":\"getStudents\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with all students\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/api/characters/students"
           segments: [
@@ -205,6 +223,12 @@ main: kit: entity: character: {
               }
             ]
           }
+          contract: {
+            id: "GET /api/characters/house/{house}"
+            json: "{\"operationId\":\"getCharactersByHouse\",\"parameters\":[{\"description\":\"Name of the Hogwarts house\",\"example\":\"gryffindor\",\"in\":\"path\",\"name\":\"house\",\"required\":true,\"schema\":{\"enum\":[\"gryffindor\",\"slytherin\",\"ravenclaw\",\"hufflepuff\"],\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with characters from the specified house\"},\"404\":{\"description\":\"House not found\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/api/characters/house/{house}"
           segments: [
@@ -243,6 +267,12 @@ main: kit: entity: character: {
                 type: "`$STRING`"
               }
             ]
+          }
+          contract: {
+            id: "GET /api/character/{id}"
+            json: "{\"operationId\":\"getCharacterById\",\"parameters\":[{\"description\":\"Unique identifier of the character\",\"example\":\"9e3f7ce4-b9a7-4244-b709-dae5c1f1d4a8\",\"in\":\"path\",\"name\":\"id\",\"required\":true,\"schema\":{\"format\":\"uuid\",\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"}}},\"description\":\"Successful response with character details\"},\"404\":{\"description\":\"Character not found\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
           }
           method: "GET"
           orig: "/api/character/{id}"
