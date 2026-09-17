@@ -127,12 +127,12 @@ class Config {
 
     entity: {
       
-      character: {
-      },
-
-      spell: {
-      },
-
+        character: {
+        },
+  
+        spell: {
+        },
+  
     }
   }
 
