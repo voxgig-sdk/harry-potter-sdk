@@ -92,95 +92,113 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "actor",
-						"short": "Name of the actor who portrayed the character",
+						"title": "Actor",
 						"type": "`$STRING`",
+						"short": "Name of the actor who portrayed the character",
 					},
 					map[string]any{
 						"name": "alive",
-						"short": "Whether the character is alive",
+						"title": "Alive",
 						"type": "`$BOOLEAN`",
+						"short": "Whether the character is alive",
 					},
 					map[string]any{
 						"name": "ancestry",
-						"short": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
+						"title": "Ancestry",
 						"type": "`$STRING`",
+						"short": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
 					},
 					map[string]any{
 						"name": "core",
-						"short": "Core material of the wand",
+						"title": "Core",
 						"type": "`$STRING`",
+						"short": "Core material of the wand",
 					},
 					map[string]any{
 						"name": "dateOfBirth",
-						"short": "Date of birth of the character",
+						"title": "Date Of Birth",
 						"type": "`$STRING`",
+						"short": "Date of birth of the character",
 					},
 					map[string]any{
 						"name": "eyeColour",
-						"short": "Eye color of the character",
+						"title": "Eye Colour",
 						"type": "`$STRING`",
+						"short": "Eye color of the character",
 					},
 					map[string]any{
 						"name": "hairColour",
-						"short": "Hair color of the character",
+						"title": "Hair Colour",
 						"type": "`$STRING`",
+						"short": "Hair color of the character",
 					},
 					map[string]any{
 						"name": "hogwartsStaff",
-						"short": "Whether the character is a Hogwarts staff member",
+						"title": "Hogwarts Staff",
 						"type": "`$BOOLEAN`",
+						"short": "Whether the character is a Hogwarts staff member",
 					},
 					map[string]any{
 						"name": "hogwartsStudent",
-						"short": "Whether the character is a Hogwarts student",
+						"title": "Hogwarts Student",
 						"type": "`$BOOLEAN`",
+						"short": "Whether the character is a Hogwarts student",
 					},
 					map[string]any{
 						"name": "house",
+						"title": "House",
+						"type": "`$STRING`",
 						"short": "Hogwarts house the character belongs to",
-						"type": "`$STRING`",
 					},
 					map[string]any{
-						"format": "uuid",
 						"name": "id",
-						"short": "Unique identifier for the character",
+						"title": "Id",
 						"type": "`$STRING`",
+						"short": "Unique identifier for the character",
+						"format": "uuid",
 					},
 					map[string]any{
-						"format": "uri",
 						"name": "image",
-						"short": "URL to an image of the character",
+						"title": "Image",
 						"type": "`$STRING`",
+						"short": "URL to an image of the character",
+						"format": "uri",
 					},
 					map[string]any{
 						"name": "length",
-						"short": "Length of the wand in inches",
+						"title": "Length",
 						"type": "`$NUMBER`",
+						"short": "Length of the wand in inches",
 					},
 					map[string]any{
 						"name": "name",
-						"short": "Name of the character",
+						"title": "Name",
 						"type": "`$STRING`",
+						"short": "Name of the character",
 					},
 					map[string]any{
 						"name": "patronus",
-						"short": "The character's Patronus form",
+						"title": "Patronus",
 						"type": "`$STRING`",
+						"short": "The character's Patronus form",
 					},
 					map[string]any{
 						"name": "wand",
-						"short": "Information about the character's wand",
+						"title": "Wand",
 						"type": "`$OBJECT`",
+						"short": "Information about the character's wand",
 					},
 					map[string]any{
 						"name": "wizard",
-						"short": "Whether the character is a wizard or witch",
+						"title": "Wizard",
 						"type": "`$BOOLEAN`",
+						"short": "Whether the character is a wizard or witch",
 					},
 					map[string]any{
 						"name": "wood",
-						"short": "Type of wood the wand is made from",
+						"title": "Wood",
 						"type": "`$STRING`",
+						"short": "Type of wood the wand is made from",
 					},
 				},
 				"id": map[string]any{
@@ -194,7 +212,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/api/characters",
@@ -206,18 +223,19 @@ func MakeConfig() map[string]any {
 										"lit": "characters",
 									},
 								},
-								"select": map[string]any{},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
 								"parts": []any{
 									"api",
 									"characters",
 								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/api/characters/staff",
@@ -232,21 +250,22 @@ func MakeConfig() map[string]any {
 										"lit": "staff",
 									},
 								},
-								"select": map[string]any{
-									"$action": "staff",
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
 								"parts": []any{
 									"api",
 									"characters",
 									"staff",
 								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{},
+								"select": map[string]any{
+									"$action": "staff",
+								},
 							},
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/api/characters/students",
@@ -261,17 +280,19 @@ func MakeConfig() map[string]any {
 										"lit": "students",
 									},
 								},
-								"select": map[string]any{
-									"$action": "student",
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
 								"parts": []any{
 									"api",
 									"characters",
 									"students",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{},
+								"select": map[string]any{
+									"$action": "student",
 								},
 							},
 						},
@@ -281,18 +302,6 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"params": []any{
-										map[string]any{
-											"example": "gryffindor",
-											"kind": "param",
-											"name": "house",
-											"orig": "house",
-											"reqd": true,
-											"type": "`$STRING`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/api/characters/house/{house}",
@@ -310,35 +319,36 @@ func MakeConfig() map[string]any {
 										"var": "house",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"house",
-									},
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
 								"parts": []any{
 									"api",
 									"characters",
 									"house",
 									"{house}",
 								},
-							},
-							map[string]any{
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
 								"args": map[string]any{
 									"params": []any{
 										map[string]any{
-											"example": "9e3f7ce4-b9a7-4244-b709-dae5c1f1d4a8",
-											"kind": "param",
-											"name": "id",
-											"orig": "id",
-											"reqd": true,
+											"name": "house",
+											"orig": "house",
 											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "gryffindor",
 										},
 									},
 								},
+								"select": map[string]any{
+									"exist": []any{
+										"house",
+									},
+								},
+							},
+							map[string]any{
 								"kind": "http",
 								"method": "GET",
 								"orig": "/api/character/{id}",
@@ -353,48 +363,60 @@ func MakeConfig() map[string]any {
 										"var": "id",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"id",
-									},
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body.wand`",
-								},
 								"parts": []any{
 									"api",
 									"character",
 									"{id}",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body.wand`",
+								},
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "id",
+											"orig": "id",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "9e3f7ce4-b9a7-4244-b709-dae5c1f1d4a8",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"id",
+									},
 								},
 							},
 						},
 					},
 				},
 				"relations": map[string]any{
-					"ancestors": []any{
-						[]any{
-							"house",
-						},
-					},
+					"ancestors": []any{},
 				},
 			},
 			"spell": map[string]any{
 				"fields": []any{
 					map[string]any{
 						"name": "description",
-						"short": "Description of what the spell does",
+						"title": "Description",
 						"type": "`$STRING`",
+						"short": "Description of what the spell does",
 					},
 					map[string]any{
 						"name": "id",
-						"short": "Unique identifier for the spell",
+						"title": "Id",
 						"type": "`$STRING`",
+						"short": "Unique identifier for the spell",
 					},
 					map[string]any{
 						"name": "name",
-						"short": "Name of the spell",
+						"title": "Name",
 						"type": "`$STRING`",
+						"short": "Name of the spell",
 					},
 				},
 				"id": map[string]any{
@@ -408,7 +430,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/api/spells",
@@ -420,15 +441,17 @@ func MakeConfig() map[string]any {
 										"lit": "spells",
 									},
 								},
-								"select": map[string]any{},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
 								"parts": []any{
 									"api",
 									"spells",
 								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},

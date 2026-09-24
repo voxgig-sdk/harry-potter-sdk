@@ -119,7 +119,7 @@ function character_basic_setup($extra)
 
     // Generate idmap.
     $idmap = [];
-    foreach (["character01", "character02", "character03", "house01", "house02", "house03"] as $k) {
+    foreach (["character01", "character02", "character03"] as $k) {
         $idmap[$k] = strtoupper($k);
     }
 

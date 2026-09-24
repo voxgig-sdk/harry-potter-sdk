@@ -1,0 +1,319 @@
+# Entity: character
+
+main: kit: entity: character: {
+
+  alias: field: {}
+
+  fields: {
+    actor: {
+      h: "Actor"
+      n: "actor"
+      r: false
+      sh: "Name of the actor who portrayed the character"
+      t: "`$STRING`"
+    }
+    alive: {
+      h: "Alive"
+      n: "alive"
+      r: false
+      sh: "Whether the character is alive"
+      t: "`$BOOLEAN`"
+    }
+    ancestry: {
+      h: "Ancestry"
+      n: "ancestry"
+      r: false
+      sh: "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)"
+      t: "`$STRING`"
+    }
+    core: {
+      h: "Core"
+      n: "core"
+      r: false
+      sh: "Core material of the wand"
+      t: "`$STRING`"
+    }
+    dateOfBirth: {
+      h: "Date Of Birth"
+      n: "dateOfBirth"
+      r: false
+      sh: "Date of birth of the character"
+      t: "`$STRING`"
+    }
+    eyeColour: {
+      h: "Eye Colour"
+      n: "eyeColour"
+      r: false
+      sh: "Eye color of the character"
+      t: "`$STRING`"
+    }
+    hairColour: {
+      h: "Hair Colour"
+      n: "hairColour"
+      r: false
+      sh: "Hair color of the character"
+      t: "`$STRING`"
+    }
+    hogwartsStaff: {
+      h: "Hogwarts Staff"
+      n: "hogwartsStaff"
+      r: false
+      sh: "Whether the character is a Hogwarts staff member"
+      t: "`$BOOLEAN`"
+    }
+    hogwartsStudent: {
+      h: "Hogwarts Student"
+      n: "hogwartsStudent"
+      r: false
+      sh: "Whether the character is a Hogwarts student"
+      t: "`$BOOLEAN`"
+    }
+    house: {
+      h: "House"
+      n: "house"
+      r: false
+      sh: "Hogwarts house the character belongs to"
+      t: "`$STRING`"
+    }
+    id: {
+      fo: "uuid"
+      h: "Id"
+      n: "id"
+      r: false
+      sh: "Unique identifier for the character"
+      t: "`$STRING`"
+    }
+    image: {
+      fo: "uri"
+      h: "Image"
+      n: "image"
+      r: false
+      sh: "URL to an image of the character"
+      t: "`$STRING`"
+    }
+    length: {
+      h: "Length"
+      n: "length"
+      r: false
+      sh: "Length of the wand in inches"
+      t: "`$NUMBER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      sh: "Name of the character"
+      t: "`$STRING`"
+    }
+    patronus: {
+      h: "Patronus"
+      n: "patronus"
+      r: false
+      sh: "The character's Patronus form"
+      t: "`$STRING`"
+    }
+    wand: {
+      h: "Wand"
+      n: "wand"
+      r: false
+      sh: "Information about the character's wand"
+      t: "`$OBJECT`"
+    }
+    wizard: {
+      h: "Wizard"
+      n: "wizard"
+      r: false
+      sh: "Whether the character is a wizard or witch"
+      t: "`$BOOLEAN`"
+    }
+    wood: {
+      h: "Wood"
+      n: "wood"
+      r: false
+      sh: "Type of wood the wand is made from"
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "character"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /api/characters"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/characters"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "characters"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /api/characters/staff"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/characters/staff"
+          q: {
+            "$action": "staff"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "characters"
+            }
+            {
+              lit: "staff"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /api/characters/students"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/characters/students"
+          q: {
+            "$action": "student"
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "characters"
+            }
+            {
+              lit: "students"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/characters/house/{house}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "gryffindor"
+                k: "param"
+                n: "house"
+                or: "house"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/characters/house/{house}"
+          q: {
+            exist: [
+              "house"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "characters"
+            }
+            {
+              lit: "house"
+            }
+            {
+              var: "house"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /api/character/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "9e3f7ce4-b9a7-4244-b709-dae5c1f1d4a8"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/character/{id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "character"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.wand`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

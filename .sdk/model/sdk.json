@@ -24,142 +24,226 @@
         "repr": "auto"
       },
       "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "character": {
           "active": true,
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "actor",
-              "req": false,
-              "short": "Name of the actor who portrayed the character",
-              "type": "`$STRING`"
+          "fields": {
+            "actor": {
+              "a": true,
+              "h": "Actor",
+              "n": "actor",
+              "r": false,
+              "sh": "Name of the actor who portrayed the character",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "alive",
-              "req": false,
-              "short": "Whether the character is alive",
-              "type": "`$BOOLEAN`"
+            "alive": {
+              "a": true,
+              "h": "Alive",
+              "n": "alive",
+              "r": false,
+              "sh": "Whether the character is alive",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "ancestry",
-              "req": false,
-              "short": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
-              "type": "`$STRING`"
+            "ancestry": {
+              "a": true,
+              "h": "Ancestry",
+              "n": "ancestry",
+              "r": false,
+              "sh": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "core",
-              "req": false,
-              "short": "Core material of the wand",
-              "type": "`$STRING`"
+            "core": {
+              "a": true,
+              "h": "Core",
+              "n": "core",
+              "r": false,
+              "sh": "Core material of the wand",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "dateOfBirth",
-              "req": false,
-              "short": "Date of birth of the character",
-              "type": "`$STRING`"
+            "dateOfBirth": {
+              "a": true,
+              "h": "Date Of Birth",
+              "n": "dateOfBirth",
+              "r": false,
+              "sh": "Date of birth of the character",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "eyeColour",
-              "req": false,
-              "short": "Eye color of the character",
-              "type": "`$STRING`"
+            "eyeColour": {
+              "a": true,
+              "h": "Eye Colour",
+              "n": "eyeColour",
+              "r": false,
+              "sh": "Eye color of the character",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "hairColour",
-              "req": false,
-              "short": "Hair color of the character",
-              "type": "`$STRING`"
+            "hairColour": {
+              "a": true,
+              "h": "Hair Colour",
+              "n": "hairColour",
+              "r": false,
+              "sh": "Hair color of the character",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "hogwartsStaff",
-              "req": false,
-              "short": "Whether the character is a Hogwarts staff member",
-              "type": "`$BOOLEAN`"
+            "hogwartsStaff": {
+              "a": true,
+              "h": "Hogwarts Staff",
+              "n": "hogwartsStaff",
+              "r": false,
+              "sh": "Whether the character is a Hogwarts staff member",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "hogwartsStudent",
-              "req": false,
-              "short": "Whether the character is a Hogwarts student",
-              "type": "`$BOOLEAN`"
+            "hogwartsStudent": {
+              "a": true,
+              "h": "Hogwarts Student",
+              "n": "hogwartsStudent",
+              "r": false,
+              "sh": "Whether the character is a Hogwarts student",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "house",
-              "req": false,
-              "short": "Hogwarts house the character belongs to",
-              "type": "`$STRING`"
+            "house": {
+              "a": true,
+              "h": "House",
+              "n": "house",
+              "r": false,
+              "sh": "Hogwarts house the character belongs to",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "format": "uuid",
-              "name": "id",
-              "req": false,
-              "short": "Unique identifier for the character",
-              "type": "`$STRING`"
+            "id": {
+              "a": true,
+              "fo": "uuid",
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "sh": "Unique identifier for the character",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "format": "uri",
-              "name": "image",
-              "req": false,
-              "short": "URL to an image of the character",
-              "type": "`$STRING`"
+            "image": {
+              "a": true,
+              "fo": "uri",
+              "h": "Image",
+              "n": "image",
+              "r": false,
+              "sh": "URL to an image of the character",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "length",
-              "req": false,
-              "short": "Length of the wand in inches",
-              "type": "`$NUMBER`"
+            "length": {
+              "a": true,
+              "h": "Length",
+              "n": "length",
+              "r": false,
+              "sh": "Length of the wand in inches",
+              "t": "`$NUMBER`"
             },
-            {
-              "active": true,
-              "name": "name",
-              "req": false,
-              "short": "Name of the character",
-              "type": "`$STRING`"
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "sh": "Name of the character",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "patronus",
-              "req": false,
-              "short": "The character's Patronus form",
-              "type": "`$STRING`"
+            "patronus": {
+              "a": true,
+              "h": "Patronus",
+              "n": "patronus",
+              "r": false,
+              "sh": "The character's Patronus form",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "wand",
-              "req": false,
-              "short": "Information about the character's wand",
-              "type": "`$OBJECT`"
+            "wand": {
+              "a": true,
+              "h": "Wand",
+              "n": "wand",
+              "r": false,
+              "sh": "Information about the character's wand",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "wizard",
-              "req": false,
-              "short": "Whether the character is a wizard or witch",
-              "type": "`$BOOLEAN`"
+            "wizard": {
+              "a": true,
+              "h": "Wizard",
+              "n": "wizard",
+              "r": false,
+              "sh": "Whether the character is a wizard or witch",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "wood",
-              "req": false,
-              "short": "Type of wood the wand is made from",
-              "type": "`$STRING`"
+            "wood": {
+              "a": true,
+              "h": "Wood",
+              "n": "wood",
+              "r": false,
+              "sh": "Type of wood the wand is made from",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "id": {
             "field": "id",
             "name": "id"
@@ -171,18 +255,19 @@
               "name": "list",
               "points": [
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /api/characters",
-                    "json": "{\"operationId\":\"getAllCharacters\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with all characters\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/api/characters",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/characters",
+                  "q": {},
+                  "r": {},
+                  "s": [
                     {
                       "lit": "api"
                     },
@@ -190,25 +275,27 @@
                       "lit": "characters"
                     }
                   ],
-                  "select": {},
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
                 },
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /api/characters/staff",
-                    "json": "{\"operationId\":\"getStaff\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with all staff members\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/api/characters/staff",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/characters/staff",
+                  "q": {
+                    "$action": "staff"
+                  },
+                  "r": {},
+                  "s": [
                     {
                       "lit": "api"
                     },
@@ -219,27 +306,27 @@
                       "lit": "staff"
                     }
                   ],
-                  "select": {
-                    "$action": "staff"
-                  },
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
                 },
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /api/characters/students",
-                    "json": "{\"operationId\":\"getStudents\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with all students\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/api/characters/students",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/characters/students",
+                  "q": {
+                    "$action": "student"
+                  },
+                  "r": {},
+                  "s": [
                     {
                       "lit": "api"
                     },
@@ -250,10 +337,7 @@
                       "lit": "students"
                     }
                   ],
-                  "select": {
-                    "$action": "student"
-                  },
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -265,30 +349,35 @@
               "name": "load",
               "points": [
                 {
-                  "active": true,
-                  "args": {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/characters/house/{house}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
                     "params": [
                       {
-                        "active": true,
-                        "example": "gryffindor",
-                        "kind": "param",
-                        "name": "house",
-                        "orig": "house",
-                        "reqd": true,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "ex": "gryffindor",
+                        "k": "param",
+                        "n": "house",
+                        "or": "house",
+                        "r": true,
+                        "t": "`$STRING`"
                       }
                     ]
                   },
-                  "contract": {
-                    "id": "GET /api/characters/house/{house}",
-                    "json": "{\"operationId\":\"getCharactersByHouse\",\"parameters\":[{\"description\":\"Name of the Hogwarts house\",\"example\":\"gryffindor\",\"in\":\"path\",\"name\":\"house\",\"required\":true,\"schema\":{\"enum\":[\"gryffindor\",\"slytherin\",\"ravenclaw\",\"hufflepuff\"],\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with characters from the specified house\"},\"404\":{\"description\":\"House not found\"}},\"securitySource\":\"unspecified\"}",
-                    "source": "openapi3",
-                    "version": 1
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/characters/house/{house}",
+                  "q": {
+                    "exist": [
+                      "house"
+                    ]
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/api/characters/house/{house}",
-                  "segments": [
+                  "r": {},
+                  "s": [
                     {
                       "lit": "api"
                     },
@@ -302,41 +391,41 @@
                       "var": "house"
                     }
                   ],
-                  "select": {
-                    "exist": [
-                      "house"
-                    ]
-                  },
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
                 },
                 {
-                  "active": true,
-                  "args": {
+                  "a": true,
+                  "co": {
+                    "id": "GET /api/character/{id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
                     "params": [
                       {
-                        "active": true,
-                        "example": "9e3f7ce4-b9a7-4244-b709-dae5c1f1d4a8",
-                        "kind": "param",
-                        "name": "id",
-                        "orig": "id",
-                        "reqd": true,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "ex": "9e3f7ce4-b9a7-4244-b709-dae5c1f1d4a8",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
                       }
                     ]
                   },
-                  "contract": {
-                    "id": "GET /api/character/{id}",
-                    "json": "{\"operationId\":\"getCharacterById\",\"parameters\":[{\"description\":\"Unique identifier of the character\",\"example\":\"9e3f7ce4-b9a7-4244-b709-dae5c1f1d4a8\",\"in\":\"path\",\"name\":\"id\",\"required\":true,\"schema\":{\"format\":\"uuid\",\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"description\":\"A character from the Harry Potter universe\",\"properties\":{\"actor\":{\"description\":\"Name of the actor who portrayed the character\",\"type\":\"string\"},\"alive\":{\"description\":\"Whether the character is alive\",\"type\":\"boolean\"},\"ancestry\":{\"description\":\"Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)\",\"type\":\"string\"},\"dateOfBirth\":{\"description\":\"Date of birth of the character\",\"type\":\"string\"},\"eyeColour\":{\"description\":\"Eye color of the character\",\"type\":\"string\"},\"hairColour\":{\"description\":\"Hair color of the character\",\"type\":\"string\"},\"hogwartsStaff\":{\"description\":\"Whether the character is a Hogwarts staff member\",\"type\":\"boolean\"},\"hogwartsStudent\":{\"description\":\"Whether the character is a Hogwarts student\",\"type\":\"boolean\"},\"house\":{\"description\":\"Hogwarts house the character belongs to\",\"enum\":[\"Gryffindor\",\"Slytherin\",\"Ravenclaw\",\"Hufflepuff\",\"\"],\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the character\",\"format\":\"uuid\",\"type\":\"string\"},\"image\":{\"description\":\"URL to an image of the character\",\"format\":\"uri\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the character\",\"type\":\"string\"},\"patronus\":{\"description\":\"The character's Patronus form\",\"type\":\"string\"},\"wand\":{\"description\":\"Information about the character's wand\",\"properties\":{\"core\":{\"description\":\"Core material of the wand\",\"type\":\"string\"},\"length\":{\"description\":\"Length of the wand in inches\",\"type\":\"number\"},\"wood\":{\"description\":\"Type of wood the wand is made from\",\"type\":\"string\"}},\"type\":\"object\"},\"wizard\":{\"description\":\"Whether the character is a wizard or witch\",\"type\":\"boolean\"}},\"type\":\"object\"}}},\"description\":\"Successful response with character details\"},\"404\":{\"description\":\"Character not found\"}},\"securitySource\":\"unspecified\"}",
-                    "source": "openapi3",
-                    "version": 1
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/character/{id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/api/character/{id}",
-                  "segments": [
+                  "r": {},
+                  "s": [
                     {
                       "lit": "api"
                     },
@@ -347,12 +436,7 @@
                       "var": "id"
                     }
                   ],
-                  "select": {
-                    "exist": [
-                      "id"
-                    ]
-                  },
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body.wand`"
                   }
@@ -361,11 +445,7 @@
             }
           },
           "relations": {
-            "ancestors": [
-              [
-                "house"
-              ]
-            ]
+            "ancestors": []
           }
         },
         "spell": {
@@ -373,29 +453,32 @@
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "description",
-              "req": false,
-              "short": "Description of what the spell does",
-              "type": "`$STRING`"
+          "fields": {
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": false,
+              "sh": "Description of what the spell does",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "id",
-              "req": false,
-              "short": "Unique identifier for the spell",
-              "type": "`$STRING`"
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "sh": "Unique identifier for the spell",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "name",
-              "req": false,
-              "short": "Name of the spell",
-              "type": "`$STRING`"
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "sh": "Name of the spell",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "id": {
             "field": "id",
             "name": "id"
@@ -407,18 +490,19 @@
               "name": "list",
               "points": [
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /api/spells",
-                    "json": "{\"operationId\":\"getAllSpells\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"description\":\"A magical spell from the Harry Potter universe\",\"properties\":{\"description\":{\"description\":\"Description of what the spell does\",\"type\":\"string\"},\"id\":{\"description\":\"Unique identifier for the spell\",\"type\":\"string\"},\"name\":{\"description\":\"Name of the spell\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response with all spells\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/api/spells",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/api/spells",
+                  "q": {},
+                  "r": {},
+                  "s": [
                     {
                       "lit": "api"
                     },
@@ -426,8 +510,7 @@
                       "lit": "spells"
                     }
                   ],
-                  "select": {},
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -856,13 +939,13 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {},
-              "match": {},
-              "op": "list",
-              "spec": [],
-              "valid": [
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
                 {
                   "apply": "ItemExists",
                   "def": {
@@ -872,19 +955,19 @@
               ]
             },
             {
-              "active": true,
-              "data": {},
-              "input": {
+              "a": true,
+              "d": {},
+              "i": {
                 "ref": "character_ref01",
                 "srcdatavar": "character_ref01_data",
                 "suffix": "_dt0"
               },
-              "match": {
+              "m": {
                 "id": "character01"
               },
-              "op": "load",
-              "spec": [],
-              "valid": [
+              "o": "load",
+              "s": [],
+              "v": [
                 {
                   "apply": "TextFieldMark",
                   "def": {
@@ -904,13 +987,13 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {},
-              "match": {},
-              "op": "list",
-              "spec": [],
-              "valid": [
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
                 {
                   "apply": "ItemExists",
                   "def": {

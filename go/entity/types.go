@@ -1,7 +1,7 @@
 // Typed models for the HarryPotter SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,24 +14,6 @@ import (
 
 // Character is the typed data model for the character entity.
 type Character struct {
-	Actor *string `json:"actor,omitempty"`
-	Alive *bool `json:"alive,omitempty"`
-	Ancestry *string `json:"ancestry,omitempty"`
-	Core *string `json:"core,omitempty"`
-	DateOfBirth *string `json:"dateOfBirth,omitempty"`
-	EyeColour *string `json:"eyeColour,omitempty"`
-	HairColour *string `json:"hairColour,omitempty"`
-	HogwartsStaff *bool `json:"hogwartsStaff,omitempty"`
-	HogwartsStudent *bool `json:"hogwartsStudent,omitempty"`
-	House *string `json:"house,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Image *string `json:"image,omitempty"`
-	Length *float64 `json:"length,omitempty"`
-	Name *string `json:"name,omitempty"`
-	Patronus *string `json:"patronus,omitempty"`
-	Wand *map[string]any `json:"wand,omitempty"`
-	Wizard *bool `json:"wizard,omitempty"`
-	Wood *string `json:"wood,omitempty"`
 }
 
 // CharacterLoadMatch is the typed request payload for Character.LoadTyped.
@@ -63,9 +45,6 @@ type CharacterListMatch struct {
 
 // Spell is the typed data model for the spell entity.
 type Spell struct {
-	Description *string `json:"description,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Name *string `json:"name,omitempty"`
 }
 
 // SpellListMatch is the typed request payload for Spell.ListTyped.

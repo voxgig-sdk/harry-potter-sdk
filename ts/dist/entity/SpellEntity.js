@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpellEntity = void 0;
 const HarryPotterEntityBase_1 = require("../HarryPotterEntityBase");
-// TODO: needs Entity superclass
 class SpellEntity extends HarryPotterEntityBase_1.HarryPotterEntityBase {
     constructor(client, entopts) {
         super(client, entopts);

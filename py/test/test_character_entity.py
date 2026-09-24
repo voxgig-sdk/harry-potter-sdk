@@ -114,7 +114,7 @@ def _character_basic_setup(extra):
 
     # Generate idmap via transform.
     idmap = vs.transform(
-        ["character01", "character02", "character03", "house01", "house02", "house03"],
+        ["character01", "character02", "character03"],
         {
             "`$PACK`": ["", {
                 "`$KEY`": "`$COPY`",

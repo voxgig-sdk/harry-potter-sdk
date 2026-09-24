@@ -19,7 +19,6 @@ import type {
   SpellListMatch,
 } from '../HarryPotterTypes'
 
-// TODO: needs Entity superclass
 class SpellEntity extends HarryPotterEntityBase<Spell> {
 
   constructor(client: HarryPotterSDK, entopts: any) {
