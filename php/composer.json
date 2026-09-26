@@ -1,5 +1,5 @@
 {
-  "name": "voxgig-sdk/harry-potter",
+  "name": "voxgig-sdk/harry-potter-sdk",
   "description": "Unofficial generated PHP SDK for the Harry Potter public API. Not affiliated with or endorsed by the upstream API provider.",
   "type": "library",
   "keywords": ["voxgig", "sdk", "generated-sdk", "openapi", "api-client", "harry-potter"],
