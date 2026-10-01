@@ -12,9 +12,14 @@ The SDK exposes the API as capitalised, semantic **Entities** — for example `$
 
 ## Install
 This package is not yet published to Packagist. Install it from the
-GitHub release tag (`php/vX.Y.Z`):
+GitHub release tag (`php/vX.Y.Z`, see [Releases](https://github.com/voxgig-sdk/harry-potter-sdk/releases)), or
+from a clone as a Composer path repository:
 
-- Releases: [https://github.com/voxgig-sdk/harry-potter-sdk/releases](https://github.com/voxgig-sdk/harry-potter-sdk/releases)
+```bash
+git clone https://github.com/voxgig-sdk/harry-potter-sdk
+composer config repositories.harry-potter-sdk path ./harry-potter-sdk/php
+composer require voxgig-sdk/harry-potter-sdk:@dev
+```
 
 
 ## Tutorial: your first API call
@@ -268,7 +273,6 @@ On error, `ok` is `false` and `$err` contains the error value.
 | `actor` | Name of the actor who portrayed the character |
 | `alive` | Whether the character is alive |
 | `ancestry` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | Core material of the wand |
 | `dateOfBirth` | Date of birth of the character |
 | `eyeColour` | Eye color of the character |
 | `hairColour` | Hair color of the character |
@@ -277,12 +281,10 @@ On error, `ok` is `false` and `$err` contains the error value.
 | `house` | Hogwarts house the character belongs to |
 | `id` | Unique identifier for the character |
 | `image` | URL to an image of the character |
-| `length` | Length of the wand in inches |
 | `name` | Name of the character |
 | `patronus` | The character's Patronus form |
 | `wand` | Information about the character's wand |
 | `wizard` | Whether the character is a wizard or witch |
-| `wood` | Type of wood the wand is made from |
 
 Operations: List, Load.
 
@@ -323,7 +325,6 @@ Create an instance: `$character = $client->Character();`
 | `actor` | `string` | Name of the actor who portrayed the character |
 | `alive` | `bool` | Whether the character is alive |
 | `ancestry` | `string` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | `string` | Core material of the wand |
 | `dateOfBirth` | `string` | Date of birth of the character |
 | `eyeColour` | `string` | Eye color of the character |
 | `hairColour` | `string` | Hair color of the character |
@@ -332,12 +333,10 @@ Create an instance: `$character = $client->Character();`
 | `house` | `string` | Hogwarts house the character belongs to |
 | `id` | `string` | Unique identifier for the character |
 | `image` | `string` | URL to an image of the character |
-| `length` | `float` | Length of the wand in inches |
 | `name` | `string` | Name of the character |
 | `patronus` | `string` | The character's Patronus form |
 | `wand` | `array` | Information about the character's wand |
 | `wizard` | `bool` | Whether the character is a wizard or witch |
-| `wood` | `string` | Type of wood the wand is made from |
 
 #### Example: Load
 

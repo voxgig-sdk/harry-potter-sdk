@@ -260,7 +260,6 @@ On error, `ok` is `False` and `err` contains the error value.
 | `actor` | Name of the actor who portrayed the character |
 | `alive` | Whether the character is alive |
 | `ancestry` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | Core material of the wand |
 | `dateOfBirth` | Date of birth of the character |
 | `eyeColour` | Eye color of the character |
 | `hairColour` | Hair color of the character |
@@ -269,12 +268,10 @@ On error, `ok` is `False` and `err` contains the error value.
 | `house` | Hogwarts house the character belongs to |
 | `id` | Unique identifier for the character |
 | `image` | URL to an image of the character |
-| `length` | Length of the wand in inches |
 | `name` | Name of the character |
 | `patronus` | The character's Patronus form |
 | `wand` | Information about the character's wand |
 | `wizard` | Whether the character is a wizard or witch |
-| `wood` | Type of wood the wand is made from |
 
 Operations: List, Load.
 
@@ -315,7 +312,6 @@ Create an instance: `character = client.Character()`
 | `actor` | `str` | Name of the actor who portrayed the character |
 | `alive` | `bool` | Whether the character is alive |
 | `ancestry` | `str` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | `str` | Core material of the wand |
 | `dateOfBirth` | `str` | Date of birth of the character |
 | `eyeColour` | `str` | Eye color of the character |
 | `hairColour` | `str` | Hair color of the character |
@@ -324,12 +320,10 @@ Create an instance: `character = client.Character()`
 | `house` | `str` | Hogwarts house the character belongs to |
 | `id` | `str` | Unique identifier for the character |
 | `image` | `str` | URL to an image of the character |
-| `length` | `float` | Length of the wand in inches |
 | `name` | `str` | Name of the character |
 | `patronus` | `str` | The character's Patronus form |
 | `wand` | `dict` | Information about the character's wand |
 | `wizard` | `bool` | Whether the character is a wizard or witch |
-| `wood` | `str` | Type of wood the wand is made from |
 
 #### Example: Load
 

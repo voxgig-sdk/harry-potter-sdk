@@ -26,7 +26,6 @@ type CharacterListMatch struct {
 	Actor *string `json:"actor,omitempty"`
 	Alive *bool `json:"alive,omitempty"`
 	Ancestry *string `json:"ancestry,omitempty"`
-	Core *string `json:"core,omitempty"`
 	DateOfBirth *string `json:"dateOfBirth,omitempty"`
 	EyeColour *string `json:"eyeColour,omitempty"`
 	HairColour *string `json:"hairColour,omitempty"`
@@ -35,12 +34,10 @@ type CharacterListMatch struct {
 	House *string `json:"house,omitempty"`
 	Id *string `json:"id,omitempty"`
 	Image *string `json:"image,omitempty"`
-	Length *float64 `json:"length,omitempty"`
 	Name *string `json:"name,omitempty"`
 	Patronus *string `json:"patronus,omitempty"`
 	Wand *map[string]any `json:"wand,omitempty"`
 	Wizard *bool `json:"wizard,omitempty"`
-	Wood *string `json:"wood,omitempty"`
 }
 
 // Spell is the typed data model for the spell entity.

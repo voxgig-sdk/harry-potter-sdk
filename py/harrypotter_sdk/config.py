@@ -134,12 +134,6 @@ def make_config():
             "short": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
           },
           {
-            "name": "core",
-            "title": "Core",
-            "type": "`$STRING`",
-            "short": "Core material of the wand",
-          },
-          {
             "name": "dateOfBirth",
             "title": "Date Of Birth",
             "type": "`$STRING`",
@@ -190,12 +184,6 @@ def make_config():
             "format": "uri",
           },
           {
-            "name": "length",
-            "title": "Length",
-            "type": "`$NUMBER`",
-            "short": "Length of the wand in inches",
-          },
-          {
             "name": "name",
             "title": "Name",
             "type": "`$STRING`",
@@ -218,12 +206,6 @@ def make_config():
             "title": "Wizard",
             "type": "`$BOOLEAN`",
             "short": "Whether the character is a wizard or witch",
-          },
-          {
-            "name": "wood",
-            "title": "Wood",
-            "type": "`$STRING`",
-            "short": "Type of wood the wand is made from",
           },
         ],
         "id": {
@@ -396,7 +378,7 @@ def make_config():
                 "rename": {},
                 "transform": {
                   "req": "`reqdata`",
-                  "res": "`body.wand`",
+                  "res": "`body`",
                 },
                 "args": {
                   "params": [

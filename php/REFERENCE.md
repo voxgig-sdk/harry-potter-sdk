@@ -99,7 +99,6 @@ $character = $client->Character();
 | `actor` | `string` | No | Name of the actor who portrayed the character |
 | `alive` | `bool` | No | Whether the character is alive |
 | `ancestry` | `string` | No | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | `string` | No | Core material of the wand |
 | `dateOfBirth` | `string` | No | Date of birth of the character |
 | `eyeColour` | `string` | No | Eye color of the character |
 | `hairColour` | `string` | No | Hair color of the character |
@@ -108,12 +107,10 @@ $character = $client->Character();
 | `house` | `string` | No | Hogwarts house the character belongs to |
 | `id` | `string` | No | Unique identifier for the character |
 | `image` | `string` | No | URL to an image of the character |
-| `length` | `float` | No | Length of the wand in inches |
 | `name` | `string` | No | Name of the character |
 | `patronus` | `string` | No | The character's Patronus form |
 | `wand` | `array` | No | Information about the character's wand |
 | `wizard` | `bool` | No | Whether the character is a wizard or witch |
-| `wood` | `string` | No | Type of wood the wand is made from |
 
 ### Operations
 

@@ -10,7 +10,6 @@
 ---@field actor? string
 ---@field alive? boolean
 ---@field ancestry? string
----@field core? string
 ---@field dateOfBirth? string
 ---@field eyeColour? string
 ---@field hairColour? string
@@ -19,12 +18,10 @@
 ---@field house? string
 ---@field id? string
 ---@field image? string
----@field length? number
 ---@field name? string
 ---@field patronus? string
 ---@field wand? table
 ---@field wizard? boolean
----@field wood? string
 
 ---@class CharacterLoadMatch
 ---@field id string
@@ -33,7 +30,6 @@
 ---@field actor? string
 ---@field alive? boolean
 ---@field ancestry? string
----@field core? string
 ---@field dateOfBirth? string
 ---@field eyeColour? string
 ---@field hairColour? string
@@ -42,12 +38,10 @@
 ---@field house? string
 ---@field id? string
 ---@field image? string
----@field length? number
 ---@field name? string
 ---@field patronus? string
 ---@field wand? table
 ---@field wizard? boolean
----@field wood? string
 
 ---@class Spell
 ---@field description? string

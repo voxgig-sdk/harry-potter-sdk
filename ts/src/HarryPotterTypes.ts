@@ -9,7 +9,6 @@ export interface Character {
   actor?: string
   alive?: boolean
   ancestry?: string
-  core?: string
   dateOfBirth?: string
   eyeColour?: string
   hairColour?: string
@@ -18,12 +17,10 @@ export interface Character {
   house?: string
   id?: string
   image?: string
-  length?: number
   name?: string
   patronus?: string
   wand?: Record<string, any>
   wizard?: boolean
-  wood?: string
 }
 
 export interface CharacterLoadMatch {
@@ -34,7 +31,6 @@ export interface CharacterListMatch {
   actor?: string
   alive?: boolean
   ancestry?: string
-  core?: string
   dateOfBirth?: string
   eyeColour?: string
   hairColour?: string
@@ -43,12 +39,10 @@ export interface CharacterListMatch {
   house?: string
   id?: string
   image?: string
-  length?: number
   name?: string
   patronus?: string
   wand?: Record<string, any>
   wizard?: boolean
-  wood?: string
 
   // Selects a custom action instead of the plain list:
   //   'staff' | 'student'

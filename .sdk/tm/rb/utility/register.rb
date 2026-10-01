@@ -33,6 +33,8 @@ require_relative 'transform_response'
 
 HarryPotterUtility.registrar = ->(u) {
   u.clean = HarryPotterUtilities::Clean
+  u.clean_add = HarryPotterUtilities::CleanAdd
+  u.clean_explain = HarryPotterUtilities::CleanExplain
   u.done = HarryPotterUtilities::Done
   u.make_error = HarryPotterUtilities::MakeError
   u.feature_add = HarryPotterUtilities::FeatureAdd

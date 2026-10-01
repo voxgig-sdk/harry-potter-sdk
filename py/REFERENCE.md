@@ -94,7 +94,6 @@ character = client.Character()
 | `actor` | `str` | No | Name of the actor who portrayed the character |
 | `alive` | `bool` | No | Whether the character is alive |
 | `ancestry` | `str` | No | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | `str` | No | Core material of the wand |
 | `dateOfBirth` | `str` | No | Date of birth of the character |
 | `eyeColour` | `str` | No | Eye color of the character |
 | `hairColour` | `str` | No | Hair color of the character |
@@ -103,12 +102,10 @@ character = client.Character()
 | `house` | `str` | No | Hogwarts house the character belongs to |
 | `id` | `str` | No | Unique identifier for the character |
 | `image` | `str` | No | URL to an image of the character |
-| `length` | `float` | No | Length of the wand in inches |
 | `name` | `str` | No | Name of the character |
 | `patronus` | `str` | No | The character's Patronus form |
 | `wand` | `dict` | No | Information about the character's wand |
 | `wizard` | `bool` | No | Whether the character is a wizard or witch |
-| `wood` | `str` | No | Type of wood the wand is made from |
 
 ### Operations
 

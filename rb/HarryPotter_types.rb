@@ -19,9 +19,6 @@
 # @!attribute [rw] ancestry
 #   @return [String, nil]
 #
-# @!attribute [rw] core
-#   @return [String, nil]
-#
 # @!attribute [rw] dateOfBirth
 #   @return [String, nil]
 #
@@ -46,9 +43,6 @@
 # @!attribute [rw] image
 #   @return [String, nil]
 #
-# @!attribute [rw] length
-#   @return [Float, nil]
-#
 # @!attribute [rw] name
 #   @return [String, nil]
 #
@@ -60,14 +54,10 @@
 #
 # @!attribute [rw] wizard
 #   @return [Boolean, nil]
-#
-# @!attribute [rw] wood
-#   @return [String, nil]
 Character = Struct.new(
   :actor,
   :alive,
   :ancestry,
-  :core,
   :dateOfBirth,
   :eyeColour,
   :hairColour,
@@ -76,12 +66,10 @@ Character = Struct.new(
   :house,
   :id,
   :image,
-  :length,
   :name,
   :patronus,
   :wand,
   :wizard,
-  :wood,
   keyword_init: true
 )
 
@@ -105,9 +93,6 @@ CharacterLoadMatch = Struct.new(
 # @!attribute [rw] ancestry
 #   @return [String, nil]
 #
-# @!attribute [rw] core
-#   @return [String, nil]
-#
 # @!attribute [rw] dateOfBirth
 #   @return [String, nil]
 #
@@ -132,9 +117,6 @@ CharacterLoadMatch = Struct.new(
 # @!attribute [rw] image
 #   @return [String, nil]
 #
-# @!attribute [rw] length
-#   @return [Float, nil]
-#
 # @!attribute [rw] name
 #   @return [String, nil]
 #
@@ -146,14 +128,10 @@ CharacterLoadMatch = Struct.new(
 #
 # @!attribute [rw] wizard
 #   @return [Boolean, nil]
-#
-# @!attribute [rw] wood
-#   @return [String, nil]
 CharacterListMatch = Struct.new(
   :actor,
   :alive,
   :ancestry,
-  :core,
   :dateOfBirth,
   :eyeColour,
   :hairColour,
@@ -162,12 +140,10 @@ CharacterListMatch = Struct.new(
   :house,
   :id,
   :image,
-  :length,
   :name,
   :patronus,
   :wand,
   :wizard,
-  :wood,
   keyword_init: true
 )
 

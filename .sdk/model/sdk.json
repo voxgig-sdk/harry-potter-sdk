@@ -121,14 +121,6 @@
               "sh": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
               "t": "`$STRING`"
             },
-            "core": {
-              "a": true,
-              "h": "Core",
-              "n": "core",
-              "r": false,
-              "sh": "Core material of the wand",
-              "t": "`$STRING`"
-            },
             "dateOfBirth": {
               "a": true,
               "h": "Date Of Birth",
@@ -195,14 +187,6 @@
               "sh": "URL to an image of the character",
               "t": "`$STRING`"
             },
-            "length": {
-              "a": true,
-              "h": "Length",
-              "n": "length",
-              "r": false,
-              "sh": "Length of the wand in inches",
-              "t": "`$NUMBER`"
-            },
             "name": {
               "a": true,
               "h": "Name",
@@ -234,14 +218,6 @@
               "r": false,
               "sh": "Whether the character is a wizard or witch",
               "t": "`$BOOLEAN`"
-            },
-            "wood": {
-              "a": true,
-              "h": "Wood",
-              "n": "wood",
-              "r": false,
-              "sh": "Type of wood the wand is made from",
-              "t": "`$STRING`"
             }
           },
           "id": {
@@ -438,7 +414,7 @@
                   ],
                   "t": {
                     "req": "`reqdata`",
-                    "res": "`body.wand`"
+                    "res": "`body`"
                   }
                 }
               ]
@@ -1047,7 +1023,12 @@
         },
         "base": "http://localhost:8000",
         "clean": {
-          "keys": "key,token,id"
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
         },
         "entity": {
           "`$CHILD`": {

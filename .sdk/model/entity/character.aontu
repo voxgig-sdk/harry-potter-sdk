@@ -26,13 +26,6 @@ main: kit: entity: character: {
       sh: "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)"
       t: "`$STRING`"
     }
-    core: {
-      h: "Core"
-      n: "core"
-      r: false
-      sh: "Core material of the wand"
-      t: "`$STRING`"
-    }
     dateOfBirth: {
       h: "Date Of Birth"
       n: "dateOfBirth"
@@ -91,13 +84,6 @@ main: kit: entity: character: {
       sh: "URL to an image of the character"
       t: "`$STRING`"
     }
-    length: {
-      h: "Length"
-      n: "length"
-      r: false
-      sh: "Length of the wand in inches"
-      t: "`$NUMBER`"
-    }
     name: {
       h: "Name"
       n: "name"
@@ -125,13 +111,6 @@ main: kit: entity: character: {
       r: false
       sh: "Whether the character is a wizard or witch"
       t: "`$BOOLEAN`"
-    }
-    wood: {
-      h: "Wood"
-      n: "wood"
-      r: false
-      sh: "Type of wood the wand is made from"
-      t: "`$STRING`"
     }
   }
 
@@ -307,7 +286,7 @@ main: kit: entity: character: {
           ]
           t: {
             req: "`reqdata`"
-            res: "`body.wand`"
+            res: "`body`"
           }
         }
       ]

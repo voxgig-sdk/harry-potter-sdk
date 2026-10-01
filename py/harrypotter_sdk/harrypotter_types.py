@@ -20,7 +20,6 @@ class Character(TypedDict, total=False):
     actor: str
     alive: bool
     ancestry: str
-    core: str
     dateOfBirth: str
     eyeColour: str
     hairColour: str
@@ -29,12 +28,10 @@ class Character(TypedDict, total=False):
     house: str
     id: str
     image: str
-    length: float
     name: str
     patronus: str
     wand: dict
     wizard: bool
-    wood: str
 
 
 class CharacterLoadMatch(TypedDict):
@@ -45,7 +42,6 @@ class CharacterListMatch(TypedDict, total=False):
     actor: str
     alive: bool
     ancestry: str
-    core: str
     dateOfBirth: str
     eyeColour: str
     hairColour: str
@@ -54,12 +50,10 @@ class CharacterListMatch(TypedDict, total=False):
     house: str
     id: str
     image: str
-    length: float
     name: str
     patronus: str
     wand: dict
     wizard: bool
-    wood: str
 
 
 class Spell(TypedDict, total=False):

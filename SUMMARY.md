@@ -23,8 +23,8 @@ Key fields to recognise:
 - `actor`: Name of the actor who portrayed the character
 - `alive`: Whether the character is alive
 - `ancestry`: Ancestry of the character (for example, pure-blood, half-blood, muggle-born)
-- `core`: Core material of the wand
 - `dateOfBirth`: Date of birth of the character
+- `eyeColour`: Eye color of the character
 
 ### Spell
 

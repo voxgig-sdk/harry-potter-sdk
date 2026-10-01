@@ -273,7 +273,6 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | `"actor"` | Name of the actor who portrayed the character |
 | `"alive"` | Whether the character is alive |
 | `"ancestry"` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `"core"` | Core material of the wand |
 | `"dateOfBirth"` | Date of birth of the character |
 | `"eyeColour"` | Eye color of the character |
 | `"hairColour"` | Hair color of the character |
@@ -282,12 +281,10 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | `"house"` | Hogwarts house the character belongs to |
 | `"id"` | Unique identifier for the character |
 | `"image"` | URL to an image of the character |
-| `"length"` | Length of the wand in inches |
 | `"name"` | Name of the character |
 | `"patronus"` | The character's Patronus form |
 | `"wand"` | Information about the character's wand |
 | `"wizard"` | Whether the character is a wizard or witch |
-| `"wood"` | Type of wood the wand is made from |
 
 Operations: List, Load.
 
@@ -328,7 +325,6 @@ Create an instance: `character := client.Character(nil)`
 | `actor` | `string` | Name of the actor who portrayed the character |
 | `alive` | `bool` | Whether the character is alive |
 | `ancestry` | `string` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | `string` | Core material of the wand |
 | `dateOfBirth` | `string` | Date of birth of the character |
 | `eyeColour` | `string` | Eye color of the character |
 | `hairColour` | `string` | Hair color of the character |
@@ -337,12 +333,10 @@ Create an instance: `character := client.Character(nil)`
 | `house` | `string` | Hogwarts house the character belongs to |
 | `id` | `string` | Unique identifier for the character |
 | `image` | `string` | URL to an image of the character |
-| `length` | `float64` | Length of the wand in inches |
 | `name` | `string` | Name of the character |
 | `patronus` | `string` | The character's Patronus form |
 | `wand` | `map[string]any` | Information about the character's wand |
 | `wizard` | `bool` | Whether the character is a wizard or witch |
-| `wood` | `string` | Type of wood the wand is made from |
 
 #### Example: Load
 

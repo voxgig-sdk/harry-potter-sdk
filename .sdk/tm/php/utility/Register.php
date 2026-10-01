@@ -37,6 +37,8 @@ require_once __DIR__ . '/TransformResponse.php';
 
 HarryPotterUtility::setRegistrar(function (HarryPotterUtility $u): void {
     $u->clean = [HarryPotterClean::class, 'call'];
+    $u->clean_add = [HarryPotterClean::class, 'add'];
+    $u->clean_explain = [HarryPotterDone::class, 'clean_explain'];
     $u->done = [HarryPotterDone::class, 'call'];
     $u->make_error = [HarryPotterMakeError::class, 'call'];
     $u->feature_add = [HarryPotterFeatureAdd::class, 'call'];

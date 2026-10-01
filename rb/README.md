@@ -12,9 +12,18 @@ The SDK exposes the API as capitalised, semantic **Entities** — for example `c
 
 ## Install
 This package is not yet published to RubyGems. Install it from the
-GitHub release tag (`rb/vX.Y.Z`):
+GitHub release tag (`rb/vX.Y.Z`, see [Releases](https://github.com/voxgig-sdk/harry-potter-sdk/releases)), or
+from a clone:
 
-- Releases: [https://github.com/voxgig-sdk/harry-potter-sdk/releases](https://github.com/voxgig-sdk/harry-potter-sdk/releases)
+```bash
+git clone https://github.com/voxgig-sdk/harry-potter-sdk
+```
+
+Then add it to your `Gemfile` by path, and run `bundle install`:
+
+```ruby
+gem "voxgig-sdk-harry-potter-sdk", path: "./harry-potter-sdk/rb"
+```
 
 
 ## Tutorial: your first API call
@@ -257,7 +266,6 @@ returns a result `Hash` with these keys:
 | `actor` | Name of the actor who portrayed the character |
 | `alive` | Whether the character is alive |
 | `ancestry` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | Core material of the wand |
 | `dateOfBirth` | Date of birth of the character |
 | `eyeColour` | Eye color of the character |
 | `hairColour` | Hair color of the character |
@@ -266,12 +274,10 @@ returns a result `Hash` with these keys:
 | `house` | Hogwarts house the character belongs to |
 | `id` | Unique identifier for the character |
 | `image` | URL to an image of the character |
-| `length` | Length of the wand in inches |
 | `name` | Name of the character |
 | `patronus` | The character's Patronus form |
 | `wand` | Information about the character's wand |
 | `wizard` | Whether the character is a wizard or witch |
-| `wood` | Type of wood the wand is made from |
 
 Operations: List, Load.
 
@@ -312,7 +318,6 @@ Create an instance: `character = client.Character`
 | `actor` | `String` | Name of the actor who portrayed the character |
 | `alive` | `Boolean` | Whether the character is alive |
 | `ancestry` | `String` | Ancestry of the character (e.g., pure-blood, half-blood, muggle-born) |
-| `core` | `String` | Core material of the wand |
 | `dateOfBirth` | `String` | Date of birth of the character |
 | `eyeColour` | `String` | Eye color of the character |
 | `hairColour` | `String` | Hair color of the character |
@@ -321,12 +326,10 @@ Create an instance: `character = client.Character`
 | `house` | `String` | Hogwarts house the character belongs to |
 | `id` | `String` | Unique identifier for the character |
 | `image` | `String` | URL to an image of the character |
-| `length` | `Float` | Length of the wand in inches |
 | `name` | `String` | Name of the character |
 | `patronus` | `String` | The character's Patronus form |
 | `wand` | `Hash` | Information about the character's wand |
 | `wizard` | `Boolean` | Whether the character is a wizard or witch |
-| `wood` | `String` | Type of wood the wand is made from |
 
 #### Example: Load
 

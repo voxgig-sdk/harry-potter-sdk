@@ -18,7 +18,6 @@ class Character
     public ?string $actor = null;
     public ?bool $alive = null;
     public ?string $ancestry = null;
-    public ?string $core = null;
     public ?string $dateOfBirth = null;
     public ?string $eyeColour = null;
     public ?string $hairColour = null;
@@ -27,12 +26,10 @@ class Character
     public ?string $house = null;
     public ?string $id = null;
     public ?string $image = null;
-    public ?float $length = null;
     public ?string $name = null;
     public ?string $patronus = null;
     public ?array $wand = null;
     public ?bool $wizard = null;
-    public ?string $wood = null;
 }
 
 /** Request payload for Character#load. */
@@ -47,7 +44,6 @@ class CharacterListMatch
     public ?string $actor = null;
     public ?bool $alive = null;
     public ?string $ancestry = null;
-    public ?string $core = null;
     public ?string $dateOfBirth = null;
     public ?string $eyeColour = null;
     public ?string $hairColour = null;
@@ -56,12 +52,10 @@ class CharacterListMatch
     public ?string $house = null;
     public ?string $id = null;
     public ?string $image = null;
-    public ?float $length = null;
     public ?string $name = null;
     public ?string $patronus = null;
     public ?array $wand = null;
     public ?bool $wizard = null;
-    public ?string $wood = null;
 }
 
 /** Spell entity data model. */

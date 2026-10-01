@@ -109,12 +109,6 @@ func MakeConfig() map[string]any {
 						"short": "Ancestry of the character (e.g., pure-blood, half-blood, muggle-born)",
 					},
 					map[string]any{
-						"name": "core",
-						"title": "Core",
-						"type": "`$STRING`",
-						"short": "Core material of the wand",
-					},
-					map[string]any{
 						"name": "dateOfBirth",
 						"title": "Date Of Birth",
 						"type": "`$STRING`",
@@ -165,12 +159,6 @@ func MakeConfig() map[string]any {
 						"format": "uri",
 					},
 					map[string]any{
-						"name": "length",
-						"title": "Length",
-						"type": "`$NUMBER`",
-						"short": "Length of the wand in inches",
-					},
-					map[string]any{
 						"name": "name",
 						"title": "Name",
 						"type": "`$STRING`",
@@ -193,12 +181,6 @@ func MakeConfig() map[string]any {
 						"title": "Wizard",
 						"type": "`$BOOLEAN`",
 						"short": "Whether the character is a wizard or witch",
-					},
-					map[string]any{
-						"name": "wood",
-						"title": "Wood",
-						"type": "`$STRING`",
-						"short": "Type of wood the wand is made from",
 					},
 				},
 				"id": map[string]any{
@@ -371,7 +353,7 @@ func MakeConfig() map[string]any {
 								"rename": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
-									"res": "`body.wand`",
+									"res": "`body`",
 								},
 								"args": map[string]any{
 									"params": []any{
