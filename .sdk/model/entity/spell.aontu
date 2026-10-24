@@ -46,6 +46,10 @@ main: kit: entity: spell: {
           }
           m: "GET"
           o: "/api/spells"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "api"

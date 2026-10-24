@@ -132,6 +132,10 @@ main: kit: entity: character: {
           }
           m: "GET"
           o: "/api/characters"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "api"
@@ -155,6 +159,10 @@ main: kit: entity: character: {
           o: "/api/characters/staff"
           q: {
             "$action": "staff"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
           }
           s: [
             {
@@ -182,6 +190,10 @@ main: kit: entity: character: {
           o: "/api/characters/students"
           q: {
             "$action": "student"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
           }
           s: [
             {
@@ -229,6 +241,10 @@ main: kit: entity: character: {
               "house"
             ]
           }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "api"
@@ -272,6 +288,10 @@ main: kit: entity: character: {
             exist: [
               "id"
             ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
           }
           s: [
             {

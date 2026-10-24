@@ -3,5 +3,26 @@
     "SUMMARY.md"
   ],
   "config": ".sdk/doc/qa/vale.ini",
-  "routes": {}
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "A magical JSON API for Harry Potter characters, spells, and the wizarding world. API providing data on Harry Potter characters and spells. Includes routes for all characters, specific character by ID, Hogwarts students and staff, characters in a house, and all spells.",
+      "Ancestry of the character (for example, pure-blood, half-blood, muggle-born)",
+      "Date of birth of the character",
+      "Description of what the spell does",
+      "Eye color of the character",
+      "Local Development Server",
+      "Name of the actor who portrayed the character",
+      "Name of the spell",
+      "Production Server",
+      "Successful response with all characters",
+      "Successful response with all spells",
+      "Successful response with all staff members",
+      "Successful response with all students",
+      "Successful response with character details",
+      "Successful response with characters from the specified house",
+      "Unique identifier for the spell",
+      "Whether the character is alive"
+    ]
+  }
 }
